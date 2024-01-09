@@ -1,7 +1,10 @@
 @import './scss/fonts';
 @import './scss/libs/normalize';
 @import './scss/libs/_set';
+@import './scss/base/mixins';
 @import './scss/general';
+
+@import './scss/base/components-a';
 
 @import './scss/components/header';
 @import './scss/components/footer';

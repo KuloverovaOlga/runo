@@ -121,12 +121,21 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    @include small-tablet {
+      width: 9.6rem;
+      height: 9.6rem;
+      border-radius: 3.2rem;
+    }
     &:hover {
         background-color: #5746a2;
     }
     & .button-swiper__svg-box {
         width: 2.4rem;
         height: 2.4rem;
+        @include small-tablet {
+          width: 4.8rem;
+          height: 4.8rem;
+        }
         & svg {
             object-fit: contain;
         }
