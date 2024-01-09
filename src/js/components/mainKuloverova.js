@@ -22,6 +22,7 @@ import popup from './popup';
 import form from './form';
 
 
+import catalogSwiper from './swiper/swipers';
 
 document.addEventListener('DOMContentLoaded', () => {
     try {
@@ -44,6 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch {}
     try {
         pricesSwiper();
+    } catch {}
+    try {
+        catalogSwiper();
     } catch {}
     try {
         rangeSwiper();
@@ -82,26 +86,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
