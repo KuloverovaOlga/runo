@@ -2,6 +2,7 @@
 $black: #28292e;
 $white: #ffffff;
 $purple: #8874dd;
+$hover-purple: #5746a2;
 $grey: #f9f9f9;
 $grey-text: #7b7b7b;
 $bg: #eeeeee;
@@ -98,7 +99,7 @@ main {
     transition: background-color 0.3s;
     width: fit-content;
     &:hover {
-        background-color: #5746a2;
+        background-color: $hover-purple;
     }
 }
 
@@ -107,7 +108,21 @@ main {
     gap: 4rem;
     & .swiper-slide {
         height: calc((100% - 30px) / 2) !important;
-        width: 54.6rem!important;
+        width: 54.6rem !important;
+    }
+}
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+    width: 172rem !important;
+    left: 0 !important;
+    height: 1px !important;
+    background-color: rgba(40, 41, 46, 0.3);
+    border-radius: 1px;
+    bottom: 2px !important;
+    & .swiper-scrollbar-drag {
+        border-radius: 2px;
+        background-color: $purple;
+        height: 3px !important;
+        top: -1px !important;
     }
 }
 
@@ -122,13 +137,39 @@ main {
     align-items: center;
     justify-content: center;
     &:hover {
-        background-color: #5746a2;
+        background-color: $hover-purple;
     }
     & .button-swiper__svg-box {
         width: 2.4rem;
         height: 2.4rem;
         & svg {
             object-fit: contain;
+        }
+    }
+}
+.link {
+    color: $purple;
+    display: flex;
+    align-items: flex-end;
+    gap: 0.6rem;
+    letter-spacing: 0.8px;
+    transition: color 0.3s;
+    &:hover {
+        color: $hover-purple;
+        & [class$='svg-box'] {
+            & svg {
+                stroke: $hover-purple;
+            }
+        }
+        
+    }
+    & [class$='svg-box'] {
+        width: 2.4rem;
+        height: 2.4rem;
+        & svg {
+            stroke: $purple;
+            object-fit: contain;
+            transition: stroke 0.3s;
         }
     }
 }

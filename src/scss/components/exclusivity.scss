@@ -1,0 +1,113 @@
+.exclusivity {
+    padding: 9rem 0;
+    // .exclusivity__inner
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 5.2rem;
+    }
+
+    // .exclusivity__header-box
+
+    &__header-box {
+        display: flex;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    // .exclusivity__title
+
+    &__title {
+        flex-basis: 69.3rem;
+    }
+
+    // .exclusivity__desk
+
+    &__desk {
+        width: 69.3rem;
+    }
+
+    // .exclusivity__swiper
+
+    &__swiper {
+        width: calc(100% + 10rem);
+        margin-right: -10rem;
+    }
+
+    // .exclusivity__swiper-wrapper
+
+    &__swiper-wrapper {
+        margin-bottom: 6rem;
+    }
+
+    // .exclusivity__swiper-slide
+
+    &__swiper-slide {
+        width: 69.3rem !important;
+        &:last-child {
+            width: 70.5rem !important;
+        }
+       
+    }
+
+    // .exclusivity__swiper-slide-inner
+
+    &__swiper-slide-inner {
+        width: 69.3rem;
+        position: relative;
+    }
+
+    // .exclusivity__swiper-slide-img-box
+
+    &__swiper-slide-img-box {
+        width: 69.3rem;
+        height: 39rem;
+        border-radius: 3rem;
+        overflow: hidden;
+        -webkit-mask-image: url(./assets/images/exclusivity-mask.webp);
+        mask-image: url(./assets/images/exclusivity-mask.webp);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    // .exclusivity__swiper-slide-num
+
+    &__swiper-slide-num {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        color: $grey-text;
+    }
+
+    // .exclusivity__swiper-scrollbar
+
+    &__swiper-scrollbar {
+    }
+
+    &__swiper-button-box {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 0.8rem;
+        margin-left: 73.3rem;
+    }
+
+    // .exclusivity__swiper-button-prev
+
+    &__swiper-button-prev {
+    }
+
+    // .exclusivity__swiper-button-next
+
+    &__swiper-button-next {
+    }
+}

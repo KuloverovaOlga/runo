@@ -5,7 +5,7 @@ import { rem } from "../../utils/constants";
 const reviewsSwiper = () => {
     const swiper = new Swiper(".reviews__swiper", {
         slidesPerView: 3,
-        // spaceBetween: 30,
+        spaceBetween: 40,
         scrollbar: {
             el: ".reviews__swiper-scrollbar",
           },

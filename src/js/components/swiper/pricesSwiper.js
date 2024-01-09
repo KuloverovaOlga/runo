@@ -4,9 +4,8 @@ import { rem } from "../../utils/constants";
 
 const pricesSwiper = () => {
     const swiper = new Swiper(".prices__swiper", {
-        slidesPerView: 3,
-
-        // spaceBetween: 30,
+        slidesPerView: '3',
+        spaceBetween: 40,
   
           navigation: {
             nextEl: '.prices__swiper-button-next',
