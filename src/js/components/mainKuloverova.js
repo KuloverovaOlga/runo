@@ -6,6 +6,10 @@ import reviewsSwiper from './swiper/reviewsSwiper';
 import exclusivitySwiper from './swiper/exclusivitySwiper';
 import pricesSwiper from './swiper/pricesSwiper';
 
+
+import questionsMain from './questionsMain';
+import showMore from './showMore';
+
 document.addEventListener('DOMContentLoaded', () => {
     try {
         advantagesSwiper();
@@ -27,6 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch {}
     try {
         pricesSwiper();
+    } catch {}
+
+
+
+    try {
+        questionsMain();
+    } catch {}
+    try {
+        showMore();
     } catch {}
 
 });

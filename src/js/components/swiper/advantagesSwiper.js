@@ -8,7 +8,7 @@ const advantagesSwiper = () => {
       grid: {
         rows: 2,
       },
-        // spaceBetween: 40,
+       
         scrollbar: {
             el: ".advantages__swiper-scrollbar",
           },
