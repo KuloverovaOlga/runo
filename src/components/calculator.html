@@ -1,0 +1,47 @@
+<section class="calculator">
+    <div class="container">
+        <form class="calculator__inner">
+            <div class="calculator__form-box">
+                <p class="calculator__form-title title-h1">Калькулятор расчета стоимости</p>
+                <div class="calculator__form">
+                    <div class="calculator__form-inner">
+                        <div class="calculator__form-box">
+                            <div class="calculator__form-title title-h2">Информация о потолке</div>
+                            <div class="calculator__form-group">
+                                <select class="calculator__form-select title-h5" required>
+                                    <option>Россия ПВХ</option>
+                                    <option>Россия ПВХ</option>
+                                    <option>Россия ПВХ</option>
+                                </select>
+
+                                <label class="calculator__form-input-wrapper">
+                                    <input class="calculator__form-input title-h5" type="text" pattern="\d+" placeholder="Общая площадь, м2" required />
+                                    <span class="error title-h5">Необходимо ввести числовое значение</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="calculator__form-box">
+                            <div class="calculator__form-title title-h2">Информация об освещении</div>
+                            <div class="calculator__form-group">
+                                <label class="calculator__form-input-wrapper">
+                                    <input class="calculator__form-input title-h5" type="text" pattern="\d+" placeholder="Потолочная люстра, шт" />
+                                    <span class="error title-h5">Необходимо ввести числовое значение</span>
+                                </label>
+                                <label class="calculator__form-input-wrapper">
+                                    <input class="calculator__form-input title-h5" type="text" pattern="\d+" placeholder="Точечное освещение, шт" />
+                                    <span class="error title-h5">Необходимо ввести числовое значение</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="calculator__form-aside">
+                <div class="calculator__form-aside-title title-h2">Примерная цена</div>
+                <div class="calculator__form-aside-cost price">9200₽<span class="title-h2">9200₽</span></div>
+                <div class="calculator__form-aside-text title-h5">Оформив заявку на сайте, вы получаете <span>скидку 10%</span> на установку потолков</div>
+                <button class="calculator__form-aside-button button title-h4" type="submit">Оставить заявку</button>
+            </div>
+        </form>
+    </div>
+</section>

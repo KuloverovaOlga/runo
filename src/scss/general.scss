@@ -1,0 +1,134 @@
+//colors
+$black: #28292e;
+$white: #ffffff;
+$purple: #8874dd;
+$grey: #f9f9f9;
+$grey-text: #7b7b7b;
+$bg: #eeeeee;
+
+// * {
+//   outline:1px solid #E33C18;
+// }
+
+body {
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: $bg;
+}
+
+main {
+    flex-grow: 1;
+    position: relative;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    @media (max-width: 48em) {
+        width: 100%;
+    }
+}
+
+//text
+.title-h1 {
+    font-family: 'SuisseIntl';
+    font-size: 6.2rem;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 120%;
+}
+
+.title-h2 {
+    font-family: 'SuisseIntl';
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: auto;
+}
+
+.title-h3 {
+    font-family: 'SuisseIntl';
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 450;
+    line-height: auto;
+}
+
+.title-h4 {
+    font-family: 'SuisseIntl';
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 146%;
+}
+
+.title-h5 {
+    font-family: 'SuisseIntl';
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 146%;
+}
+
+.price {
+    font-family: 'SuisseIntl';
+    font-size: 5.2rem;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 120%;
+}
+
+// ---------------------------------buttons-----------------------------------------
+
+.button {
+    padding: 1.5rem 3.2rem;
+    background-color: $purple;
+    border-radius: 2rem;
+    color: $white;
+    transition: background-color 0.3s;
+    width: fit-content;
+    &:hover {
+        background-color: #5746a2;
+    }
+}
+
+.swiper-grid-column > .swiper-wrapper {
+    flex-direction: row !important;
+    gap: 4rem;
+    & .swiper-slide {
+        height: calc((100% - 30px) / 2) !important;
+        width: 54.6rem!important;
+    }
+}
+
+.button-swiper {
+    cursor: pointer;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 2rem;
+    background-color: $purple;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+        background-color: #5746a2;
+    }
+    & .button-swiper__svg-box {
+        width: 2.4rem;
+        height: 2.4rem;
+        & svg {
+            object-fit: contain;
+        }
+    }
+}

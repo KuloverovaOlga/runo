@@ -1,0 +1,98 @@
+.advantages {
+    padding: 9rem 0;
+    // .advantages__inner
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+    }
+
+    // .advantages__header-box
+
+    &__header-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    // .advantages__title
+
+    &__title {
+    }
+
+    // .advantages__btn
+
+    &__btn {
+    }
+
+    // .advantages__swiper
+
+    &__swiper {
+        width: 100%;
+    }
+
+    // .advantages__swiper-wrapper
+
+    &__swiper-wrapper {
+    }
+
+    // .advantages__swiper-slide
+
+    &__swiper-slide {
+    }
+
+    // .advantages__swiper-slide-inner
+
+    &__swiper-slide-inner {
+        padding: 3rem;
+        border-radius: 3rem;
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 37.3rem;
+        position: relative;
+    }
+
+    // .advantages__swiper-slide-title
+
+    &__swiper-slide-title {
+    }
+
+    // .advantages__swiper-slide-svg-box
+
+    &__swiper-slide-svg-box {
+        position: absolute;
+        top: 12.1rem;
+        right: 3rem;
+        width: 6.4rem;
+        height: 6.4rem;
+        & svg {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            fill: $purple;
+        }
+    }
+
+    // .advantages__swiper-slide-desk
+
+    &__swiper-slide-desk {
+        padding: 3rem;
+        background-color: $grey;
+        border-radius: 1.5rem;
+        color: $grey-text;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; // количество строк
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        letter-spacing: 0.72px;
+    }
+
+    // .advantages__swiper-scrollbar
+
+    &__swiper-scrollbar {
+    }
+}
