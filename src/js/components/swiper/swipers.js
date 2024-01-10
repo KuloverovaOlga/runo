@@ -53,4 +53,26 @@ const productBannerSwiper = () => {
   });
 }
 
-export {catalogSwiper, productBannerSwiper};
+// BENEFITS section
+const benefitsSwiper = () => {
+  const sliderImgs = new Swiper('.benefits__swiper', {
+    spaceBetween: rem(4),
+    speed: 1000,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.benefits__btn-next',
+      prevEl: '.benefits__btn-prev',
+    },
+    scrollbar: {
+      el: '.benefits__swiper-scrollbar',
+    },
+    breakpoints: {
+      769: {
+        slidesPerView: 3,
+        spaceBetween: rem(2),
+      },
+    }
+  });
+}
+
+export {catalogSwiper, productBannerSwiper, benefitsSwiper};
