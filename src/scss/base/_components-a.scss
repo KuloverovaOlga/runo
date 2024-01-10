@@ -106,7 +106,7 @@
 
 @mixin scroll-bar {
   background: rgba(40, 41, 46, 0.30);
-  height: 0.2rem;
+  height: 0.4rem;
   .swiper-scrollbar-drag {
     height: 0.4rem;
     background: $purple;

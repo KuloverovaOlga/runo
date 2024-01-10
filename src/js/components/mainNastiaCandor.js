@@ -1,4 +1,4 @@
-import {catalogSwiper, productBannerSwiper} from './swiper/swipers';
+import {catalogSwiper, productBannerSwiper, benefitsSwiper} from './swiper/swipers';
 
 document.addEventListener('DOMContentLoaded', () => {
     try {
@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch {}
     try {
         productBannerSwiper();
+    } catch {}
+    try {
+        benefitsSwiper();
     } catch {}
 
 });
