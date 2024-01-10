@@ -1,3 +1,118 @@
+@mixin tab-item {
+  padding: 1.6rem 3.2rem;
+  border: solid 0.15rem $purple;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  color: $purple;
+  letter-spacing: 0.08rem;
+  width: fit-content;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+  transition-property: background-color, border-color;
+  cursor: pointer;
+  &:hover {
+    border-color: rgba(136, 116, 221, 0.25);
+  }
+  @include small-tablet {
+    font-size: 3.2rem;
+    line-height: 146%;
+    letter-spacing: 0.12rem;
+    gap: 3.2rem;
+    padding: 2.6rem 4.8rem;
+  }
+  &::before {
+    content: '';
+    display: block;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 0.1rem;
+    background-color: $purple;
+    @include small-tablet {
+      width: 1.2rem;
+      height: 1.2rem;
+      border-radius: 0.2rem;
+    }
+  }
+  &._active {
+    border-color: $white;
+    background-color: $white;
+  }
+}
+
+@mixin curved-border-angle($dl, $sl) {
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: $dl;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0 0 2rem 0;
+    box-shadow: 1rem 1rem 0 0.5rem $bg;
+    @include small-tablet {
+      width: 6rem;
+      height: 6rem;
+      bottom: $sl;
+      border-radius: 0 0 3.2rem 0;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    right: $dl;
+    bottom: 0;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0 0 2rem 0;
+    box-shadow: 1rem 1rem 0 0.5rem $bg;
+    @include small-tablet {
+      width: 6rem;
+      height: 6rem;
+      right: $sl;
+      border-radius: 0 0 3.2rem 0;
+    }
+  }
+}
+
+@mixin btn-purple {
+  background-color: $purple;
+  border-radius: 2rem;
+  padding: 1.6rem 3.2rem;
+  font-family: 'SuisseIntl';
+  font-size: 2rem;
+  font-weight: 450;
+  letter-spacing: 0.08rem;
+  line-height: 146%;
+  color: $white;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+  transition-property: background-color, color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include small-tablet {
+    font-size: 3.2rem;
+    font-weight: 450;
+    letter-spacing: 0.12rem;
+    padding: 2.6rem 4.8rem;
+  }
+  &:hover {
+    background-color: $purple-dark;
+  }
+}
+
+@mixin scroll-bar {
+  background: rgba(40, 41, 46, 0.30);
+  height: 0.2rem;
+  .swiper-scrollbar-drag {
+    height: 0.4rem;
+    background: $purple;
+  }
+}
+
 .price-item {
   width: 54.5rem;
   border-radius: 1rem;
@@ -82,38 +197,6 @@
       height: 9.6rem;
       border-radius: 3.2rem;
     }
-    &::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: 8rem;
-      width: 4rem;
-      height: 4rem;
-      border-radius: 0 0 2rem 0;
-      box-shadow: 1rem 1rem 0 0.5rem $bg;
-      @include small-tablet {
-        width: 6rem;
-        height: 6rem;
-        bottom: 11.5rem;
-        border-radius: 0 0 3.2rem 0;
-      }
-    }
-    &::before {
-      content: "";
-      position: absolute;
-      right: 8rem;
-      bottom: 0;
-      width: 4rem;
-      height: 4rem;
-      border-radius: 0 0 2rem 0;
-      box-shadow: 1rem 1rem 0 0.5rem $bg;
-      @include small-tablet {
-        width: 6rem;
-        height: 6rem;
-        right: 11.5rem;
-        border-radius: 0 0 3.2rem 0;
-      }
-    }
     svg {
       width: 2.4rem;
       height: 2.4rem;
@@ -125,45 +208,15 @@
   }
 }
 
-@mixin tab-item {
-  padding: 1.6rem 3.2rem;
-  border: solid 0.15rem $purple;
-  border-radius: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 1.6rem;
-  color: $purple;
-  letter-spacing: 0.08rem;
-  width: fit-content;
-  transition-duration: 0.4s;
-  transition-timing-function: ease;
-  transition-property: background-color, border-color;
-  cursor: pointer;
-  &:hover {
-    border-color: rgba(136, 116, 221, 0.25);
-  }
+.mob {
+  display: none;
   @include small-tablet {
-    font-size: 3.2rem;
-    line-height: 146%;
-    letter-spacing: 0.12rem;
-    gap: 3.2rem;
-    padding: 2.6rem 4.8rem;
-  }
-  &::before {
-    content: '';
     display: block;
-    width: 0.6rem;
-    height: 0.6rem;
-    border-radius: 0.1rem;
-    background-color: $purple;
-    @include small-tablet {
-      width: 1.2rem;
-      height: 1.2rem;
-      border-radius: 0.2rem;
-    }
   }
-  &._active {
-    border-color: $white;
-    background-color: $white;
+}
+
+.desc {
+  @include small-tablet {
+    display: none;
   }
 }

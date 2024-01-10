@@ -30,3 +30,14 @@
 	font-weight: 500;
 	font-style: normal;
 }
+
+@font-face {
+	font-family: 'Gilroy';
+	src: url('./assets/fonts/Gilroy-Medium.eot');
+	src: local('SuisseIntl-Medium'), local('SuisseIntl-Medium'),
+			url('./assets/fonts/Gilroy-Medium.ttf') format('embedded-opentype'),
+			url('./assets/fonts/Gilroy-Medium.woff2') format('woff2'),
+			url('./assets/fonts/Gilroy-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}

@@ -13,15 +13,6 @@ const catalogSwiper = () => {
       nextEl: '.catalog__tab-btn-next',
       prevEl: '.catalog__tab-btn-prev',
     },
-    // on: {
-    //   //Показать и скрыть кнопки при прокрутке
-    //   fromEdge: function () {
-    //     if(document.querySelector('.catalog__tab-btn-next')) {
-    //       document.querySelector('.catalog__tab-btn-next').style.display = 'flex';
-    //       document.querySelector('.catalog__tab-btn-prev').style.display = 'flex';
-    //     }
-    //   },
-    // },
     breakpoints: {
       769: {
         slidesPerView: 'auto',
@@ -33,18 +24,33 @@ const catalogSwiper = () => {
       }
     }
   });
-
-  // if(document.querySelector('.catalog__tab-swiper')) {
-  //   sliderThumbs.on('reachEnd', () => {
-  //     document.querySelector('.catalog__tab-btn-next').style.display = 'none';
-  //   })
-  //   sliderThumbs.on('reachBeginning', () => {
-  //     console.log('beggining');
-  //     document.querySelector('.catalog__tab-btn-prev').style.display = 'none';
-  //   })
-  // }
-
-
 }
 
-export default catalogSwiper;
+// PRODUCT-BANNER section
+const productBannerSwiper = () => {
+  const sliderThumbs = new Swiper('.product-banner__thumb-slider', {
+    slidesPerView: 3,
+    spaceBetween: rem(4),
+    speed: 1000,
+    loop: true,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  const sliderImgs = new Swiper('.product-banner__swiper', {
+    spaceBetween: rem(2),
+    speed: 1000,
+    loop: true,
+    navigation: {
+      nextEl: '.product-banner__img-btn-next',
+      prevEl: '.product-banner__img-btn-prev',
+    },
+    thumbs: {
+      swiper: sliderThumbs,
+    },
+    scrollbar: {
+      el: '.product-banner__swiper-scrollbar',
+    },
+  });
+}
+
+export {catalogSwiper, productBannerSwiper};
