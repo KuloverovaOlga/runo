@@ -47,6 +47,9 @@
       gap: 2rem;
     }
   }
+  .price-item-btn {
+    @include curved-border-angle(8rem, 11.5rem);
+  }
 }
 
 @keyframes fade-in {

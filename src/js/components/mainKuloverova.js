@@ -5,7 +5,6 @@ import certificatesSwiper from './swiper/certificatesSwiper';
 import reviewsSwiper from './swiper/reviewsSwiper';
 import exclusivitySwiper from './swiper/exclusivitySwiper';
 import pricesSwiper from './swiper/pricesSwiper';
-import catalogSwiper from './swiper/swipers';
 
 document.addEventListener('DOMContentLoaded', () => {
     try {
@@ -29,10 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
         pricesSwiper();
     } catch {}
-    try {
-        catalogSwiper();
-    } catch {}
-
 });
 
 

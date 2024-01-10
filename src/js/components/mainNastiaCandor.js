@@ -1,3 +1,15 @@
+import {catalogSwiper, productBannerSwiper} from './swiper/swipers';
+
+document.addEventListener('DOMContentLoaded', () => {
+    try {
+        catalogSwiper();
+    } catch {}
+    try {
+        productBannerSwiper();
+    } catch {}
+
+});
+
 //tabs//
 
 let currTub;
