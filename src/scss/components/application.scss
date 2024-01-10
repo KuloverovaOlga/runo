@@ -1,0 +1,119 @@
+.application {
+    // .application__inner
+
+    &__inner {
+        padding: 3rem;
+        display: flex;
+        gap: 9rem;
+        background-color: $white;
+    }
+
+    // .application__form
+
+    &__form-wrapper {
+        width: 51.7rem;
+        background-color: $purple;
+        padding: 6rem;
+        color: $white;
+    }
+
+    // .application__title
+
+    &__title {
+        margin-bottom: 2.2rem;
+    }
+
+    // .application__text
+
+    &__text {
+        margin-bottom: 6rem;
+    }
+
+    // .application__input-group
+
+    &__input-group {
+        margin-bottom: 2rem;
+    }
+
+    // .application__form-input-wrapper
+
+    &__form-input-wrapper {
+        width: 39.7rem;
+    }
+
+    // .application__input
+
+    &__input {
+        width: 100%;
+        padding: 1.7rem 1.6rem;
+        border-radius: 2rem;
+        background-color: $white;
+    }
+
+    // .application__form-button
+
+    &__form-button {
+        margin-top: 4rem;
+    }
+
+    // .application__content
+
+    &__content-wrapper {
+        padding: 6rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    // .application__content-title
+
+    &__content-title {
+    }
+
+    // .application__content-contacts
+
+    &__content-contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+
+    // .application__content-box
+
+    &__content-contacts-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    // .application__content-svg-box
+
+    &__content-svg-box {
+    }
+
+    // .application__content-text
+
+    &__content-text {
+    }
+
+    // .application__content-socials
+
+    &__content-socials {
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+    }
+
+    // .application__content-socials-links
+
+    &__content-socials-links {
+        display: flex;
+        align-items: center;
+        gap: 3.2rem;
+    }
+
+    // .application__content-socials-link
+
+    &__content-socials-link {
+    }
+}

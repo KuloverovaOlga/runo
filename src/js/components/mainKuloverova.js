@@ -9,6 +9,12 @@ import pricesSwiper from './swiper/pricesSwiper';
 
 import questionsMain from './questionsMain';
 import showMore from './showMore';
+import select from './select';
+
+import popup from './popup';
+import form from './form';
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
     try {
@@ -41,8 +47,24 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
         showMore();
     } catch {}
+    try {
+        select();
+    } catch {}
+
+
+
+    try {
+        popup();
+    } catch {}
+
+    try {
+        form();
+    } catch {}
+
 
 });
+
+
 
 
 import Choices from 'choices.js';
@@ -150,7 +172,6 @@ $(function () {
         });
     }
 });
-
 
 // document.addEventListener('DOMContentLoaded', function () {
 //     const dropdowns = document.querySelectorAll('.dropdown');

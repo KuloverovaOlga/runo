@@ -9,6 +9,7 @@
     <body>
         <div class="wrapper">
             <include src="./components/header.html"></include>
+            <include src="./components/popup.html"></include>
             <main class="main">
                 <section class="hero">
                     <div class="container hero__container">
@@ -110,7 +111,90 @@
 
                 <include src="./components/advantages.html"></include>
 
-                <!-- <include src="./components/stages.html"></include> -->
+                <section class="stages">
+                    <div class="container">
+                        <div class="stages__inner">
+                            <div class="stages__header-box">
+                                <p class="stages__title title-h1">Этапы работ</p>
+                            </div>
+
+                            <div class="stages__swiper swiper">
+                                <div class="stages__swiper-wrapper swiper-wrapper">
+                                    <div class="stages__swiper-slide swiper-slide">
+                                        <div class="stages__swiper-slide-inner-img">
+                                            <div class="stages__swiper-slide-img-box">
+                                                <img src="./assets/images/stages1.webp" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="stages__swiper-slide swiper-slide">
+                                        <div class="stages__swiper-slide-wrapper">
+                                            <div class="stages__swiper-slide-inner">
+                                                <p class="stages__swiper-slide-desk title-h5">
+                                                    Вы звоните по телефону
+                                                    <br />
+                                                    <a class="stages__swiper-slide-link" href="tel:+790000000000">+7 (900) 000-00-00</a>
+                                                    или оставляете заявку через сайт на <a class="stages__swiper-slide-link" href="#">Бесплатный вызов замерщика</a>
+                                                </p>
+                                                <p class="stages__swiper-slide-title title-h2">
+                                                    Заявка <br />
+                                                    на сайте
+                                                </p>
+                                            </div>
+                                            <p class="stages__swiper-slide-num title-h2">01</p>
+                                        </div>
+                                    </div>
+                                    <div class="stages__swiper-slide swiper-slide">
+                                        <div class="stages__swiper-slide-wrapper">
+                                            <div class="stages__swiper-slide-inner">
+                                                <p class="stages__swiper-slide-desk title-h5">
+                                                    Замерщик приедет к вам на замер в оговоренное время с полным каталогом фактур и оттенков и сделает расчёт стоимости
+                                                    бесплатно прямо при вас
+                                                </p>
+                                                <p class="stages__swiper-slide-title title-h2">Замер <br />и расчет стоимости</p>
+                                            </div>
+                                            <p class="stages__swiper-slide-num title-h2">02</p>
+                                        </div>
+                                    </div>
+                                    <div class="stages__swiper-slide swiper-slide">
+                                        <div class="stages__swiper-slide-wrapper">
+                                            <div class="stages__swiper-slide-inner">
+                                                <p class="stages__swiper-slide-desk title-h5">
+                                                    Заключаем с вами договор, чтобы вы были уверенны в качестве нашей работы. Также вам будет предоставлена гарантия на
+                                                    потолок и монтажные работы
+                                                </p>
+                                                <p class="stages__swiper-slide-title title-h2">Заключение <br />договора</p>
+                                            </div>
+                                            <p class="stages__swiper-slide-num title-h2">03</p>
+                                        </div>
+                                    </div>
+                                    <div class="stages__swiper-slide swiper-slide">
+                                        <div class="stages__swiper-slide-wrapper">
+                                            <div class="stages__swiper-slide-inner">
+                                                <ul class="stages__swiper-slide-list">
+                                                    <li class="stages__swiper-slide-item title-h5">Выполним быстрый монтаж</li>
+                                                    <li class="stages__swiper-slide-item title-h5">Установим встроенные светильники и шумоизоляцию</li>
+                                                    <li class="stages__swiper-slide-item title-h5">Скроем кабели, провода и другую коммуникацию</li>
+                                                    <li class="stages__swiper-slide-item title-h5">Оставим после себя чистоту</li>
+                                                </ul>
+                                                <p class="stages__swiper-slide-title title-h2">Профессиональный <br />монтаж</p>
+                                            </div>
+                                            <p class="stages__swiper-slide-num title-h2">04</p>
+                                        </div>
+                                    </div>
+                                    <div class="stages__swiper-slide swiper-slide">
+                                        <div class="stages__swiper-slide-inner-img">
+                                            <div class="stages__swiper-slide-img-box">
+                                                <img src="./assets/images/stages2.webp" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="stages__swiper-scrollbar swiper-scrollbar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 <section class="exclusivity">
                     <div class="container">
@@ -212,7 +296,7 @@
                     </div>
                 </section>
 
-                <!-- <include src="./components/calculator.html"></include> -->
+                <include src="./components/calculator.html"></include>
 
                 <section class="prices">
                     <div class="container">
@@ -787,7 +871,7 @@
 
                 <include src="./components/reviews.html"></include>
 
-                <!-- <include src="./components/application.html"></include> -->
+                <include src="./components/application.html"></include>
 
                 <section class="info">
                     <div class="container">
@@ -808,53 +892,50 @@
                                     </p>
                                     <div class="info__link-box">
                                         <a href="#" class="info__link link info__link--show">
-                                      
-                                            <span class="info__link-text title-h4 ">Посмотреть еще</span>
-                              
-                                   
-                                        <div class="info__link-svg-box">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-                                                <path
-                                                    d="M14.9297 5.86133L20.9997 11.9313L14.9297 18.0013"
-                                                    stroke-width="1.5"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                />
-                                                <path
-                                                    d="M20.9297 11.9307L4.09969 11.9307"
-                                                    stroke-width="1.5"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                />
-                                            </svg>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="info__link link info__link--hidden">
-                                            <span class="info__link-text title-h4 ">Свернуть</span>
-                                   
-                                        <div class="info__link-svg-box">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-                                                <path
-                                                    d="M14.9297 5.86133L20.9997 11.9313L14.9297 18.0013"
-                                                    stroke-width="1.5"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                />
-                                                <path
-                                                    d="M20.9297 11.9307L4.09969 11.9307"
-                                                    stroke-width="1.5"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                />
-                                            </svg>
-                                        </div>
-                                    </a>
+                                            <span class="info__link-text title-h4">Посмотреть еще</span>
+
+                                            <div class="info__link-svg-box">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                                    <path
+                                                        d="M14.9297 5.86133L20.9997 11.9313L14.9297 18.0013"
+                                                        stroke-width="1.5"
+                                                        stroke-miterlimit="10"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    />
+                                                    <path
+                                                        d="M20.9297 11.9307L4.09969 11.9307"
+                                                        stroke-width="1.5"
+                                                        stroke-miterlimit="10"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    />
+                                                </svg>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="info__link link info__link--hidden">
+                                            <span class="info__link-text title-h4">Свернуть</span>
+
+                                            <div class="info__link-svg-box">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                                    <path
+                                                        d="M14.9297 5.86133L20.9997 11.9313L14.9297 18.0013"
+                                                        stroke-width="1.5"
+                                                        stroke-miterlimit="10"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    />
+                                                    <path
+                                                        d="M20.9297 11.9307L4.09969 11.9307"
+                                                        stroke-width="1.5"
+                                                        stroke-miterlimit="10"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    />
+                                                </svg>
+                                            </div>
+                                        </a>
                                     </div>
-                                
                                 </div>
                             </div>
                             <div class="info__img-box">
