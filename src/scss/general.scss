@@ -21,6 +21,17 @@ body {
     background-color: $bg;
 }
 
+body {
+    // scroll is blocked
+    .lock & {
+        overflow: hidden;
+        touch-action: none;
+    }
+    // site is loaded
+    .loaded & {
+    }
+}
+
 main {
     flex-grow: 1;
     position: relative;
@@ -108,7 +119,7 @@ main {
     gap: 4rem;
     & .swiper-slide {
         height: calc((100% - 30px) / 2) !important;
-        width: 54.6rem !important;
+        // width: 54.6rem !important;
     }
 }
 .swiper-scrollbar.swiper-scrollbar-horizontal {
@@ -173,3 +184,136 @@ main {
         }
     }
 }
+
+.input-group {
+    position: relative;
+}
+.input-group input,
+.input-group textarea {
+    outline: 1px solid transparent;
+    transition: outline 0.3s;
+}
+
+._form-error input,
+._form-error textarea {
+    outline: 1px solid #c22f2f;
+}
+
+.text-change__form-success {
+    display: none;
+}
+
+.error-span {
+    position: absolute;
+    bottom: -2.5rem;
+    left: 0;
+    color: #c22f2f;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    &.active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    @media (max-width: 48em) {
+        bottom: -3rem;
+    }
+}
+
+.choices.select-choices {
+    width: 100%;
+    padding: 1.7rem 1.6rem;
+    background-color: $grey;
+    border-radius: 2rem;
+    cursor: auto;
+    margin-bottom: 0;
+  
+    .choices__list--dropdown {
+      padding: 1.6rem;
+      bottom: 0.8rem;
+      background-color: $grey;
+      left: 0;
+      margin-top: 1rem;
+      box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.05);
+      .choices__item {
+        border-bottom: 0.1rem solid rgba(161, 172, 185, 0.20);
+        padding: 1.7rem 1.6rem;
+        font-family: 'SuisseIntl';
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 146%;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  
+    .choices__heading {
+      border-bottom: 0.1rem solid rgba(161, 172, 185, 0.20);
+      font-family: 'SuisseIntl';
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 146%;
+    }
+  
+    &[data-type*="select-one"]::after {
+      width: 1.2rem;
+      height: 1.6rem;
+      margin: 0;
+      right: 1.6rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: url('./assets/images/icons/select-arr.svg') no-repeat center center;
+      background-size: contain;
+      border: 0;
+    }
+  
+    .choices__inner {
+      border: 0;
+      padding: 0;
+      min-height: 100%;
+
+      .choices__list--single {
+        padding: 0;
+      }
+      .choices__placeholder {
+        opacity: 1;
+      }
+  
+      .choices__item {
+        min-height: 0;
+        width: 90%;
+        font-family: 'SuisseIntl';
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 146%;
+      }
+    }
+  
+    &.is-open {
+      .choices__list {
+        height: fit-content;
+        border: 0;
+        gap: 2rem;
+      }
+      .choices__inner {
+        & .choices__placeholder {
+          opacity: 1;
+        }
+      }
+      #choices--select-filter-item-choice-1 {
+        display: none;
+      }
+      .is-highlighted {
+
+      }
+  
+      &[data-type*="select-one"]::after {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+  }

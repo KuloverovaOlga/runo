@@ -53,6 +53,8 @@
 
 /*! ../css-loader/dist/runtime/sourceMaps.js */
 
+/*! ../modules.js */
+
 /*! ../node_modules/css-loader/dist/runtime/api.js */
 
 /*! ../node_modules/css-loader/dist/runtime/getUrl.js */
@@ -75,6 +77,8 @@
 
 /*! ../shared/utils.mjs */
 
+/*! ../utils/constants */
+
 /*! ./assets/fonts/SuisseIntl-Book.eot */
 
 /*! ./assets/fonts/SuisseIntl-Book.woff */
@@ -93,11 +97,17 @@
 
 /*! ./assets/fonts/SuisseIntl-Regular.woff2 */
 
+/*! ./assets/images/calculator-mask.webp */
+
+/*! ./assets/images/calculator.webp */
+
 /*! ./assets/images/exclusivity-mask.webp */
 
 /*! ./assets/images/hero-mask.webp */
 
 /*! ./assets/images/icons/arrow-blue.svg */
+
+/*! ./assets/images/icons/calculator.svg */
 
 /*! ./assets/images/icons/hero-mask.svg */
 
@@ -105,9 +115,19 @@
 
 /*! ./assets/images/icons/reviews-mask.svg */
 
+/*! ./assets/images/icons/select-arr.svg */
+
+/*! ./assets/images/icons/stages-mask-big.svg */
+
+/*! ./assets/images/icons/stages-mask-min.svg */
+
 /*! ./assets/images/info-mask.webp */
 
 /*! ./assets/images/price-mask.webp */
+
+/*! ./form */
+
+/*! ./formModal */
 
 /*! ./index.scss */
 
@@ -161,7 +181,11 @@
 
 /*! ./modules/zoom.mjs */
 
+/*! ./popup */
+
 /*! ./questionsMain */
+
+/*! ./select */
 
 /*! ./shared/swiper-core.mjs */
 
@@ -209,13 +233,33 @@
   !*** ./src/index.scss ***!
   \************************/
 
+/*!***************************!*\
+  !*** ./src/js/modules.js ***!
+  \***************************/
+
+/*!***********************************!*\
+  !*** ./src/js/components/form.js ***!
+  \***********************************/
+
 /*!***********************************!*\
   !*** ./src/js/utils/constants.js ***!
   \***********************************/
 
+/*!************************************!*\
+  !*** ./src/js/components/popup.js ***!
+  \************************************/
+
+/*!*************************************!*\
+  !*** ./src/js/components/select.js ***!
+  \*************************************/
+
 /*!***************************************!*\
   !*** ./src/js/components/showMore.js ***!
   \***************************************/
+
+/*!****************************************!*\
+  !*** ./src/js/components/formModal.js ***!
+  \****************************************/
 
 /*!******************************************!*\
   !*** ./src/assets/images/hero-mask.webp ***!
@@ -224,6 +268,10 @@
 /*!******************************************!*\
   !*** ./src/assets/images/info-mask.webp ***!
   \******************************************/
+
+/*!*******************************************!*\
+  !*** ./src/assets/images/calculator.webp ***!
+  \*******************************************/
 
 /*!*******************************************!*\
   !*** ./src/assets/images/price-mask.webp ***!
@@ -290,7 +338,19 @@
   \************************************************/
 
 /*!************************************************!*\
+  !*** ./src/assets/images/calculator-mask.webp ***!
+  \************************************************/
+
+/*!************************************************!*\
   !*** ./src/assets/images/icons/arrow-blue.svg ***!
+  \************************************************/
+
+/*!************************************************!*\
+  !*** ./src/assets/images/icons/calculator.svg ***!
+  \************************************************/
+
+/*!************************************************!*\
+  !*** ./src/assets/images/icons/select-arr.svg ***!
   \************************************************/
 
 /*!************************************************!*\
@@ -411,6 +471,14 @@
 
 /*!*****************************************************!*\
   !*** ./node_modules/swiper/modules/effect-flip.mjs ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./src/assets/images/icons/stages-mask-big.svg ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./src/assets/images/icons/stages-mask-min.svg ***!
   \*****************************************************/
 
 /*!******************************************************!*\
