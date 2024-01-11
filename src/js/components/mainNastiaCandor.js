@@ -1,4 +1,5 @@
-import {catalogSwiper, productBannerSwiper, benefitsSwiper} from './swiper/swipers';
+window.$ = window.jQuery = require('jquery');
+import {catalogSwiper, productBannerSwiper, benefitsSwiper, ourWorksTabSwiper} from './swiper/swipers';
 
 document.addEventListener('DOMContentLoaded', () => {
     try {
@@ -10,26 +11,75 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
         benefitsSwiper();
     } catch {}
+    try {
+        ourWorksTabSwiper();
+    } catch {}
 
 });
 
-//tabs//
+//---tabs----------------------------------------------//
 
-let currTub;
-document.querySelectorAll('.catalog__tab-item').forEach((tab) => {
-  if (tab.classList.contains('_active')) {
-    currTub = tab;
-  };
-  tab.addEventListener('click', () => {
-    const id = tab.getAttribute('data-tab');
+// CATALOG tabs
+$('.catalog__tab-item').on('click', function() {
+  let id = $(this).attr('data-tab');
+  let content = $('.catalog__display[data-tab="'+ id +'"]');
+  
+  $('.catalog__tab-item._active').removeClass('_active');
+  $(this).addClass('_active');
+  
+  $('.catalog__display').removeClass('active');
+  content.addClass('active');
+});
 
-    const contentList = Array.from(document.querySelectorAll('.catalog__display'));
-    const content = contentList.filter((item) => item.getAttribute('data-tab') === id);
-    document.querySelector('.catalog__display.active').classList.remove('active');
-    content[0].classList.add('active');
-
-    currTub.classList.remove('_active');
-    tab.classList.add('_active');
-    currTub = tab;
+// OUR_WORKS tabs
+$('.our-works__tab-item').on('click', function() {
+  let id = $(this).attr('data-tab');
+  let content = $('.our-works__display[data-tab="'+ id +'"]');
+  
+  $('.our-works__tab-item._active').removeClass('_active');
+  $(this).addClass('_active');
+  
+  $('.our-works__display').removeClass('active');
+  content.addClass('active');
+});
+window.$ = window.jQuery = require('jquery');
+$(document).ready(function() {
+    let maxVisibleSlides = 6;
+    let incrementSlides = 2;
+    
+    function setupSlides(activeTab) {
+        let currentSlideItems = $(`.our-works__display[data-tab='${activeTab}'] .our-works__item`);
+        
+        // Показываем начальные слайды
+        currentSlideItems.hide();
+        currentSlideItems.slice(0, maxVisibleSlides).show();
+        
+        // Если число слайдов меньше или равно maxVisibleSlides, скрываем кнопку
+        if (currentSlideItems.length <= maxVisibleSlides) {
+            $('.our-works__more-btn').hide();
+        } else {
+            $('.our-works__more-btn').show();
+        }
+    
+        // Обновляем обработчик событий
+        $('.our-works__more-btn').off('click').on('click', function (e) {
+            e.preventDefault();
+        
+            $(`.our-works__display[data-tab='${activeTab}'] .our-works__item:hidden`).slice(0, incrementSlides).slideDown();
+        
+            if ($(`.our-works__display[data-tab='${activeTab}'] .our-works__item:hidden`).length == 0) {
+                $('.our-works__more-btn').fadeOut('slow');
+            }
+        });
+    }
+    
+    // Первоначальная настройка слайдов
+    setupSlides($('.our-works__tab-item._active').data('tab'));
+    
+    // Ваш обработчик переключения вкладок
+    $('.our-works__tab-item').on('click', function() {
+        
+        let activeTab = $('.our-works__tab-item._active').data('tab');
+        setupSlides(activeTab);
+    });
   });
-});

@@ -75,4 +75,28 @@ const benefitsSwiper = () => {
   });
 }
 
-export {catalogSwiper, productBannerSwiper, benefitsSwiper};
+// OUR-WORKS section
+const ourWorksTabSwiper = () => {
+  const sliderThumbs = new Swiper('.our-works__tab-swiper', {
+    slidesPerView: 'auto',
+    watchOverflow: true,
+    spaceBetween: rem(2),
+    speed: 1000,
+    navigation: {
+      nextEl: '.our-works__tab-btn-next',
+      prevEl: '.our-works__tab-btn-prev',
+    },
+    breakpoints: {
+      769: {
+        slidesPerView: 'auto',
+        spaceBetween: rem(2),
+      },
+      210: {
+        slidesPerView: 'auto',
+        spaceBetween: rem(4),
+      }
+    }
+  });
+}
+
+export {catalogSwiper, productBannerSwiper, benefitsSwiper, ourWorksTabSwiper};
