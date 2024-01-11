@@ -7,7 +7,7 @@
           <form data-popup-message="#popup__success" data-dev action="#"  class="application__form">
             <div class="application__input-group input-group popup__label--required">
               <div class="application__form-input-wrapper form__input-wrapper">
-                  <input class="application__input input--name title-h5" 
+                  <input class="application__input input--name title-h5 " 
                   type="text"  placeholder="Имя"   
                   data-validate
                   data-required
@@ -18,8 +18,8 @@
           </div>
             <div class="application__input-group input-group popup__label--required">
               <div class="application__form-input-wrapper form__input-wrapper">
-                  <input class="application__input input--tel title-h5" 
-                  type="text"  placeholder="+7 (9__) ___ __ __"  
+                  <input class="application__input input--tel title-h5 phone-mask" 
+                  type="text"  placeholder="+7 (___) ___ __ __"  
                   data-validate
                   data-required="tel"
                   autocomplete="off"
@@ -38,7 +38,7 @@
             <div class="application__content-contacts-wrapper">
               <a class="application__content-box title-h3" href="tel:+79000000000">
                 <div class="application__content-svg-box">
-          
+          <img src="./assets/images/icons/tel.svg" alt="">
                 </div>
                 + 7 (900) 000-00-00
               </a>
@@ -46,25 +46,31 @@
             </div>
             <a class="application__content-box title-h3" href="mailto:email@mail.ru">
               <div class="application__content-svg-box">
-          
+                <img src="./assets/images/icons/mail.svg" alt="">
               </div>
               email@mail.ru
             </a>
-            <a class="application__content-box title-h3" href="#">
+            <div class="application__content-box title-h3" >
               <div class="application__content-svg-box">
-          
+                <img src="./assets/images/icons/adress.svg" alt="">
               </div>
               6689078, г. Москва, ул. Московская, д. 1, офис 204
-            </a>
+            </div>
           </div>
           <div class="application__content-socials">
             <div class="application__content-title title-h2">Или напишите нам:</div>
             <div class="application__content-socials-links">
               <a class="application__content-socials-link" href="#">
-              
+                <div class="application__content-socials-link-img-box">
+                  <img src="./assets/images/icons/watsapp.svg" alt="">
+                </div>
+
+             
               </a>
               <a class="application__content-socials-link" href="#">
-    
+                <div class="application__content-socials-link-img-box">
+                  <img src="./assets/images/icons/telegram.svg" alt="">
+                </div>
               </a>
             </div>
           </div>

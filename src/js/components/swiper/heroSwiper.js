@@ -14,22 +14,16 @@ const heroSwiper = () => {
           nextEl: '.hero__swiper-button-next',
           prevEl: '.hero__swiper-button-prev',
         },
-     
+        scrollbar: {
+          el: '.hero__swiper-scrollbar',
+      },
         speed: 1000,
         breakpoints: {
           769: {
             slidesPerView: 1,
             spaceBetween: rem(0),
           },
-          210: {
-            slidesPerView: 1,
-            spaceBetween: rem(1),
-            pagination: {
-              el: '.banner-progress',
-              type: 'bullets',
-              clickable: true,
-            },
-          }
+          
         }
       });
 

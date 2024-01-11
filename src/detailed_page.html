@@ -4,12 +4,13 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
         <title>Детальная страница</title>
     </head>
     <body>
         <div class="wrapper">
             <include src="./components/header.html"></include>
+            <include src="./components/popup.html"></include>
             <main class="main">
                 <include src="./components/calculator.html"></include>
 
@@ -19,11 +20,57 @@
                         <div class="stages__inner">
                             <div class="stages__header-box">
                                 <p class="stages__title title-h1">Этапы работ</p>
+                                <div class="stages__swiper-button-box">
+                                    <div class="stages__swiper-button-prev button-swiper">
+                                        <div class="button-swiper__svg-box">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M9.57031 18.0703L3.50031 12.0003L9.57031 5.93031"
+                                                    stroke="white"
+                                                    stroke-width="1.5"
+                                                    stroke-miterlimit="10"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                                <path
+                                                    d="M20.5 12.0002L3.67 12.0002"
+                                                    stroke="white"
+                                                    stroke-width="1.5"
+                                                    stroke-miterlimit="10"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="stages__swiper-button-next button-swiper">
+                                        <div class="button-swiper__svg-box">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M14.9297 5.8606L20.9997 11.9306L14.9297 18.0006"
+                                                    stroke="white"
+                                                    stroke-width="1.5"
+                                                    stroke-miterlimit="10"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                                <path
+                                                    d="M20.9297 11.9299L4.09969 11.9299"
+                                                    stroke="white"
+                                                    stroke-width="1.5"
+                                                    stroke-miterlimit="10"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="stages__swiper swiper">
                                 <div class="stages__swiper-wrapper swiper-wrapper">
-                                    <div class="stages__swiper-slide swiper-slide">
+                                    <div class="stages__swiper-slide stages__swiper-slide-img swiper-slide">
                                         <div class="stages__swiper-slide-inner-img">
                                             <div class="stages__swiper-slide-img-box">
                                                 <img src="./assets/images/stages1.webp" alt="" />
@@ -85,7 +132,7 @@
                                             <p class="stages__swiper-slide-num title-h2">04</p>
                                         </div>
                                     </div>
-                                    <div class="stages__swiper-slide swiper-slide">
+                                    <div class="stages__swiper-slide stages__swiper-slide-img swiper-slide">
                                         <div class="stages__swiper-slide-inner-img">
                                             <div class="stages__swiper-slide-img-box">
                                                 <img src="./assets/images/stages2.webp" alt="" />

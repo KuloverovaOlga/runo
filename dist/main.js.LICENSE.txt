@@ -103,7 +103,17 @@
 
 /*! ./assets/images/exclusivity-mask.webp */
 
+/*! ./assets/images/hero-mask-mob.webp */
+
 /*! ./assets/images/hero-mask.webp */
+
+/*! ./assets/images/icons/application-bg.svg */
+
+/*! ./assets/images/icons/application-inner-mask.svg */
+
+/*! ./assets/images/icons/application-inner-mask2.svg */
+
+/*! ./assets/images/icons/application-mask.svg */
 
 /*! ./assets/images/icons/arrow-blue.svg */
 
@@ -111,7 +121,7 @@
 
 /*! ./assets/images/icons/hero-mask.svg */
 
-/*! ./assets/images/icons/prices-mask.svg */
+/*! ./assets/images/icons/reviews-mask-mob.svg */
 
 /*! ./assets/images/icons/reviews-mask.svg */
 
@@ -120,6 +130,8 @@
 /*! ./assets/images/icons/stages-mask-big.svg */
 
 /*! ./assets/images/icons/stages-mask-min.svg */
+
+/*! ./assets/images/icons/stages-mask-mob.svg */
 
 /*! ./assets/images/info-mask.webp */
 
@@ -309,6 +321,10 @@
   !*** ./src/assets/fonts/SuisseIntl-Book.eot ***!
   \**********************************************/
 
+/*!**********************************************!*\
+  !*** ./src/assets/images/hero-mask-mob.webp ***!
+  \**********************************************/
+
 /*!***********************************************!*\
   !*** ./node_modules/swiper/swiper-bundle.css ***!
   \***********************************************/
@@ -375,10 +391,6 @@
 
 /*!*************************************************!*\
   !*** ./src/assets/images/exclusivity-mask.webp ***!
-  \*************************************************/
-
-/*!*************************************************!*\
-  !*** ./src/assets/images/icons/prices-mask.svg ***!
   \*************************************************/
 
 /*!**************************************************!*\
@@ -457,6 +469,10 @@
   !*** ./node_modules/swiper/shared/swiper-core.mjs ***!
   \****************************************************/
 
+/*!****************************************************!*\
+  !*** ./src/assets/images/icons/application-bg.svg ***!
+  \****************************************************/
+
 /*!*****************************************************!*\
   !*** ./node_modules/css-loader/dist/runtime/api.js ***!
   \*****************************************************/
@@ -481,6 +497,10 @@
   !*** ./src/assets/images/icons/stages-mask-min.svg ***!
   \*****************************************************/
 
+/*!*****************************************************!*\
+  !*** ./src/assets/images/icons/stages-mask-mob.svg ***!
+  \*****************************************************/
+
 /*!******************************************************!*\
   !*** ./node_modules/swiper/modules/effect-cards.mjs ***!
   \******************************************************/
@@ -495,6 +515,14 @@
 
 /*!******************************************************!*\
   !*** ./node_modules/swiper/shared/effect-target.mjs ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./src/assets/images/icons/application-mask.svg ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./src/assets/images/icons/reviews-mask-mob.svg ***!
   \******************************************************/
 
 /*!******************************************************!*\
@@ -536,6 +564,14 @@
 /*!************************************************************!*\
   !*** ./node_modules/swiper/shared/classes-to-selector.mjs ***!
   \************************************************************/
+
+/*!************************************************************!*\
+  !*** ./src/assets/images/icons/application-inner-mask.svg ***!
+  \************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./src/assets/images/icons/application-inner-mask2.svg ***!
+  \*************************************************************/
 
 /*!***************************************************************!*\
   !*** ./node_modules/style-loader/dist/runtime/styleDomAPI.js ***!

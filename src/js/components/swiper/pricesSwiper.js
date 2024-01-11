@@ -4,13 +4,22 @@ import { rem } from "../../utils/constants";
 
 const pricesSwiper = () => {
     const swiper = new Swiper(".prices__swiper", {
-        slidesPerView: '3',
-        spaceBetween: 40,
-  
+        slidesPerView: 1,
+        spaceBetween: 20,
+        scrollbar: {
+          el: ".prices__swiper-scrollbar",
+        },
           navigation: {
             nextEl: '.prices__swiper-button-next',
             prevEl: '.prices__swiper-button-prev',
           },
+
+          breakpoints: {
+            769: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            },
+        },
       });
 }
 

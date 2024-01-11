@@ -102,9 +102,16 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <button class="hero__button button title-h4" type="button">Оставить заявку</button>
+                                <div class="hero__swiper-scrollbar swiper-scrollbar"></div>
+                            </div>
+<div class="hero__button-box">
+    <button class="hero__button button title-h4" type="button">Оставить заявку</button>
+    <button class="hero__button hero__button--hidden button-transparent title-h4" type="button">Контакты</button>
+</div>
+                          
+
+                            
                         </div>
                     </div>
                 </section>
@@ -116,11 +123,59 @@
                         <div class="stages__inner">
                             <div class="stages__header-box">
                                 <p class="stages__title title-h1">Этапы работ</p>
+
+                                <div class="stages__swiper-button-box">
+                                    <div class="stages__swiper-button-prev button-swiper">
+                                        <div class="button-swiper__svg-box">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M9.57031 18.0703L3.50031 12.0003L9.57031 5.93031"
+                                                    stroke="white"
+                                                    stroke-width="1.5"
+                                                    stroke-miterlimit="10"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                                <path
+                                                    d="M20.5 12.0002L3.67 12.0002"
+                                                    stroke="white"
+                                                    stroke-width="1.5"
+                                                    stroke-miterlimit="10"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="stages__swiper-button-next button-swiper">
+                                        <div class="button-swiper__svg-box">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M14.9297 5.8606L20.9997 11.9306L14.9297 18.0006"
+                                                    stroke="white"
+                                                    stroke-width="1.5"
+                                                    stroke-miterlimit="10"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                                <path
+                                                    d="M20.9297 11.9299L4.09969 11.9299"
+                                                    stroke="white"
+                                                    stroke-width="1.5"
+                                                    stroke-miterlimit="10"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
 
                             <div class="stages__swiper swiper">
                                 <div class="stages__swiper-wrapper swiper-wrapper">
-                                    <div class="stages__swiper-slide swiper-slide">
+                                    <div class="stages__swiper-slide stages__swiper-slide-img swiper-slide">
                                         <div class="stages__swiper-slide-inner-img">
                                             <div class="stages__swiper-slide-img-box">
                                                 <img src="./assets/images/stages1.webp" alt="" />
@@ -182,7 +237,7 @@
                                             <p class="stages__swiper-slide-num title-h2">04</p>
                                         </div>
                                     </div>
-                                    <div class="stages__swiper-slide swiper-slide">
+                                    <div class="stages__swiper-slide stages__swiper-slide-img swiper-slide">
                                         <div class="stages__swiper-slide-inner-img">
                                             <div class="stages__swiper-slide-img-box">
                                                 <img src="./assets/images/stages2.webp" alt="" />
@@ -339,24 +394,62 @@
                                                     <p class="prices__swiper-slide-price price">390 <span class="title-h2">₽/м2</span></p>
                                                 </div>
                                             </div>
-                                            <div class="prices__swiper-slide-link">
-                                                <div class="prices__swiper-slide-link-svg-box">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none">
-                                                        <path
-                                                            d="M14.4297 10.9905L23.014 10.9905L23.014 19.5748"
-                                                            stroke-width="1.5"
-                                                            stroke-miterlimit="10"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        />
-                                                        <path
-                                                            d="M10.9922 23.0115L22.8928 11.1109"
-                                                            stroke-width="1.5"
-                                                            stroke-miterlimit="10"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        />
-                                                    </svg>
+                                            <div class="prices__swiper-slide-link-wrapper">
+                                                <div class="prices__swiper-slide-link">
+                                                    <div class="prices__swiper-slide-link-svg-box">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none">
+                                                            <path
+                                                                d="M14.4297 10.9905L23.014 10.9905L23.014 19.5748"
+                                                                stroke-width="1.5"
+                                                                stroke-miterlimit="10"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            />
+                                                            <path
+                                                                d="M10.9922 23.0115L22.8928 11.1109"
+                                                                stroke-width="1.5"
+                                                                stroke-miterlimit="10"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                          
+                                        </a>
+                                    </div>
+                                    <div class="prices__swiper-slide swiper-slide">
+                                        <a href="#" class="prices__swiper-slide-wrapper">
+                                            <div class="prices__swiper-slide-inner">
+                                                <div class="prices__swiper-slide-img-box">
+                                                    <img src="./assets/images/price1.webp" alt="" />
+                                                </div>
+                                                <div class="prices__swiper-slide-info-box">
+                                                    <p class="prices__swiper-slide-title title-h3">Матовый белый «MSD Premium»</p>
+                                                    <p class="prices__swiper-slide-price price">390 <span class="title-h2">₽/м2</span></p>
+                                                </div>
+                                            </div>
+                                             <div class="prices__swiper-slide-link-wrapper">
+                                                <div class="prices__swiper-slide-link">
+                                                    <div class="prices__swiper-slide-link-svg-box">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none">
+                                                            <path
+                                                                d="M14.4297 10.9905L23.014 10.9905L23.014 19.5748"
+                                                                stroke-width="1.5"
+                                                                stroke-miterlimit="10"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            />
+                                                            <path
+                                                                d="M10.9922 23.0115L22.8928 11.1109"
+                                                                stroke-width="1.5"
+                                                                stroke-miterlimit="10"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            />
+                                                        </svg>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </a>
@@ -372,24 +465,26 @@
                                                     <p class="prices__swiper-slide-price price">390 <span class="title-h2">₽/м2</span></p>
                                                 </div>
                                             </div>
-                                            <div class="prices__swiper-slide-link">
-                                                <div class="prices__swiper-slide-link-svg-box">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none">
-                                                        <path
-                                                            d="M14.4297 10.9905L23.014 10.9905L23.014 19.5748"
-                                                            stroke-width="1.5"
-                                                            stroke-miterlimit="10"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        />
-                                                        <path
-                                                            d="M10.9922 23.0115L22.8928 11.1109"
-                                                            stroke-width="1.5"
-                                                            stroke-miterlimit="10"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        />
-                                                    </svg>
+                                             <div class="prices__swiper-slide-link-wrapper">
+                                                <div class="prices__swiper-slide-link">
+                                                    <div class="prices__swiper-slide-link-svg-box">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none">
+                                                            <path
+                                                                d="M14.4297 10.9905L23.014 10.9905L23.014 19.5748"
+                                                                stroke-width="1.5"
+                                                                stroke-miterlimit="10"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            />
+                                                            <path
+                                                                d="M10.9922 23.0115L22.8928 11.1109"
+                                                                stroke-width="1.5"
+                                                                stroke-miterlimit="10"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            />
+                                                        </svg>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </a>
@@ -405,24 +500,26 @@
                                                     <p class="prices__swiper-slide-price price">390 <span class="title-h2">₽/м2</span></p>
                                                 </div>
                                             </div>
-                                            <div class="prices__swiper-slide-link">
-                                                <div class="prices__swiper-slide-link-svg-box">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none">
-                                                        <path
-                                                            d="M14.4297 10.9905L23.014 10.9905L23.014 19.5748"
-                                                            stroke-width="1.5"
-                                                            stroke-miterlimit="10"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        />
-                                                        <path
-                                                            d="M10.9922 23.0115L22.8928 11.1109"
-                                                            stroke-width="1.5"
-                                                            stroke-miterlimit="10"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        />
-                                                    </svg>
+                                             <div class="prices__swiper-slide-link-wrapper">
+                                                <div class="prices__swiper-slide-link">
+                                                    <div class="prices__swiper-slide-link-svg-box">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none">
+                                                            <path
+                                                                d="M14.4297 10.9905L23.014 10.9905L23.014 19.5748"
+                                                                stroke-width="1.5"
+                                                                stroke-miterlimit="10"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            />
+                                                            <path
+                                                                d="M10.9922 23.0115L22.8928 11.1109"
+                                                                stroke-width="1.5"
+                                                                stroke-miterlimit="10"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            />
+                                                        </svg>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </a>
@@ -438,24 +535,26 @@
                                                     <p class="prices__swiper-slide-price price">390 <span class="title-h2">₽/м2</span></p>
                                                 </div>
                                             </div>
-                                            <div class="prices__swiper-slide-link">
-                                                <div class="prices__swiper-slide-link-svg-box">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none">
-                                                        <path
-                                                            d="M14.4297 10.9905L23.014 10.9905L23.014 19.5748"
-                                                            stroke-width="1.5"
-                                                            stroke-miterlimit="10"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        />
-                                                        <path
-                                                            d="M10.9922 23.0115L22.8928 11.1109"
-                                                            stroke-width="1.5"
-                                                            stroke-miterlimit="10"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        />
-                                                    </svg>
+                                             <div class="prices__swiper-slide-link-wrapper">
+                                                <div class="prices__swiper-slide-link">
+                                                    <div class="prices__swiper-slide-link-svg-box">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none">
+                                                            <path
+                                                                d="M14.4297 10.9905L23.014 10.9905L23.014 19.5748"
+                                                                stroke-width="1.5"
+                                                                stroke-miterlimit="10"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            />
+                                                            <path
+                                                                d="M10.9922 23.0115L22.8928 11.1109"
+                                                                stroke-width="1.5"
+                                                                stroke-miterlimit="10"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            />
+                                                        </svg>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </a>
@@ -471,24 +570,26 @@
                                                     <p class="prices__swiper-slide-price price">390 <span class="title-h2">₽/м2</span></p>
                                                 </div>
                                             </div>
-                                            <div class="prices__swiper-slide-link">
-                                                <div class="prices__swiper-slide-link-svg-box">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none">
-                                                        <path
-                                                            d="M14.4297 10.9905L23.014 10.9905L23.014 19.5748"
-                                                            stroke-width="1.5"
-                                                            stroke-miterlimit="10"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        />
-                                                        <path
-                                                            d="M10.9922 23.0115L22.8928 11.1109"
-                                                            stroke-width="1.5"
-                                                            stroke-miterlimit="10"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        />
-                                                    </svg>
+                                             <div class="prices__swiper-slide-link-wrapper">
+                                                <div class="prices__swiper-slide-link">
+                                                    <div class="prices__swiper-slide-link-svg-box">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none">
+                                                            <path
+                                                                d="M14.4297 10.9905L23.014 10.9905L23.014 19.5748"
+                                                                stroke-width="1.5"
+                                                                stroke-miterlimit="10"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            />
+                                                            <path
+                                                                d="M10.9922 23.0115L22.8928 11.1109"
+                                                                stroke-width="1.5"
+                                                                stroke-miterlimit="10"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            />
+                                                        </svg>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </a>
@@ -504,24 +605,26 @@
                                                     <p class="prices__swiper-slide-price price">390 <span class="title-h2">₽/м2</span></p>
                                                 </div>
                                             </div>
-                                            <div class="prices__swiper-slide-link">
-                                                <div class="prices__swiper-slide-link-svg-box">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none">
-                                                        <path
-                                                            d="M14.4297 10.9905L23.014 10.9905L23.014 19.5748"
-                                                            stroke-width="1.5"
-                                                            stroke-miterlimit="10"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        />
-                                                        <path
-                                                            d="M10.9922 23.0115L22.8928 11.1109"
-                                                            stroke-width="1.5"
-                                                            stroke-miterlimit="10"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        />
-                                                    </svg>
+                                             <div class="prices__swiper-slide-link-wrapper">
+                                                <div class="prices__swiper-slide-link">
+                                                    <div class="prices__swiper-slide-link-svg-box">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none">
+                                                            <path
+                                                                d="M14.4297 10.9905L23.014 10.9905L23.014 19.5748"
+                                                                stroke-width="1.5"
+                                                                stroke-miterlimit="10"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            />
+                                                            <path
+                                                                d="M10.9922 23.0115L22.8928 11.1109"
+                                                                stroke-width="1.5"
+                                                                stroke-miterlimit="10"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            />
+                                                        </svg>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </a>
@@ -537,24 +640,26 @@
                                                     <p class="prices__swiper-slide-price price">390 <span class="title-h2">₽/м2</span></p>
                                                 </div>
                                             </div>
-                                            <div class="prices__swiper-slide-link">
-                                                <div class="prices__swiper-slide-link-svg-box">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none">
-                                                        <path
-                                                            d="M14.4297 10.9905L23.014 10.9905L23.014 19.5748"
-                                                            stroke-width="1.5"
-                                                            stroke-miterlimit="10"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        />
-                                                        <path
-                                                            d="M10.9922 23.0115L22.8928 11.1109"
-                                                            stroke-width="1.5"
-                                                            stroke-miterlimit="10"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        />
-                                                    </svg>
+                                             <div class="prices__swiper-slide-link-wrapper">
+                                                <div class="prices__swiper-slide-link">
+                                                    <div class="prices__swiper-slide-link-svg-box">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none">
+                                                            <path
+                                                                d="M14.4297 10.9905L23.014 10.9905L23.014 19.5748"
+                                                                stroke-width="1.5"
+                                                                stroke-miterlimit="10"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            />
+                                                            <path
+                                                                d="M10.9922 23.0115L22.8928 11.1109"
+                                                                stroke-width="1.5"
+                                                                stroke-miterlimit="10"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            />
+                                                        </svg>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </a>
@@ -570,62 +675,33 @@
                                                     <p class="prices__swiper-slide-price price">390 <span class="title-h2">₽/м2</span></p>
                                                 </div>
                                             </div>
-                                            <div class="prices__swiper-slide-link">
-                                                <div class="prices__swiper-slide-link-svg-box">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none">
-                                                        <path
-                                                            d="M14.4297 10.9905L23.014 10.9905L23.014 19.5748"
-                                                            stroke-width="1.5"
-                                                            stroke-miterlimit="10"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        />
-                                                        <path
-                                                            d="M10.9922 23.0115L22.8928 11.1109"
-                                                            stroke-width="1.5"
-                                                            stroke-miterlimit="10"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        />
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="prices__swiper-slide swiper-slide">
-                                        <a href="#" class="prices__swiper-slide-wrapper">
-                                            <div class="prices__swiper-slide-inner">
-                                                <div class="prices__swiper-slide-img-box">
-                                                    <img src="./assets/images/price1.webp" alt="" />
-                                                </div>
-                                                <div class="prices__swiper-slide-info-box">
-                                                    <p class="prices__swiper-slide-title title-h3">Матовый белый «MSD Premium»</p>
-                                                    <p class="prices__swiper-slide-price price">390 <span class="title-h2">₽/м2</span></p>
-                                                </div>
-                                            </div>
-                                            <div class="prices__swiper-slide-link">
-                                                <div class="prices__swiper-slide-link-svg-box">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none">
-                                                        <path
-                                                            d="M14.4297 10.9905L23.014 10.9905L23.014 19.5748"
-                                                            stroke-width="1.5"
-                                                            stroke-miterlimit="10"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        />
-                                                        <path
-                                                            d="M10.9922 23.0115L22.8928 11.1109"
-                                                            stroke-width="1.5"
-                                                            stroke-miterlimit="10"
-                                                            stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                        />
-                                                    </svg>
+                                             <div class="prices__swiper-slide-link-wrapper">
+                                                <div class="prices__swiper-slide-link">
+                                                    <div class="prices__swiper-slide-link-svg-box">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none">
+                                                            <path
+                                                                d="M14.4297 10.9905L23.014 10.9905L23.014 19.5748"
+                                                                stroke-width="1.5"
+                                                                stroke-miterlimit="10"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            />
+                                                            <path
+                                                                d="M10.9922 23.0115L22.8928 11.1109"
+                                                                stroke-width="1.5"
+                                                                stroke-miterlimit="10"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            />
+                                                        </svg>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
                                 </div>
+                                <div class="prices__swiper-scrollbar swiper-scrollbar"></div>
+
                                 <div class="prices__swiper-button-box">
                                     <div class="prices__swiper-button-prev button-swiper">
                                         <div class="button-swiper__svg-box">
@@ -880,7 +956,14 @@
                                 <p class="info__article-title title-h1">Натяжные потолки в Москве и Московской области</p>
 
                                 <div class="info__article-wrapper">
+                                    <div class="info__img-box">
+                                        <img src="./assets/images/main-info.webp" alt="" />
+                                    </div>
+
                                     <p class="info__article-wrapper-title title-h3">Натяжные потолки в Москве и Московской области</p>
+                                    
+                                 
+                                    
                                     <p class="info__article-text title-h5">
                                         Мы выполняем монтаж натяжного потолка в Москве и области. Ниже представлены разные виды полотен и типы конструкций, которые
                                         собирают наши монтажники. Применяем технологии, включающие образование декоративного зазора или создания плотного примыкания
@@ -938,9 +1021,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="info__img-box">
-                                <img src="./assets/images/main-info.webp" alt="" />
-                            </div>
+                        
                         </div>
                     </div>
                 </section>

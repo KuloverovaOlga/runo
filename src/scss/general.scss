@@ -58,6 +58,9 @@ main {
     font-style: normal;
     font-weight: 450;
     line-height: 120%;
+    @media (max-width: 48em) {
+        font-size: 6.4rem;
+    }
 }
 
 .title-h2 {
@@ -66,6 +69,11 @@ main {
     font-style: normal;
     font-weight: 500;
     line-height: auto;
+    letter-spacing: 1.28px;
+    @media (max-width: 48em) {
+        font-size: 4.8rem;
+        letter-spacing: 0.96px;
+    }
 }
 
 .title-h3 {
@@ -74,6 +82,11 @@ main {
     font-style: normal;
     font-weight: 450;
     line-height: auto;
+    letter-spacing: 0.96px;
+    @media (max-width: 48em) {
+        font-size: 4rem;
+        letter-spacing: 0.8px;
+    }
 }
 
 .title-h4 {
@@ -82,6 +95,11 @@ main {
     font-style: normal;
     font-weight: 450;
     line-height: 146%;
+    letter-spacing: 0.8px;
+    @media (max-width: 48em) {
+        font-size: 3.2rem;
+        letter-spacing: 0.64px;
+    }
 }
 
 .title-h5 {
@@ -90,6 +108,11 @@ main {
     font-style: normal;
     font-weight: 400;
     line-height: 146%;
+    letter-spacing: 0.72px;
+    @media (max-width: 48em) {
+        font-size: 2.8rem;
+        letter-spacing: 0.56px;
+    }
 }
 
 .price {
@@ -109,8 +132,70 @@ main {
     color: $white;
     transition: background-color 0.3s;
     width: fit-content;
+    text-align: center;
     &:hover {
         background-color: $hover-purple;
+    }
+    height: 6rem;
+    @media (max-width: 48em) {
+        padding: 2.6rem 4.8rem;
+        border-radius: 3.2rem;
+        height: 9.6rem;
+
+       
+    }
+}
+
+.button-transparent {
+    padding: 1.5rem 3.2rem;
+    border-radius: 2rem;
+    border: 1.2px solid $purple;
+    color: $purple;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+    height: 6rem;
+    text-align: center;
+    &:hover {
+        background-color: #d5d0ea;
+    }
+    @media (max-width: 48em) {
+        padding: 2.6rem 4.8rem;
+        border-radius: 3.2rem;
+        height: 9.6rem;
+    }
+}
+
+.link {
+    color: $purple;
+    display: flex;
+    align-items: flex-end;
+    gap: 0.6rem;
+    transition: color 0.3s;
+    &:hover {
+        color: $hover-purple;
+        & [class$='svg-box'] {
+            & svg {
+                stroke: $hover-purple;
+            }
+        }
+    }
+    & [class$='svg-box'] {
+        width: 2.4rem;
+        height: 2.4rem;
+
+        @media (max-width: 48em) {
+            width: 4.8rem;
+            height: 4.8rem;
+        }
+        & svg {
+            stroke: $purple;
+            object-fit: contain;
+            transition: stroke 0.3s;
+        }
+    }
+
+    @media (max-width: 48em) {
+        gap: 1.2rem;
     }
 }
 
@@ -135,6 +220,10 @@ main {
         height: 3px !important;
         top: -1px !important;
     }
+
+    @media (max-width: 48em) {
+        width: 100% !important;
+    }
 }
 
 .button-swiper {
@@ -156,32 +245,16 @@ main {
         & svg {
             object-fit: contain;
         }
-    }
-}
-.link {
-    color: $purple;
-    display: flex;
-    align-items: flex-end;
-    gap: 0.6rem;
-    letter-spacing: 0.8px;
-    transition: color 0.3s;
-    &:hover {
-        color: $hover-purple;
-        & [class$='svg-box'] {
-            & svg {
-                stroke: $hover-purple;
-            }
+        @media (max-width: 48em) {
+            width: 4.8rem;
+            height: 4.8rem;
         }
-        
     }
-    & [class$='svg-box'] {
-        width: 2.4rem;
-        height: 2.4rem;
-        & svg {
-            stroke: $purple;
-            object-fit: contain;
-            transition: stroke 0.3s;
-        }
+
+    @media (max-width: 48em) {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 3.2rem;
     }
 }
 
@@ -191,12 +264,16 @@ main {
 .input-group input,
 .input-group textarea {
     outline: 1px solid transparent;
-    transition: outline 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 ._form-error input,
 ._form-error textarea {
-    outline: 1px solid #c22f2f;
+    background-color: #fee7ea;
+    color: #f3566a;
+    &::placeholder {
+        color: #f3566a;
+    }
 }
 
 .text-change__form-success {
@@ -205,115 +282,148 @@ main {
 
 .error-span {
     position: absolute;
-    bottom: -2.5rem;
+    bottom: -1.5rem;
     left: 0;
-    color: #c22f2f;
+    color: #f35656;
+    line-height: normal;
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s, visibility 0.3s;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+
     &.active {
         visibility: visible;
         opacity: 1;
+        line-height: normal;
     }
 
     @media (max-width: 48em) {
         bottom: -3rem;
+        font-size: 2rem;
     }
 }
 
 .choices.select-choices {
     width: 100%;
+    height: 6rem;
     padding: 1.7rem 1.6rem;
     background-color: $grey;
     border-radius: 2rem;
     cursor: auto;
     margin-bottom: 0;
-  
+    @media (max-width: 48em) {
+        height: 9.6rem;
+        padding: 2.8rem 3.2rem;
+        border-radius: 2.4rem;
+    }
+
     .choices__list--dropdown {
-      padding: 1.6rem;
-      bottom: 0.8rem;
-      background-color: $grey;
-      left: 0;
-      margin-top: 1rem;
-      box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.05);
-      .choices__item {
-        border-bottom: 0.1rem solid rgba(161, 172, 185, 0.20);
-        padding: 1.7rem 1.6rem;
-        font-family: 'SuisseIntl';
-        font-size: 1.8rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 146%;
-        &:last-child {
-          margin-bottom: 0;
+        padding: 1.6rem;
+        bottom: 0.8rem;
+        background-color: $grey;
+        left: 0;
+        margin-top: 1rem;
+        box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.05);
+        .choices__item {
+            border-bottom: 0.1rem solid rgba(161, 172, 185, 0.2);
+            padding: 1.7rem 1.6rem;
+            font-family: 'SuisseIntl';
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 146%;
+            letter-spacing: 0.72px;
+            @media (max-width: 48em) {
+                font-size: 2.8rem;
+                letter-spacing: 0.56px;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
-      }
     }
-  
+
     .choices__heading {
-      border-bottom: 0.1rem solid rgba(161, 172, 185, 0.20);
-      font-family: 'SuisseIntl';
-      font-size: 1.8rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 146%;
-    }
-  
-    &[data-type*="select-one"]::after {
-      width: 1.2rem;
-      height: 1.6rem;
-      margin: 0;
-      right: 1.6rem;
-      top: 50%;
-      transform: translateY(-50%);
-      background: url('./assets/images/icons/select-arr.svg') no-repeat center center;
-      background-size: contain;
-      border: 0;
-    }
-  
-    .choices__inner {
-      border: 0;
-      padding: 0;
-      min-height: 100%;
-
-      .choices__list--single {
-        padding: 0;
-      }
-      .choices__placeholder {
-        opacity: 1;
-      }
-  
-      .choices__item {
-        min-height: 0;
-        width: 90%;
+        border-bottom: 0.1rem solid rgba(161, 172, 185, 0.2);
         font-family: 'SuisseIntl';
         font-size: 1.8rem;
         font-style: normal;
         font-weight: 400;
         line-height: 146%;
-      }
-    }
-  
-    &.is-open {
-      .choices__list {
-        height: fit-content;
-        border: 0;
-        gap: 2rem;
-      }
-      .choices__inner {
-        & .choices__placeholder {
-          opacity: 1;
+        letter-spacing: 0.72px;
+        @media (max-width: 48em) {
+            font-size: 2.8rem;
+            letter-spacing: 0.56px;
         }
-      }
-      #choices--select-filter-item-choice-1 {
-        display: none;
-      }
-      .is-highlighted {
-
-      }
-  
-      &[data-type*="select-one"]::after {
-        transform: translateY(-50%) rotate(180deg);
-      }
     }
-  }
+
+    &[data-type*='select-one']::after {
+        width: 1.2rem;
+        height: 1.6rem;
+        margin: 0;
+        right: 1.6rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background: url('./assets/images/icons/select-arr.svg') no-repeat center center;
+        background-size: contain;
+        border: 0;
+
+        @media (max-width: 48em) {
+            width: 2.4rem;
+            height: 3.2rem;
+        }
+    }
+
+    .choices__inner {
+        border: 0;
+        padding: 0;
+        min-height: 100%;
+
+        .choices__list--single {
+            padding: 0;
+        }
+        .choices__placeholder {
+            opacity: 1;
+        }
+
+        .choices__item {
+            min-height: 0;
+            width: 90%;
+            font-family: 'SuisseIntl';
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 146%;
+            letter-spacing: 0.72px;
+            @media (max-width: 48em) {
+                font-size: 2.8rem;
+                letter-spacing: 0.56px;
+            }
+        }
+    }
+
+    &.is-open {
+        .choices__list {
+            height: fit-content;
+            border: 0;
+            gap: 2rem;
+        }
+        .choices__inner {
+            & .choices__placeholder {
+                opacity: 1;
+            }
+        }
+        #choices--select-filter-item-choice-1 {
+            display: none;
+        }
+        .is-highlighted {
+        }
+
+        &[data-type*='select-one']::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+    }
+}

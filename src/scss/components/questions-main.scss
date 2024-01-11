@@ -83,7 +83,7 @@
         transition: color 0.3s linear, background-color 0.3s linear;
         &.active {
             background-color: $purple;
-            color: $white
+            color: $white;
         }
     }
 
@@ -97,8 +97,7 @@
         justify-content: space-between;
         gap: 5rem;
         width: 100%;
-   
-     
+
         &.active + .questions__accordion-item-body {
             margin-bottom: 3rem;
         }
@@ -160,5 +159,166 @@
     &__accordion-count {
         // transition: color 0.3s;
         pointer-events: none;
+    }
+}
+
+@media (max-width: 48em) {
+    .questions {
+        padding: 10rem 0;
+        // .questions__inner
+
+        &__inner {
+            display: flex;
+            flex-direction: column;
+            gap: 3.2rem;
+            align-items: flex-start;
+            position: relative;
+            padding-bottom: 26.4rem;
+        }
+
+        // .questions__title
+
+        &__title {
+        }
+
+        // .questions__content-box
+
+        &__content-box {
+            gap: 8rem;
+            flex-direction: column;
+        }
+
+        // .questions__info-box
+
+        &__info-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        // .questions__btn-box
+
+        &__btn-box {
+            display: flex;
+            flex-direction: column;
+            gap: 4.8rem;
+            width: 100%;
+        }
+
+        // .questions__btn-box-text
+
+        &__btn-box-text {
+            letter-spacing: 0.56px;
+        }
+
+        // .questions__btn-box-btn
+
+        &__btn-box-btn {
+        }
+
+        &__link-box {
+     
+            gap: 3.2rem;
+            width: 62rem;
+
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        // .questions__accordion-box
+
+        &__accordion-box {
+            width: 100%;
+        }
+
+        // .questions__accordion
+
+        &__accordion {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        // .questions__accordion-item
+
+        &__accordion-item {
+            border-radius: 3.6rem;
+
+            display: flex;
+            flex-direction: column;
+            transition: color 0.3s linear, background-color 0.3s linear;
+          
+        }
+
+        // .questions__accordion-item-header
+
+        &__accordion-item-header {
+            padding: 3.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 5rem;
+            width: 100%;
+     
+            &.active + .questions__accordion-item-body {
+                margin-bottom: 3rem;
+            }
+
+            &.active .questions__accordion-svg-box {
+                transform: rotate(-180deg);
+                & svg {
+                    stroke: $white;
+                }
+            }
+        }
+
+        // .questions__accordion-title
+
+        &__accordion-title {
+            flex-grow: 1;
+            font-size: 3.2rem;
+        }
+
+        // .questions__accordion-svg-wrapper
+
+        &__accordion-svg-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        // .questions__accordion-svg-box
+
+        &__accordion-svg-box {
+            width: 3.2rem;
+            height: 1.6rem;
+           
+        }
+
+        // .questions__accordion-item-body
+
+        &__accordion-item-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s, margin-bottom 0.3s;
+            width: 55rem;
+            margin-left: 12rem;
+        }
+
+        // .questions__accordion-item-body-content
+
+        &__accordion-item-body-content {
+        }
+
+        // .questions__accordion-count
+
+        &__accordion-count {
+            // transition: color 0.3s;
+            pointer-events: none;
+            font-size: 3.2rem;
+        }
     }
 }
