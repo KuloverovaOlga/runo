@@ -224,8 +224,8 @@
                     </div>
 
                     <div class="header__btn-box">
-                        <button data-popup="#popup__success" class="header__btn title-h4">Вызов замерщика</button>
-                        <button class="header__btn title-h4">Рассчет стоимости</button>
+                        <button data-popup="#popup__application" class="header__btn button-transparent title-h4">Вызов замерщика</button>
+                        <button data-popup="#popup__calculator" class="header__btn button title-h4">Рассчет стоимости</button>
                     </div>
                 </div>
             </div>
@@ -240,7 +240,185 @@
     </div>
 </header>
 
+            <div id="popup__success" aria-hidden="true" class="popup popup__success">
+    <div class="popup__wrapper popup__success-wrapper">
+        <div class="popup__content">
+            <div class="popup__body popup__body--success">
+                <button data-close type="button" class="popup__body-close-btn close-btn popup__body-close-btn--short success-close-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M18 2L2 18" stroke="#0E1C15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                        <path d="M2 2L18 18" stroke="#0E1C15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <p class="popup__body-title title-h1 popup__body--success-title">Ваша заявка отправлена</p>
 
+                <button data-close class="popup__body-btn close-btn popup__body--success-btn button">
+                    <span class="popup__body-btn-text title-h4">Продолжить</span>
+
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="popup__calculator" aria-hidden="true" class="popup popup__calculator">
+    <div class="popup__wrapper">
+        <div class="popup__content">
+            <div class="popup__body popup__body-calculator popup__body--short">
+                <button data-close type="button" class="popup__body-close-btn close-btn popup__body-close-btn--short">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M18 2L2 18" stroke="#0E1C15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                        <path d="M2 2L18 18" stroke="#0E1C15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                    </svg>
+                </button>
+               
+                <form data-popup-message="#popup__success" data-dev action="#" class="popup__calculator-form-box">
+                    <div class="popup__calculator-form-wrapper">
+                        <p class="popup__calculator-form-header-title title-h1">Калькулятор расчета стоимости</p>
+                        <div class="popup__calculator-form">
+                            <div class="popup__calculator-form-inner">
+                                <div class="popup__calculator-form-box">
+                                    <div class="popup__calculator-form-title title-h2">Информация о потолке</div>
+                                    <div class="popup__calculator-form-group">
+                                        <select class="popup__calculator-form-select select title-h5" required>
+                                            <option>MSD Classic</option>
+                                            <option>Bauf</option>
+                                            <option>LUMFER лаковый</option>
+                                            <option>LUMFER матовый</option>
+                                            <option>MSD Evolution</option>
+                                            <option>MSD Premium</option>
+                                            <option>TEQTUM белый</option>
+                                            <option>TEQTUM цветной</option>
+                                        </select>
+        
+                                        <div class="popup__calculator-input-group input-group popup__label--required">
+                                            <div class="popup__calculator-form-input-wrapper form__input-wrapper">
+                                                <input
+                                                    class="popup__calculator-input input--num title-h5"
+                                                    type="text"
+                                                    placeholder="Общая площадь, м2"
+                                                    data-validate
+                                                    data-required="num"
+                                                    autocomplete="off"
+                                                    name="form[]"
+                                                />
+                                            </div>
+                                            <span class="error-span title-h5">Введите числовое значение</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="popup__calculator-form-box">
+                                    <div class="popup__calculator-form-title title-h2">Информация об освещении</div>
+                                    <div class="popup__calculator-form-group">
+                                        <div class="popup__calculator-input-group input-group popup__label--required">
+                                            <div class="popup__calculator-form-input-wrapper form__input-wrapper">
+                                                <input
+                                                    class="popup__calculator-input input--num title-h5"
+                                                    type="text"
+                                                    placeholder="Потолочная люстра, шт"
+                                                    data-validate
+                                                    data-required="num"
+                                                    autocomplete="off"
+                                                    name="form[]"
+                                                />
+                                            </div>
+                                            <span class="error-span title-h5">Введите числовое значение</span>
+                                        </div>
+        
+                                        <div class="popup__calculator-input-group input-group popup__label--required">
+                                            <div class="popup__calculator-form-input-wrapper form__input-wrapper">
+                                                <input
+                                                    class="popup__calculator-input input--num title-h5"
+                                                    type="text"
+                                                    placeholder="Точечное освещение, шт"
+                                                    data-validate
+                                                    data-required="num"
+                                                    autocomplete="off"
+                                                    name="form[]"
+                                                />
+                                            </div>
+                                            <span class="error-span title-h5">Введите числовое значение</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup__calculator-form-aside">
+                        <div class="popup__calculator-form-aside-wrapper">
+                            <div class="popup__calculator-form-aside-info-box">
+                                <div class="popup__calculator-form-aside-title title-h2">Примерная цена</div>
+                                <div class="popup__calculator-form-aside-cost price">9200₽<span class="title-h2">9200₽</span></div>
+                            </div>
+
+                           
+                            <div class="popup__calculator-form-aside-text title-h5">Оформив заявку на сайте, вы получаете <span>скидку 10%</span> на установку потолков</div>
+                       
+                            <div class="popup__calculator-form-aside-button-wrapper">
+                                <button class="popup__calculator-form-aside-button button title-h4" type="submit">Оставить заявку</button>
+                            </div>
+                        </div>
+                       
+                       
+                    </div>
+                </form>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="popup__application" aria-hidden="true" class="popup popup__application">
+    <div class="popup__wrapper">
+        <div class="popup__content">
+            <div class="popup__body popup__body-application popup__body--short">
+                <button data-close type="button" class="popup__body-close-btn close-btn popup__body-close-btn--short">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M18 2L2 18" stroke="#0E1C15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                        <path d="M2 2L18 18" stroke="#0E1C15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                    </svg>
+                </button>
+               <div class="popup__application-header-box">
+                <p class="popup__application-title title-h1">Оставьте заявку</p>
+                <p class="popup__application-text title-h4">Хотите узнать стоимость и заказать самый ровный натяжной потолок? Оставьте ваш номер телефона, вам перезвонит наш специалист</p>
+               </div>
+                
+                <form data-popup-message="#popup__success" data-dev action="#"  class="popup__application-form">
+                    <div class="popup__application-input-group input-group popup__label--required">
+                      <div class="popup__application-form-input-wrapper form__input-wrapper">
+                          <input class="popup__application-input input--name title-h5 " 
+                          type="text"  placeholder="Имя"   
+                          data-validate
+                          data-required
+                          autocomplete="off"
+                          name="form[]" />
+                      </div>
+                      <span class="error-span title-h5">Введите текстовое значение</span>
+                  </div>
+                    <div class="popup__application-input-group input-group popup__label--required">
+                      <div class="popup__application-form-input-wrapper form__input-wrapper">
+                          <input class="popup__application-input input--tel title-h5 phone-mask" 
+                          type="text"  placeholder="+7 (___) ___ __ __"  
+                          data-validate
+                          data-required="tel"
+                          autocomplete="off"
+                          name="form[]" />
+                      </div>
+                      <span class="error-span title-h5">Введите текстовое значение</span>
+                  </div>
+        
+        
+                    <button class="popup__application-form-button button title-h4" type="submit">Оставить заявку</button>
+                  </form>
+
+
+            </div>
+        </div>
+    </div>
+</div>
             <main class="main">
                 <section class="advantages">
     <div class="container">
@@ -386,7 +564,7 @@
           <form data-popup-message="#popup__success" data-dev action="#"  class="application__form">
             <div class="application__input-group input-group popup__label--required">
               <div class="application__form-input-wrapper form__input-wrapper">
-                  <input class="application__input input--name title-h5" 
+                  <input class="application__input input--name title-h5 " 
                   type="text"  placeholder="Имя"   
                   data-validate
                   data-required
@@ -397,8 +575,8 @@
           </div>
             <div class="application__input-group input-group popup__label--required">
               <div class="application__form-input-wrapper form__input-wrapper">
-                  <input class="application__input input--tel title-h5" 
-                  type="text"  placeholder="+7 (9__) ___ __ __"  
+                  <input class="application__input input--tel title-h5 phone-mask" 
+                  type="text"  placeholder="+7 (___) ___ __ __"  
                   data-validate
                   data-required="tel"
                   autocomplete="off"
@@ -417,7 +595,7 @@
             <div class="application__content-contacts-wrapper">
               <a class="application__content-box title-h3" href="tel:+79000000000">
                 <div class="application__content-svg-box">
-          
+          <img src="assets/images/tel.svg" alt="">
                 </div>
                 + 7 (900) 000-00-00
               </a>
@@ -425,25 +603,31 @@
             </div>
             <a class="application__content-box title-h3" href="mailto:email@mail.ru">
               <div class="application__content-svg-box">
-          
+                <img src="assets/images/mail.svg" alt="">
               </div>
               email@mail.ru
             </a>
-            <a class="application__content-box title-h3" href="#">
+            <div class="application__content-box title-h3" >
               <div class="application__content-svg-box">
-          
+                <img src="assets/images/adress.svg" alt="">
               </div>
               6689078, г. Москва, ул. Московская, д. 1, офис 204
-            </a>
+            </div>
           </div>
           <div class="application__content-socials">
             <div class="application__content-title title-h2">Или напишите нам:</div>
             <div class="application__content-socials-links">
               <a class="application__content-socials-link" href="#">
-              
+                <div class="application__content-socials-link-img-box">
+                  <img src="assets/images/watsapp.svg" alt="">
+                </div>
+
+             
               </a>
               <a class="application__content-socials-link" href="#">
-    
+                <div class="application__content-socials-link-img-box">
+                  <img src="assets/images/telegram.svg" alt="">
+                </div>
               </a>
             </div>
           </div>
@@ -460,6 +644,9 @@
                                 <p class="info__article-title title-h1">Ремонт натяжных потолков любых видов и конструкций</p>
 
                                 <div class="info__article-wrapper">
+                                    <div class="info__img-box">
+                                        <img src="assets/images/info3.webp" alt="" />
+                                    </div>
                                     <p class="info__article-wrapper-title title-h3">Ремонт натяжных потолков любых видов и конструкций</p>
                                     <p class="info__article-text title-h5">
                                         Мы выполняем монтаж натяжного потолка в Москве и области. Ниже представлены разные виды полотен и типы конструкций, которые
@@ -517,9 +704,6 @@
                                         </a>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="info__img-box">
-                                <img src="assets/images/info3.webp" alt="" />
                             </div>
                         </div>
                     </div>

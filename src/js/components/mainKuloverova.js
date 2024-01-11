@@ -1,3 +1,5 @@
+
+
 import advantagesSwiper from './swiper/advantagesSwiper';
 import stagesSwiper from './swiper/stagesSwiper';
 import heroSwiper from './swiper/heroSwiper';
@@ -67,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-import Choices from 'choices.js';
+
 import 'inputmask';
 window.$ = window.jQuery = require('jquery');
 let timer;
@@ -81,6 +83,9 @@ const rem = function (rem) {
     }
 };
 
+
+const mask = new Inputmask('+7 (999) 999 99 99');
+mask.mask($('.phone-mask'));
 //dropdown//
 
 $(function () {

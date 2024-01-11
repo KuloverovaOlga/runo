@@ -14,7 +14,7 @@ const showMore = () => {
                 //   parent.classList.toggle("isActive");
 
                 if (item.classList.contains('isActive')) {
-                    content.style.maxHeight = window.innerWidth > 768 ? '26.2rem' : '20.2rem';
+                    content.style.maxHeight = window.innerWidth > 768 ? '26.2rem' : '40.2rem';
                  setTimeout(() => {
                   item.classList.remove('isActive');
                  },500)
@@ -36,7 +36,7 @@ const showMore = () => {
                 if (item.classList.contains('isActive')) {
                     item.querySelector('.info__article-text').style.maxHeight = `${item.querySelector('.info__article-text').scrollHeight}px`;
                 } else {
-                    item.querySelector('.info__article-text').style.maxHeight = window.innerWidth > 768 ? '26.2rem' : '20.2rem'; 
+                    item.querySelector('.info__article-text').style.maxHeight = window.innerWidth > 768 ? '26.2rem' : '40.2rem'; 
                 }
             })
     })

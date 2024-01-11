@@ -9,7 +9,7 @@ body::before {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.8s ease 0s;
-    background: rgba(40, 41, 46, 0.70);
+    background: rgba(40, 41, 46, 0.7);
     backdrop-filter: blur(2px);
 }
 .popup-show body::before {
@@ -65,14 +65,17 @@ body::before {
         // max-width: 127.8rem;
         max-width: fit-content;
         background-color: $white;
-        border-radius: 4rem;
+        border-radius: 3rem;
         visibility: hidden;
         transform: scale(0);
         transition: transform 0.3s ease 0s;
         position: relative;
-
         .lock & {
             visibility: visible;
+        }
+
+        @media (max-width: 48em) {
+            border-radius: 3.6rem;
         }
     }
 
@@ -84,7 +87,7 @@ body::before {
         flex-direction: column;
         gap: 6rem;
         @media (max-width: 48em) {
-            gap: 8rem;
+            gap: 6.4rem;
         }
     }
 
@@ -105,11 +108,11 @@ body::before {
         height: 3.4rem;
         top: 2.4rem;
         right: 2.4rem;
-        // background-color: $green;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: 2;
         & svg {
             width: 3.4rem;
             height: 3.4rem;
@@ -119,9 +122,11 @@ body::before {
         @media (max-width: 48em) {
             width: 10rem;
             height: 10rem;
+            top: 0.4rem;
+            right: 0.4rem;
             & svg {
-                width: 2.4rem;
-                height: 2.4rem;
+                width: 4.4rem;
+                height: 4.4rem;
             }
         }
     }
@@ -141,7 +146,6 @@ body::before {
     &__body-btn {
         @media (max-width: 48em) {
             // margin-top: 2.4rem;
-
         }
         & span {
             pointer-events: none;
@@ -163,12 +167,7 @@ body::before {
         text-align: center;
         justify-content: center;
         @media (max-width: 48em) {
-            padding: 8rem 3rem;
-        }
-        &-review {
-            @media (max-width: 48em) {
-                padding: 8rem 4rem;
-            }
+            padding: 10.2rem 15.6rem;
         }
     }
 
@@ -191,5 +190,323 @@ body::before {
 
     &__body--success-btn {
         width: fit-content;
+    }
+
+    // ---------------------------------------application----------------------------
+
+    // .popup__body-application
+
+    &__body-application {
+        padding: 8rem 12rem;
+        @media (max-width: 48em) {
+            padding: 6.4rem 4.8rem;
+        }
+    }
+
+    // .popup__application-header-box
+
+    &__application-header-box {
+        width: 58.4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+        align-items: center;
+        text-align: center;
+        @media (max-width: 48em) {
+            width: 53rem;
+            text-align: left;
+            align-items: flex-start;
+        }
+    }
+
+    // .popup__application-title
+
+    &__application-title {
+    }
+
+    // .popup__application-text
+
+    &__application-text {
+        @media (max-width: 48em) {
+            letter-spacing: 0.56px;
+            font-size: 2.4rem;
+        }
+    }
+
+    // .popup__application-form
+
+    &__application-form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+
+     
+    }
+
+    // .popup__application-input-group
+
+    &__application-input-group {
+    }
+
+    // .popup__application-form-input-wrapper
+
+    &__application-form-input-wrapper {
+        width: 49.4rem;
+
+        @media (max-width: 48em) {
+            width: 61.4rem;
+        }
+    }
+
+    // .popup__application-input
+
+    &__application-input {
+        padding: 1.7rem 1.6rem;
+        background-color: $grey;
+        width: 100%;
+        border-radius: 2rem;
+        color: $grey-text;
+
+        @media (max-width: 48em) {
+            padding: 3.4rem 3.2rem;
+            border-radius: 2.4rem;
+        }
+    }
+
+    // .popup__application-form-button
+
+    &__application-form-button {
+        margin-top: 4rem;
+        @media (max-width: 48em) {
+           width: 100%;
+          
+        }
+    }
+
+
+    // ---------------------------------------calculator----------------------------
+
+    // .popup__calculator
+
+    &__calculator {
+    }
+
+    // .popup__body-calculator
+
+    &__body-calculator {
+        padding: 8rem;
+        position: relative;
+        &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            right: 0;
+            background-image: url(./assets/images/icons/calculator.svg);
+            width: 54.3rem;
+            height: 60rem;
+        }
+
+        @media (max-width: 48em) {
+            padding: 6.4rem 4.8rem;
+
+            &::after {
+            display: none;
+            }
+        }
+    }
+
+    // .popup__calculator-form-inner
+
+    &__calculator-form-box {
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+
+        @media (max-width: 48em) {
+            gap: 6.4rem;
+        }
+    }
+
+    // .popup__calculator-form-wrapper
+
+    &__calculator-form-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+
+        @media (max-width: 48em) {
+            gap: 8rem;
+        }
+    }
+
+    &__calculator-form-inner {
+        display: flex;
+        gap: 4rem;
+        width: 101.2rem;
+
+        @media (max-width: 48em) {
+            width: 100%;
+            flex-direction: column;
+            gap: 6.4rem;
+        }
+    }
+
+    // .popup__calculator-form-header-title
+
+    &__calculator-form-header-title {
+        width: 58.4rem;
+        @media (max-width: 48em) {
+            width: 100%;
+        }
+    }
+
+    // .popup__calculator-form
+
+    &__calculator-form {
+        display: flex;
+    }
+
+    // .popup__calculator-form-box
+
+    &__calculator-form-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 4rem;
+
+        @media (max-width: 48em) {
+            gap: 3.2rem;
+        }
+    }
+
+    // .popup__calculator-form-title
+
+    &__calculator-form-title {
+    }
+
+    // .popup__calculator-form-group
+
+    &__calculator-form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+
+        @media (max-width: 48em) {
+            gap: 2rem;
+        }
+    }
+
+    // .popup__calculator-form-select
+
+    &__calculator-form-select {
+    }
+
+    // .popup__calculator-input-group
+
+    &__calculator-input-group {
+    }
+
+    // .popup__calculator-form-input-wrapper
+
+    &__calculator-form-input-wrapper {
+    }
+
+    // .popup__calculator-input
+
+    &__calculator-input {
+        width: 48.6rem;
+        padding: 1.7rem 1.6rem;
+        background-color: $grey;
+        border-radius: 2rem;
+
+        @media (max-width: 48em) {
+          width: 100%;
+          padding: 3.4rem 3.2rem;
+          border-radius: 2.4rem;
+        }
+    }
+
+    // .popup__calculator-form-aside
+
+    &__calculator-form-aside {
+    }
+
+    // .popup__calculator-form-aside-wrapper
+
+    &__calculator-form-aside-wrapper {
+        padding: 6rem 4rem;
+        border-radius: 2rem;
+        background-color: $bg;
+        display: flex;
+        gap: 6.2rem;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: 48em) {
+            padding: 4.8rem;
+            border-radius: 3rem;
+            flex-direction: column;
+            gap: 4.8rem;
+            align-items: flex-start;
+          }
+    }
+
+    &__calculator-form-aside-info-box {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        @media (max-width: 48em) {
+            gap: 4rem;
+          }
+    }
+    // .popup__calculator-form-aside-title
+
+    &__calculator-form-aside-title {
+    }
+
+    // .popup__calculator-form-aside-cost
+
+    &__calculator-form-aside-cost {
+        display: flex;
+        gap: 1.2rem;
+        align-items: flex-end;
+        color: $purple;
+        & span {
+            color: $grey-text;
+            text-decoration: line-through;
+        }
+
+        @media (max-width: 48em) {
+            gap: 1rem;
+            font-size: 5.6rem;
+            & span {
+                font-size: 4.8rem;
+                line-height: 6rem;
+            }
+          }
+    }
+
+    // .popup__calculator-form-aside-text
+
+    &__calculator-form-aside-text {
+        width: 26rem;
+        letter-spacing: 0.8px;
+        & span {
+            color: $purple;
+        }
+        @media (max-width: 48em) {
+            width: 100%;
+          }
+    }
+
+    // .popup__calculator-form-aside-button-wrapper
+
+    &__calculator-form-aside-button-wrapper {
+    }
+
+    // .popup__calculator-form-aside-button
+
+    &__calculator-form-aside-button {
     }
 }

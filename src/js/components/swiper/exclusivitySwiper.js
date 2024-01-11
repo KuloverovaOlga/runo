@@ -4,8 +4,8 @@ import { rem } from "../../utils/constants";
 
 const exclusivitySwiper = () => {
     const swiper = new Swiper(".exclusivity__swiper", {
-        slidesPerView: 'auto',
-        spaceBetween: 40,
+        slidesPerView: 1,
+        spaceBetween: 20,
         scrollbar: {
             el: ".exclusivity__swiper-scrollbar",
           },
@@ -13,6 +13,13 @@ const exclusivitySwiper = () => {
             nextEl: '.exclusivity__swiper-button-next',
             prevEl: '.exclusivity__swiper-button-prev',
           },
+          breakpoints: {
+            769: {
+                slidesPerView: 'auto',
+                spaceBetween: 40,
+            },
+        },
+
       });
 
       const sliders = document.querySelectorAll('.exclusivity__swiper-slide-inner')

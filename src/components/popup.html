@@ -1,31 +1,3 @@
-<div id="popup__entrys" aria-hidden="true" class="popup popup__entrys">
-    <div class="popup__wrapper">
-        <div class="popup__content">
-            <div class="popup__body popup__body-entrys popup__body--short">
-                <button data-close type="button" class="popup__body-close-btn close-btn popup__body-close-btn--short">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M18 2L2 18" stroke="#0E1C15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
-                        <path d="M2 2L18 18" stroke="#0E1C15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
-                    </svg>
-                </button>
-                <p class="popup__body-title title-h2">Войдите или зарегистрируйтесь</p>
-                <p class="popup__body-desk text">Войдите, чтобы получить доступ к оформлению заказов, получению бонусов и персональных скидок</p>
-
-                <button data-popup="#popup__entrys-personal-area" class="popup__body-btn close-btn button-long-arr">
-                    <span class="popup__body-btn-text button">Войти или зарегистрироваться</span>
-                    <span class="popup__body-btn-svg-box">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 9" fill="none">
-                            <path
-                                d="M1 4L0.5 4L0.5 5L1 5L1 4ZM53.3536 4.85355C53.5488 4.65829 53.5488 4.34171 53.3536 4.14645L50.1716 0.964466C49.9763 0.769204 49.6597 0.769204 49.4645 0.964466C49.2692 1.15973 49.2692 1.47631 49.4645 1.67157L52.2929 4.5L49.4645 7.32843C49.2692 7.52369 49.2692 7.84027 49.4645 8.03553C49.6597 8.2308 49.9763 8.2308 50.1716 8.03553L53.3536 4.85355ZM1 5L53 5L53 4L1 4L1 5Z"
-                            />
-                        </svg>
-                    </span>
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div id="popup__success" aria-hidden="true" class="popup popup__success">
     <div class="popup__wrapper popup__success-wrapper">
         <div class="popup__content">
@@ -42,6 +14,165 @@
                     <span class="popup__body-btn-text title-h4">Продолжить</span>
 
                 </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="popup__calculator" aria-hidden="true" class="popup popup__calculator">
+    <div class="popup__wrapper">
+        <div class="popup__content">
+            <div class="popup__body popup__body-calculator popup__body--short">
+                <button data-close type="button" class="popup__body-close-btn close-btn popup__body-close-btn--short">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M18 2L2 18" stroke="#0E1C15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                        <path d="M2 2L18 18" stroke="#0E1C15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                    </svg>
+                </button>
+               
+                <form data-popup-message="#popup__success" data-dev action="#" class="popup__calculator-form-box">
+                    <div class="popup__calculator-form-wrapper">
+                        <p class="popup__calculator-form-header-title title-h1">Калькулятор расчета стоимости</p>
+                        <div class="popup__calculator-form">
+                            <div class="popup__calculator-form-inner">
+                                <div class="popup__calculator-form-box">
+                                    <div class="popup__calculator-form-title title-h2">Информация о потолке</div>
+                                    <div class="popup__calculator-form-group">
+                                        <select class="popup__calculator-form-select select title-h5" required>
+                                            <option>MSD Classic</option>
+                                            <option>Bauf</option>
+                                            <option>LUMFER лаковый</option>
+                                            <option>LUMFER матовый</option>
+                                            <option>MSD Evolution</option>
+                                            <option>MSD Premium</option>
+                                            <option>TEQTUM белый</option>
+                                            <option>TEQTUM цветной</option>
+                                        </select>
+        
+                                        <div class="popup__calculator-input-group input-group popup__label--required">
+                                            <div class="popup__calculator-form-input-wrapper form__input-wrapper">
+                                                <input
+                                                    class="popup__calculator-input input--num title-h5"
+                                                    type="text"
+                                                    placeholder="Общая площадь, м2"
+                                                    data-validate
+                                                    data-required="num"
+                                                    autocomplete="off"
+                                                    name="form[]"
+                                                />
+                                            </div>
+                                            <span class="error-span title-h5">Введите числовое значение</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="popup__calculator-form-box">
+                                    <div class="popup__calculator-form-title title-h2">Информация об освещении</div>
+                                    <div class="popup__calculator-form-group">
+                                        <div class="popup__calculator-input-group input-group popup__label--required">
+                                            <div class="popup__calculator-form-input-wrapper form__input-wrapper">
+                                                <input
+                                                    class="popup__calculator-input input--num title-h5"
+                                                    type="text"
+                                                    placeholder="Потолочная люстра, шт"
+                                                    data-validate
+                                                    data-required="num"
+                                                    autocomplete="off"
+                                                    name="form[]"
+                                                />
+                                            </div>
+                                            <span class="error-span title-h5">Введите числовое значение</span>
+                                        </div>
+        
+                                        <div class="popup__calculator-input-group input-group popup__label--required">
+                                            <div class="popup__calculator-form-input-wrapper form__input-wrapper">
+                                                <input
+                                                    class="popup__calculator-input input--num title-h5"
+                                                    type="text"
+                                                    placeholder="Точечное освещение, шт"
+                                                    data-validate
+                                                    data-required="num"
+                                                    autocomplete="off"
+                                                    name="form[]"
+                                                />
+                                            </div>
+                                            <span class="error-span title-h5">Введите числовое значение</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup__calculator-form-aside">
+                        <div class="popup__calculator-form-aside-wrapper">
+                            <div class="popup__calculator-form-aside-info-box">
+                                <div class="popup__calculator-form-aside-title title-h2">Примерная цена</div>
+                                <div class="popup__calculator-form-aside-cost price">9200₽<span class="title-h2">9200₽</span></div>
+                            </div>
+
+                           
+                            <div class="popup__calculator-form-aside-text title-h5">Оформив заявку на сайте, вы получаете <span>скидку 10%</span> на установку потолков</div>
+                       
+                            <div class="popup__calculator-form-aside-button-wrapper">
+                                <button class="popup__calculator-form-aside-button button title-h4" type="submit">Оставить заявку</button>
+                            </div>
+                        </div>
+                       
+                       
+                    </div>
+                </form>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="popup__application" aria-hidden="true" class="popup popup__application">
+    <div class="popup__wrapper">
+        <div class="popup__content">
+            <div class="popup__body popup__body-application popup__body--short">
+                <button data-close type="button" class="popup__body-close-btn close-btn popup__body-close-btn--short">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M18 2L2 18" stroke="#0E1C15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                        <path d="M2 2L18 18" stroke="#0E1C15" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                    </svg>
+                </button>
+               <div class="popup__application-header-box">
+                <p class="popup__application-title title-h1">Оставьте заявку</p>
+                <p class="popup__application-text title-h4">Хотите узнать стоимость и заказать самый ровный натяжной потолок? Оставьте ваш номер телефона, вам перезвонит наш специалист</p>
+               </div>
+                
+                <form data-popup-message="#popup__success" data-dev action="#"  class="popup__application-form">
+                    <div class="popup__application-input-group input-group popup__label--required">
+                      <div class="popup__application-form-input-wrapper form__input-wrapper">
+                          <input class="popup__application-input input--name title-h5 " 
+                          type="text"  placeholder="Имя"   
+                          data-validate
+                          data-required
+                          autocomplete="off"
+                          name="form[]" />
+                      </div>
+                      <span class="error-span title-h5">Введите текстовое значение</span>
+                  </div>
+                    <div class="popup__application-input-group input-group popup__label--required">
+                      <div class="popup__application-form-input-wrapper form__input-wrapper">
+                          <input class="popup__application-input input--tel title-h5 phone-mask" 
+                          type="text"  placeholder="+7 (___) ___ __ __"  
+                          data-validate
+                          data-required="tel"
+                          autocomplete="off"
+                          name="form[]" />
+                      </div>
+                      <span class="error-span title-h5">Введите текстовое значение</span>
+                  </div>
+        
+        
+                    <button class="popup__application-form-button button title-h4" type="submit">Оставить заявку</button>
+                  </form>
+
+
             </div>
         </div>
     </div>

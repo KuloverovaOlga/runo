@@ -93,7 +93,7 @@
     &__bottom-inner {
         display: flex;
         justify-content: space-between;
-        gap: 10rem;
+
         align-items: center;
     }
 
@@ -274,24 +274,288 @@
 
     // .header__btn
 
-    &__btn {
-        padding: 1.5rem 3.2rem;
-        border-radius: 2rem;
-        border: 1.2px solid $purple;
-        color: $purple;
-        background-color: transparent;
-        transition: background-color 0.3s, color 0.3s;
-        &:hover {
-            color: $white;
-            background-color: $purple;
+
+}
+
+@media (max-width: 48em) {
+    .header {
+        display: none;
+        // .header__inner
+        padding-bottom: 4.8rem;
+        &__inner {
+            display: flex;
+            flex-direction: column;
+            gap: 2.4rem;
+            position: relative;
         }
+    
+        &__top {
+            background-color: $white;
+        }
+    
+        &__top-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.1rem 0;
+        }
+    
+        // .header__link-box
+    
+        &__link-box {
+            display: flex;
+            align-items: center;
+            gap: 3.2rem;
+        }
+    
+        // .header__link
+    
+        &__link {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+    
+        // .header__link-svg-box
+    
+        &__link-svg-box {
+            width: 2.4rem;
+            height: 2.4rem;
+            & svg {
+                object-fit: contain;
+                fill: $purple;
+            }
+        }
+    
+        // .header__link-text
+    
+        &__link-text {
+        }
+    
+        // .header__tel-box
+    
+        &__tel-box {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+    
+        // .header__tel-wrapper
+    
+        &__tel-link {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+    
+        // .header__tel-svg-box
+    
+        &__tel-svg-box {
+            width: 2rem;
+            height: 2rem;
+            & svg {
+                object-fit: contain;
+                fill: $purple;
+            }
+        }
+    
+        // .header__tel-text
+    
+        &__tel-text {
+        }
+    
+        // .header__tel-title
+    
+        &__tel-title {
+        }
+    
+        // .header__bottom
+    
+        &__bottom-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 10rem;
+            align-items: center;
+        }
+    
+        // .header__logo
+    
+        &__logo {
+            width: 17.7rem;
+            height: 5.6rem;
+        }
+    
+        // .header__nav
+    
+        &__nav {
+            display: flex;
+            align-items: center;
+            gap: 2.4rem;
+        }
+    
+        // .header__nav-item
+    
+        &__nav-item {
+            & .header__nav-item-link {
+                &::after {
+                    position: relative;
+                    content: '';
+                    display: block;
+                    bottom: -0.8rem;
+                    width: 0;
+                    height: 0.2rem;
+                    background: $purple;
+                    transition: width 0.3s ease-in-out;
+                }
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+        }
+        &__dropdown {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            z-index: 125;
+            top: 13.5rem;
+            left: -15.5rem;
+            padding: 0 10%;
+            background: $white;
+            //border-top: 0.1rem solid #E9E9E9;
+            &-icon {
+                display: none;
+            }
+            &-services {
+                display: flex;
+                align-items: center;
+                border-top: 0.1rem solid #e9e9e9;
+                padding: 0 38.5rem;
+                &-item {
+                    width: 38.2rem;
+                    border-left: 0.1rem solid #e9e9e9;
+                    padding: 6rem 15rem;
+                    &-icon {
+                        width: 6rem;
+                        height: 6rem;
+                        margin-bottom: 3.2rem;
+                    }
+                    &:hover {
+                        background: $grey;
+                        transition: background-color 0.3s ease-in-out;
+                    }
+                    &:first-child {
+                        border-right: 0.1rem solid #e9e9e9;
+                    }
+                    & span {
+                        font-weight: 600;
+                    }
+                }
+            }
+            &-catalog {
+                display: flex;
+                padding: 0 76% 0 10%;
+                &-list {
+                    padding: 2.9rem 0 8rem 0;
+                    border-left: 0.1rem solid #e9e9e9;
+                    border-right: 0.1rem solid #e9e9e9;
+                }
+                &-item {
+                    width: 53.3rem;
+                    display: flex;
+                    & span {
+                        font-family: 'Gilroy';
+                        font-size: 2rem;
+                        font-weight: 600;
+                        width: 100%;
+                        padding: 1rem 0 1rem 19rem;
+                        cursor: pointer;
+                    }
+                    &.active {
+                        background: $grey;
+                        & span {
+                            color: $purple;
+                            &::after {
+                                content: '';
+                                position: relative;
+                                margin-left: 4rem;
+                                width: 2.4rem;
+                                height: 1.8rem;
+                                display: inline-block;
+                                transform: translate(0, 10%);
+                                background-image: url(./assets/images/icons/arrow-blue.svg);
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                background-size: contain;
+                            }
+                        }
+                    }
+                    &:hover {
+                        background: $grey;
+                        & span {
+                            color: $purple;
+                            &::after {
+                                content: '';
+                                position: relative;
+                                margin-left: 4rem;
+                                display: inline-block;
+                                transform: translate(0, 10%);
+                                width: 2.4rem;
+                                height: 1.8rem;
+                                background-image: url(./assets/images/icons/arrow-blue.svg);
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                background-size: contain;
+                            }
+                        }
+                    }
+                }
+                &-content {
+                    position: absolute;
+                    top: 0;
+                    right: 68.5rem;
+                    display: flex;
+                    background: $white;
+                    & .list {
+                        width: 13.8rem;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        gap: 2rem;
+                        &-wrap {
+                            height: 45.6rem;
+                            width: 53.1rem;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            padding: 4rem 0 4rem;
+                            border: 0;
+                            border-right: 0.1rem solid #e9e9e9;
+                        }
+                        &-title {
+                            width: 50%;
+                            margin-bottom: 2rem;
+                            margin-left: 12.5rem;
+                            font-family: 'Gilroy';
+                            font-size: 2rem;
+                            font-weight: 600;
+                            color: $black;
+                        }
+                    }
+                }
+            }
+        }
+    
+        // .header__btn-box
+    
+        &__btn-box {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+    
+        // .header__btn
+    
+    
     }
 }
-.container {
-}
-.title-h5 {
-}
-.title-h4 {
-}
-.dropdown {
-}
+
