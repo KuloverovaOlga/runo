@@ -44,7 +44,7 @@
       gap: 1.6rem;
     }
 
-    &:nth-child(2n) {
+    &:nth-child(2n + 1) {
       flex-direction: row-reverse;
 
       @include small-tablet {
