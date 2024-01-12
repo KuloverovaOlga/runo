@@ -99,4 +99,27 @@ const ourWorksTabSwiper = () => {
   });
 }
 
-export {catalogSwiper, productBannerSwiper, benefitsSwiper, ourWorksTabSwiper};
+// SPECIALISTS section
+const specialistsSwiper = () => {
+  const sliderThumbs = new Swiper('.specialists__swiper', {
+    slidesPerView: 'auto',
+    watchOverflow: true,
+    spaceBetween: rem(2),
+    speed: 1000,
+    navigation: {
+      nextEl: '.specialists__btn-next',
+      prevEl: '.specialists__btn-prev',
+    },
+    scrollbar: {
+      el: '.specialists__swiper-scrollbar',
+    },
+    breakpoints: {
+      769: {
+        slidesPerView: 1,
+        spaceBetween: rem(14),
+      },
+    },
+  });
+}
+
+export {catalogSwiper, productBannerSwiper, benefitsSwiper, ourWorksTabSwiper, specialistsSwiper};
