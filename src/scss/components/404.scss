@@ -1,0 +1,133 @@
+.error {
+    padding: 10rem 0 12rem;
+    // .error__inner
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 8rem;
+    }
+
+    // .error__img-wrapper
+
+    &__img-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 31.1rem;
+        position: relative;
+    }
+
+    // .error__img-num
+
+    &__img-num {
+        color: $black;
+        font-family: 'SuisseIntl';
+        font-size: 40rem;
+        font-style: normal;
+        font-weight: 450;
+        line-height: normal;
+    }
+
+    // .error__img-box
+
+    &__img-box {
+        position: absolute;
+        width: 26rem;
+        height: 34rem;
+        left: 27.5rem;
+        bottom: 6rem;
+        & img {
+            object-fit: contain;
+        }
+    }
+
+    // .error__content-box
+
+    &__content-box {
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // .error__title
+
+    &__title {
+    }
+
+    // .error__btn
+
+    &__btn {
+        width: fit-content;
+        align-self: center;
+    }
+
+
+}
+
+@media (max-width: 48em) {
+    .error {
+      padding: 20rem 0 20rem;
+  
+      &__inner {
+        gap: 6rem;
+      }
+      // .error__img-wrapper
+  
+      &__img-wrapper {
+        gap: 26rem;
+      }
+  
+      // .error__img-nim
+  
+      &__img-num {
+        font-size: 34rem;
+      }
+  
+      // .error__img-box
+  
+      &__img-box {
+        width: 21.4rem;
+        height: 28.4rem;
+        left: 24rem;
+        bottom: 5rem;
+      }
+  
+      // .error__content-box
+  
+      &__content-box {
+        display: flex;
+        flex-direction: column;
+        gap: 4.8rem;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
+  
+      // .error__title
+  
+      &__title {
+      }
+  
+      // .error__desk
+  
+      &__desk {
+        width: 60rem;
+      }
+  
+      // .error__btn
+  
+      &__btn {
+
+
+      }
+    
+    }
+  }
+  

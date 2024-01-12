@@ -8,7 +8,7 @@
     <script defer src="main.js"></script></head>
     <body>
         <div class="wrapper">
-            <header class="header">
+            <header class="header " id="header">
     <div class="header__inner">
         <div class="header__top">
             <div class="container">
@@ -418,8 +418,34 @@
         </div>
     </div>
 </div>
+            <div class="widget">
+  <div class="widget__icon">
+    <img src="assets/images/cross.svg" alt="">
+  </div>
+  <div class="widget__content">
+    <a class="widget__content-item" data-popup="#popup__calculator">
+      <div class="widget__content-item-icon">
+        <img src="assets/images/calculator-min.svg" alt="">
+      </div>
+      <div class="widget__content-item-text" >Калькулятор расчета стоимости</div>
+    </a>
+    <a class="widget__content-item" data-popup="#popup__application">
+      <div class="widget__content-item-icon" >
+        <img src="assets/images/ruler.svg" alt="">
+      </div>
+      <div class="widget__content-item-text" >Вызвать замерщика</div>
+    </a>
+    <a class="widget__content-item" href="#header">
+      <div class="widget__content-item-icon">
+        <img src="assets/images/arrow-white.svg" alt="">
+      </div>
+      <div class="widget__content-item-text">Наверх</div>
+    </a>
+  </div>
+</div>
+
             <main class="main">
-                <section class="hero">
+                <section class="hero" >
                     <div class="container hero__container">
                         <div class="hero__inner">
                             <div class="hero__swiper swiper">
@@ -513,13 +539,745 @@
 
                                 <div class="hero__swiper-scrollbar swiper-scrollbar"></div>
                             </div>
-<div class="hero__button-box">
-    <button class="hero__button button title-h4" type="button">Оставить заявку</button>
-    <button class="hero__button hero__button--hidden button-transparent title-h4" type="button">Контакты</button>
-</div>
-                          
+                            <div class="hero__button-box">
+                                <button class="hero__button button title-h4" type="button" data-popup="#popup__application">Оставить заявку</button>
+                                <button class="hero__button hero__button--hidden button-transparent title-h4" type="button">Контакты</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-                            
+                <section class="range">
+                    <div class="container">
+                        <div class="range__inner">
+                            <p class="range__header-title title-h1">Примеры работ</p>
+
+                            <div class="range__swiper-box">
+                                <div class="range__swiper-nav-menu-wrapper">
+                                    <div class="range__swiper-nav-menu">
+                                        <div class="range__swiper-nav-item title-h4 isActive">В прихожей</div>
+                                        <div class="range__swiper-nav-item title-h4">В ванной</div>
+                                        <div class="range__swiper-nav-item title-h4">В детской</div>
+                                        <div class="range__swiper-nav-item title-h4">На кухне</div>
+                                        <div class="range__swiper-nav-item title-h4">В спальне</div>
+                                    </div>
+
+                                    <button class="range__swiper-nav-button button title-h4">Смотреть все</button>
+                                </div>
+
+                                <!-- Swiper -->
+                                <div class="range__swiper swiper product-card__swiper">
+                                    <div class="range__swiper-wrapper swiper-wrapper">
+                                        <div class="range__swiper-slide swiper-slide">
+                                            <div class="range__swiper-slide-swiper swiper range__swiper-slide-swiper--1">
+                                                <div class="range__swiper-slide-swiper-wrapper swiper-wrapper">
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range1.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2">01</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range2.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2">02</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range3.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2">03</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range4.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2" >04</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range1.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2">05</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range2.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2">06</p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <ul class="range__swiper-slide-swiper-info-list">
+                                                    <li class="range__swiper-slide-swiper-info-item">
+                                                        <div class="range__swiper-slide-swiper-info-svg-wrapper">
+                                                            <div class="range__swiper-slide-swiper-info-svg-box">
+                                                                <img src="assets/images/range1.svg" alt="" />
+                                                            </div>
+                                                        </div>
+                                                        <p class="range__swiper-slide-swiper-info-text title-h5">Площадь прихожей 9 м2</p>
+                                                    </li>
+                                                    <li class="range__swiper-slide-swiper-info-item">
+                                                        <div class="range__swiper-slide-swiper-info-svg-wrapper">
+                                                            <div class="range__swiper-slide-swiper-info-svg-box">
+                                                                <img src="assets/images/range2.svg" alt="" />
+                                                            </div>
+                                                        </div>
+                                                        <p class="range__swiper-slide-swiper-info-text title-h5">Скрытый профиль</p>
+                                                    </li>
+                                                    <li class="range__swiper-slide-swiper-info-item">
+                                                        <div class="range__swiper-slide-swiper-info-svg-wrapper">
+                                                            <div class="range__swiper-slide-swiper-info-svg-box">
+                                                                <img src="assets/images/range3.svg" alt="" />
+                                                            </div>
+                                                        </div>
+                                                        <p class="range__swiper-slide-swiper-info-text title-h5">Сатиновый потолок</p>
+                                                    </li>
+                                                    <li class="range__swiper-slide-swiper-info-item">
+                                                        <div class="range__swiper-slide-swiper-info-svg-wrapper">
+                                                            <div class="range__swiper-slide-swiper-info-svg-box">
+                                                                <img src="assets/images/range4.svg" alt="" />
+                                                            </div>
+                                                        </div>
+                                                        <p class="range__swiper-slide-swiper-info-text title-h5">Итоговая сумма 5000 ₽</p>
+                                                    </li>
+                                                </ul>
+
+                                                <div class="range__swiper-scrollbar swiper-scrollbar"></div>
+                                                <div class="range__swiper-button-box">
+                                                    <div class="range__swiper-button-prev button-swiper">
+                                                        <div class="button-swiper__svg-box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                                                <path
+                                                                    d="M9.57031 18.0703L3.50031 12.0003L9.57031 5.93031"
+                                                                    stroke="white"
+                                                                    stroke-width="1.5"
+                                                                    stroke-miterlimit="10"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                />
+                                                                <path
+                                                                    d="M20.5 12.0002L3.67 12.0002"
+                                                                    stroke="white"
+                                                                    stroke-width="1.5"
+                                                                    stroke-miterlimit="10"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-button-next button-swiper">
+                                                        <div class="button-swiper__svg-box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                                                <path
+                                                                    d="M14.9297 5.8606L20.9997 11.9306L14.9297 18.0006"
+                                                                    stroke="white"
+                                                                    stroke-width="1.5"
+                                                                    stroke-miterlimit="10"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                />
+                                                                <path
+                                                                    d="M20.9297 11.9299L4.09969 11.9299"
+                                                                    stroke="white"
+                                                                    stroke-width="1.5"
+                                                                    stroke-miterlimit="10"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="range__swiper-slide swiper-slide">
+                                            <div class="range__swiper-slide-swiper swiper range__swiper-slide-swiper--1">
+                                                <div class="range__swiper-slide-swiper-wrapper swiper-wrapper">
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range2.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2">01</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range1.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2">02</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range4.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2">03</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range3.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2" >04</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range1.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2">05</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range2.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2">06</p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <ul class="range__swiper-slide-swiper-info-list">
+                                                    <li class="range__swiper-slide-swiper-info-item">
+                                                        <div class="range__swiper-slide-swiper-info-svg-wrapper">
+                                                            <div class="range__swiper-slide-swiper-info-svg-box">
+                                                                <img src="assets/images/range1.svg" alt="" />
+                                                            </div>
+                                                        </div>
+                                                        <p class="range__swiper-slide-swiper-info-text title-h5">Без ограничений по площади
+                                                        </p>
+                                                    </li>
+                                                    <li class="range__swiper-slide-swiper-info-item">
+                                                        <div class="range__swiper-slide-swiper-info-svg-wrapper">
+                                                            <div class="range__swiper-slide-swiper-info-svg-box">
+                                                                <img src="assets/images/range2.svg" alt="" />
+                                                            </div>
+                                                        </div>
+                                                        <p class="range__swiper-slide-swiper-info-text title-h5">Подходит для влажных помещений
+                                                        </p>
+                                                    </li>
+                                                    <li class="range__swiper-slide-swiper-info-item">
+                                                        <div class="range__swiper-slide-swiper-info-svg-wrapper">
+                                                            <div class="range__swiper-slide-swiper-info-svg-box">
+                                                                <img src="assets/images/range3.svg" alt="" />
+                                                            </div>
+                                                        </div>
+                                                        <p class="range__swiper-slide-swiper-info-text title-h5">Легкий в уходе
+                                                        </p>
+                                                    </li>
+                                                    <li class="range__swiper-slide-swiper-info-item">
+                                                        <div class="range__swiper-slide-swiper-info-svg-wrapper">
+                                                            <div class="range__swiper-slide-swiper-info-svg-box">
+                                                                <img src="assets/images/range4.svg" alt="" />
+                                                            </div>
+                                                        </div>
+                                                        <p class="range__swiper-slide-swiper-info-text title-h5">Итоговая сумма реализации от 5000 ₽
+                                                        </p>
+                                                    </li>
+                                                </ul>
+
+                                                <div class="range__swiper-scrollbar swiper-scrollbar"></div>
+                                                <div class="range__swiper-button-box">
+                                                    <div class="range__swiper-button-prev button-swiper">
+                                                        <div class="button-swiper__svg-box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                                                <path
+                                                                    d="M9.57031 18.0703L3.50031 12.0003L9.57031 5.93031"
+                                                                    stroke="white"
+                                                                    stroke-width="1.5"
+                                                                    stroke-miterlimit="10"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                />
+                                                                <path
+                                                                    d="M20.5 12.0002L3.67 12.0002"
+                                                                    stroke="white"
+                                                                    stroke-width="1.5"
+                                                                    stroke-miterlimit="10"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-button-next button-swiper">
+                                                        <div class="button-swiper__svg-box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                                                <path
+                                                                    d="M14.9297 5.8606L20.9997 11.9306L14.9297 18.0006"
+                                                                    stroke="white"
+                                                                    stroke-width="1.5"
+                                                                    stroke-miterlimit="10"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                />
+                                                                <path
+                                                                    d="M20.9297 11.9299L4.09969 11.9299"
+                                                                    stroke="white"
+                                                                    stroke-width="1.5"
+                                                                    stroke-miterlimit="10"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="range__swiper-slide swiper-slide">
+                                            <div class="range__swiper-slide-swiper swiper range__swiper-slide-swiper--1">
+                                                <div class="range__swiper-slide-swiper-wrapper swiper-wrapper">
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range1.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2">01</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range2.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2">02</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range3.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2">03</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range4.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2" >04</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range1.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2">05</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range2.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2">06</p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <ul class="range__swiper-slide-swiper-info-list">
+                                                    <li class="range__swiper-slide-swiper-info-item">
+                                                        <div class="range__swiper-slide-swiper-info-svg-wrapper">
+                                                            <div class="range__swiper-slide-swiper-info-svg-box">
+                                                                <img src="assets/images/range1.svg" alt="" />
+                                                            </div>
+                                                        </div>
+                                                        <p class="range__swiper-slide-swiper-info-text title-h5">Площадь прихожей 9 м2</p>
+                                                    </li>
+                                                    <li class="range__swiper-slide-swiper-info-item">
+                                                        <div class="range__swiper-slide-swiper-info-svg-wrapper">
+                                                            <div class="range__swiper-slide-swiper-info-svg-box">
+                                                                <img src="assets/images/range2.svg" alt="" />
+                                                            </div>
+                                                        </div>
+                                                        <p class="range__swiper-slide-swiper-info-text title-h5">Скрытый профиль</p>
+                                                    </li>
+                                                    <li class="range__swiper-slide-swiper-info-item">
+                                                        <div class="range__swiper-slide-swiper-info-svg-wrapper">
+                                                            <div class="range__swiper-slide-swiper-info-svg-box">
+                                                                <img src="assets/images/range3.svg" alt="" />
+                                                            </div>
+                                                        </div>
+                                                        <p class="range__swiper-slide-swiper-info-text title-h5">Сатиновый потолок</p>
+                                                    </li>
+                                                    <li class="range__swiper-slide-swiper-info-item">
+                                                        <div class="range__swiper-slide-swiper-info-svg-wrapper">
+                                                            <div class="range__swiper-slide-swiper-info-svg-box">
+                                                                <img src="assets/images/range4.svg" alt="" />
+                                                            </div>
+                                                        </div>
+                                                        <p class="range__swiper-slide-swiper-info-text title-h5">Итоговая сумма 5000 ₽</p>
+                                                    </li>
+                                                </ul>
+
+                                                <div class="range__swiper-scrollbar swiper-scrollbar"></div>
+                                                <div class="range__swiper-button-box">
+                                                    <div class="range__swiper-button-prev button-swiper">
+                                                        <div class="button-swiper__svg-box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                                                <path
+                                                                    d="M9.57031 18.0703L3.50031 12.0003L9.57031 5.93031"
+                                                                    stroke="white"
+                                                                    stroke-width="1.5"
+                                                                    stroke-miterlimit="10"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                />
+                                                                <path
+                                                                    d="M20.5 12.0002L3.67 12.0002"
+                                                                    stroke="white"
+                                                                    stroke-width="1.5"
+                                                                    stroke-miterlimit="10"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-button-next button-swiper">
+                                                        <div class="button-swiper__svg-box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                                                <path
+                                                                    d="M14.9297 5.8606L20.9997 11.9306L14.9297 18.0006"
+                                                                    stroke="white"
+                                                                    stroke-width="1.5"
+                                                                    stroke-miterlimit="10"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                />
+                                                                <path
+                                                                    d="M20.9297 11.9299L4.09969 11.9299"
+                                                                    stroke="white"
+                                                                    stroke-width="1.5"
+                                                                    stroke-miterlimit="10"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="range__swiper-slide swiper-slide">
+                                            <div class="range__swiper-slide-swiper swiper range__swiper-slide-swiper--1">
+                                                <div class="range__swiper-slide-swiper-wrapper swiper-wrapper">
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range2.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2">01</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range1.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2">02</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range4.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2">03</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range3.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2" >04</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range1.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2">05</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range2.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2">06</p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <ul class="range__swiper-slide-swiper-info-list">
+                                                    <li class="range__swiper-slide-swiper-info-item">
+                                                        <div class="range__swiper-slide-swiper-info-svg-wrapper">
+                                                            <div class="range__swiper-slide-swiper-info-svg-box">
+                                                                <img src="assets/images/range1.svg" alt="" />
+                                                            </div>
+                                                        </div>
+                                                        <p class="range__swiper-slide-swiper-info-text title-h5">Без ограничений по площади
+                                                        </p>
+                                                    </li>
+                                                    <li class="range__swiper-slide-swiper-info-item">
+                                                        <div class="range__swiper-slide-swiper-info-svg-wrapper">
+                                                            <div class="range__swiper-slide-swiper-info-svg-box">
+                                                                <img src="assets/images/range2.svg" alt="" />
+                                                            </div>
+                                                        </div>
+                                                        <p class="range__swiper-slide-swiper-info-text title-h5">Подходит для влажных помещений
+                                                        </p>
+                                                    </li>
+                                                    <li class="range__swiper-slide-swiper-info-item">
+                                                        <div class="range__swiper-slide-swiper-info-svg-wrapper">
+                                                            <div class="range__swiper-slide-swiper-info-svg-box">
+                                                                <img src="assets/images/range3.svg" alt="" />
+                                                            </div>
+                                                        </div>
+                                                        <p class="range__swiper-slide-swiper-info-text title-h5">Легкий в уходе
+                                                        </p>
+                                                    </li>
+                                                    <li class="range__swiper-slide-swiper-info-item">
+                                                        <div class="range__swiper-slide-swiper-info-svg-wrapper">
+                                                            <div class="range__swiper-slide-swiper-info-svg-box">
+                                                                <img src="assets/images/range4.svg" alt="" />
+                                                            </div>
+                                                        </div>
+                                                        <p class="range__swiper-slide-swiper-info-text title-h5">Итоговая сумма реализации от 5000 ₽
+                                                        </p>
+                                                    </li>
+                                                </ul>
+
+                                                <div class="range__swiper-scrollbar swiper-scrollbar"></div>
+                                                <div class="range__swiper-button-box">
+                                                    <div class="range__swiper-button-prev button-swiper">
+                                                        <div class="button-swiper__svg-box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                                                <path
+                                                                    d="M9.57031 18.0703L3.50031 12.0003L9.57031 5.93031"
+                                                                    stroke="white"
+                                                                    stroke-width="1.5"
+                                                                    stroke-miterlimit="10"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                />
+                                                                <path
+                                                                    d="M20.5 12.0002L3.67 12.0002"
+                                                                    stroke="white"
+                                                                    stroke-width="1.5"
+                                                                    stroke-miterlimit="10"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-button-next button-swiper">
+                                                        <div class="button-swiper__svg-box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                                                <path
+                                                                    d="M14.9297 5.8606L20.9997 11.9306L14.9297 18.0006"
+                                                                    stroke="white"
+                                                                    stroke-width="1.5"
+                                                                    stroke-miterlimit="10"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                />
+                                                                <path
+                                                                    d="M20.9297 11.9299L4.09969 11.9299"
+                                                                    stroke="white"
+                                                                    stroke-width="1.5"
+                                                                    stroke-miterlimit="10"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="range__swiper-slide swiper-slide">
+                                            <div class="range__swiper-slide-swiper swiper range__swiper-slide-swiper--1">
+                                                <div class="range__swiper-slide-swiper-wrapper swiper-wrapper">
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range2.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2">01</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range1.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2">02</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range4.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2">03</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range3.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2" >04</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range1.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2">05</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-slide-swiper-slide swiper-slide">
+                                                        <div class="range__swiper-slide-swiper-slide-inner">
+                                                            <div class="range__swiper-slide-swiper-slide-img-box">
+                                                                <img src="assets/images/range2.webp" alt="" />
+                                                            </div>
+                                                            <p class="range__swiper-slide-swiper-slide-num title-h2">06</p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <ul class="range__swiper-slide-swiper-info-list">
+                                                    <li class="range__swiper-slide-swiper-info-item">
+                                                        <div class="range__swiper-slide-swiper-info-svg-wrapper">
+                                                            <div class="range__swiper-slide-swiper-info-svg-box">
+                                                                <img src="assets/images/range1.svg" alt="" />
+                                                            </div>
+                                                        </div>
+                                                        <p class="range__swiper-slide-swiper-info-text title-h5">Без ограничений по площади
+                                                        </p>
+                                                    </li>
+                                                    <li class="range__swiper-slide-swiper-info-item">
+                                                        <div class="range__swiper-slide-swiper-info-svg-wrapper">
+                                                            <div class="range__swiper-slide-swiper-info-svg-box">
+                                                                <img src="assets/images/range2.svg" alt="" />
+                                                            </div>
+                                                        </div>
+                                                        <p class="range__swiper-slide-swiper-info-text title-h5">Подходит для влажных помещений
+                                                        </p>
+                                                    </li>
+                                                    <li class="range__swiper-slide-swiper-info-item">
+                                                        <div class="range__swiper-slide-swiper-info-svg-wrapper">
+                                                            <div class="range__swiper-slide-swiper-info-svg-box">
+                                                                <img src="assets/images/range3.svg" alt="" />
+                                                            </div>
+                                                        </div>
+                                                        <p class="range__swiper-slide-swiper-info-text title-h5">Легкий в уходе
+                                                        </p>
+                                                    </li>
+                                                    <li class="range__swiper-slide-swiper-info-item">
+                                                        <div class="range__swiper-slide-swiper-info-svg-wrapper">
+                                                            <div class="range__swiper-slide-swiper-info-svg-box">
+                                                                <img src="assets/images/range4.svg" alt="" />
+                                                            </div>
+                                                        </div>
+                                                        <p class="range__swiper-slide-swiper-info-text title-h5">Итоговая сумма реализации от 5000 ₽
+                                                        </p>
+                                                    </li>
+                                                </ul>
+
+                                                <div class="range__swiper-scrollbar swiper-scrollbar"></div>
+                                                <div class="range__swiper-button-box">
+                                                    <div class="range__swiper-button-prev button-swiper">
+                                                        <div class="button-swiper__svg-box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                                                <path
+                                                                    d="M9.57031 18.0703L3.50031 12.0003L9.57031 5.93031"
+                                                                    stroke="white"
+                                                                    stroke-width="1.5"
+                                                                    stroke-miterlimit="10"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                />
+                                                                <path
+                                                                    d="M20.5 12.0002L3.67 12.0002"
+                                                                    stroke="white"
+                                                                    stroke-width="1.5"
+                                                                    stroke-miterlimit="10"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="range__swiper-button-next button-swiper">
+                                                        <div class="button-swiper__svg-box">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                                                <path
+                                                                    d="M14.9297 5.8606L20.9997 11.9306L14.9297 18.0006"
+                                                                    stroke="white"
+                                                                    stroke-width="1.5"
+                                                                    stroke-miterlimit="10"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                />
+                                                                <path
+                                                                    d="M20.9297 11.9299L4.09969 11.9299"
+                                                                    stroke="white"
+                                                                    stroke-width="1.5"
+                                                                    stroke-miterlimit="10"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -712,7 +1470,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
 
                             <div class="stages__swiper swiper">
@@ -1046,7 +1803,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                          
                                         </a>
                                     </div>
                                     <div class="prices__swiper-slide swiper-slide">
@@ -1060,7 +1816,7 @@
                                                     <p class="prices__swiper-slide-price price">390 <span class="title-h2">₽/м2</span></p>
                                                 </div>
                                             </div>
-                                             <div class="prices__swiper-slide-link-wrapper">
+                                            <div class="prices__swiper-slide-link-wrapper">
                                                 <div class="prices__swiper-slide-link">
                                                     <div class="prices__swiper-slide-link-svg-box">
                                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none">
@@ -1095,7 +1851,7 @@
                                                     <p class="prices__swiper-slide-price price">390 <span class="title-h2">₽/м2</span></p>
                                                 </div>
                                             </div>
-                                             <div class="prices__swiper-slide-link-wrapper">
+                                            <div class="prices__swiper-slide-link-wrapper">
                                                 <div class="prices__swiper-slide-link">
                                                     <div class="prices__swiper-slide-link-svg-box">
                                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none">
@@ -1130,7 +1886,7 @@
                                                     <p class="prices__swiper-slide-price price">390 <span class="title-h2">₽/м2</span></p>
                                                 </div>
                                             </div>
-                                             <div class="prices__swiper-slide-link-wrapper">
+                                            <div class="prices__swiper-slide-link-wrapper">
                                                 <div class="prices__swiper-slide-link">
                                                     <div class="prices__swiper-slide-link-svg-box">
                                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none">
@@ -1165,7 +1921,7 @@
                                                     <p class="prices__swiper-slide-price price">390 <span class="title-h2">₽/м2</span></p>
                                                 </div>
                                             </div>
-                                             <div class="prices__swiper-slide-link-wrapper">
+                                            <div class="prices__swiper-slide-link-wrapper">
                                                 <div class="prices__swiper-slide-link">
                                                     <div class="prices__swiper-slide-link-svg-box">
                                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none">
@@ -1200,7 +1956,7 @@
                                                     <p class="prices__swiper-slide-price price">390 <span class="title-h2">₽/м2</span></p>
                                                 </div>
                                             </div>
-                                             <div class="prices__swiper-slide-link-wrapper">
+                                            <div class="prices__swiper-slide-link-wrapper">
                                                 <div class="prices__swiper-slide-link">
                                                     <div class="prices__swiper-slide-link-svg-box">
                                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none">
@@ -1235,7 +1991,7 @@
                                                     <p class="prices__swiper-slide-price price">390 <span class="title-h2">₽/м2</span></p>
                                                 </div>
                                             </div>
-                                             <div class="prices__swiper-slide-link-wrapper">
+                                            <div class="prices__swiper-slide-link-wrapper">
                                                 <div class="prices__swiper-slide-link">
                                                     <div class="prices__swiper-slide-link-svg-box">
                                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none">
@@ -1270,7 +2026,7 @@
                                                     <p class="prices__swiper-slide-price price">390 <span class="title-h2">₽/м2</span></p>
                                                 </div>
                                             </div>
-                                             <div class="prices__swiper-slide-link-wrapper">
+                                            <div class="prices__swiper-slide-link-wrapper">
                                                 <div class="prices__swiper-slide-link">
                                                     <div class="prices__swiper-slide-link-svg-box">
                                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none">
@@ -1305,7 +2061,7 @@
                                                     <p class="prices__swiper-slide-price price">390 <span class="title-h2">₽/м2</span></p>
                                                 </div>
                                             </div>
-                                             <div class="prices__swiper-slide-link-wrapper">
+                                            <div class="prices__swiper-slide-link-wrapper">
                                                 <div class="prices__swiper-slide-link">
                                                     <div class="prices__swiper-slide-link-svg-box">
                                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none">
@@ -2102,9 +2858,7 @@
                                     </div>
 
                                     <p class="info__article-wrapper-title title-h3">Натяжные потолки в Москве и Московской области</p>
-                                    
-                                 
-                                    
+
                                     <p class="info__article-text title-h5">
                                         Мы выполняем монтаж натяжного потолка в Москве и области. Ниже представлены разные виды полотен и типы конструкций, которые
                                         собирают наши монтажники. Применяем технологии, включающие образование декоративного зазора или создания плотного примыкания
@@ -2162,7 +2916,6 @@
                                     </div>
                                 </div>
                             </div>
-                        
                         </div>
                     </div>
                 </section>
