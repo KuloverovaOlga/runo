@@ -116,11 +116,12 @@
 
     &__nav-item {
         & .header__nav-item-link {
+            transition: color 0.3s ease-in-out;
             &::after {
                 position: relative;
                 content: '';
                 display: block;
-                bottom: -0.8rem;
+                bottom: 0;
                 width: 0;
                 height: 0.2rem;
                 background: $purple;
@@ -128,6 +129,9 @@
             }
             &:hover::after {
                 width: 100%;
+            }
+            &:hover {
+                color: $purple;
             }
         }
     }

@@ -322,7 +322,8 @@ body::before {
         display: flex;
         flex-direction: column;
         gap: 6rem;
-
+position: relative;
+z-index: 2;
         @media (max-width: 48em) {
             gap: 6.4rem;
         }
