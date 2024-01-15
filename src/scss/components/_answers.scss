@@ -1,0 +1,46 @@
+.answers {
+    padding: 3.2rem 0 9rem;
+
+    @include small-tablet {
+        padding: 8rem 0 10rem;
+    }
+
+    &__title {
+        @include small-tablet {
+            font-size: 6.4rem;
+            line-height: 120%;
+        }
+    }
+
+    &__tab {
+        &-swiper {
+            position: relative;
+            overflow: hidden;
+            padding: 8rem 0 6rem;
+
+            .answers__tab-item {
+                @include tab-item;
+            }
+        }
+    }
+    &__display {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        animation: fade-in 0.5s ease-in-out;
+        display: none;
+
+        &.active {
+            display: flex;
+            animation: fade-in 0.5s ease-in-out;
+        }
+
+        @include small-tablet {
+            gap: 2rem;
+        }
+    }
+    &__more-btn {
+        @include btn-purple;
+        margin-top: 6rem;
+    }
+}
