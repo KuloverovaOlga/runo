@@ -144,4 +144,24 @@ const weDoingSwiper = () => {
   });
 }
 
-export {catalogSwiper, productBannerSwiper, benefitsSwiper, ourWorksTabSwiper, specialistsSwiper, weDoingSwiper};
+// ANSWERS section
+const answersSwiper = () => {
+  const sliderThumbs = new Swiper('.answers__tab-swiper', {
+    slidesPerView: 'auto',
+    watchOverflow: true,
+    spaceBetween: rem(2),
+    speed: 1000,
+    breakpoints: {
+      769: {
+        slidesPerView: 'auto',
+        spaceBetween: rem(2),
+      },
+      210: {
+        slidesPerView: 'auto',
+        spaceBetween: rem(4),
+      }
+    }
+  });
+}
+
+export {catalogSwiper, productBannerSwiper, benefitsSwiper, ourWorksTabSwiper, specialistsSwiper, weDoingSwiper, answersSwiper};

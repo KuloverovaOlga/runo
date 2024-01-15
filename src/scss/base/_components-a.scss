@@ -221,3 +221,22 @@
     display: none;
   }
 }
+
+.bread {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__link {
+    &._curr {
+      color: $purple;
+      cursor: default;
+    }
+  }
+  &__link:not(:last-child)::after {
+    display: inline-block;
+    margin: 0 0.8rem;
+    content: "/";
+  }
+
+}

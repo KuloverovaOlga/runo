@@ -1,5 +1,5 @@
 window.$ = window.jQuery = require('jquery');
-import {catalogSwiper, productBannerSwiper, benefitsSwiper, ourWorksTabSwiper, specialistsSwiper, weDoingSwiper} from './swiper/swipers';
+import {catalogSwiper, productBannerSwiper, benefitsSwiper, ourWorksTabSwiper, specialistsSwiper, weDoingSwiper, answersSwiper} from './swiper/swipers';
 
 document.addEventListener('DOMContentLoaded', () => {
     try {
@@ -18,7 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
         specialistsSwiper();
     } catch {}
     try {
-      weDoingSwiper();
+        weDoingSwiper();
+    } catch {}
+    try {
+      answersSwiper();
     } catch {}
 });
 
@@ -47,7 +50,6 @@ $('.our-works__tab-item').on('click', function() {
   $('.our-works__display').removeClass('active');
   content.addClass('active');
 });
-window.$ = window.jQuery = require('jquery');
 $(document).ready(function() {
     let maxVisibleSlides = 6;
     let incrementSlides = 2;
@@ -87,4 +89,57 @@ $(document).ready(function() {
         let activeTab = $('.our-works__tab-item._active').data('tab');
         setupSlides(activeTab);
     });
-  });
+});
+
+// ANSWERS tabs
+$('.answers__tab-item').on('click', function() {
+  let id = $(this).attr('data-tab');
+  let content = $('.answers__display[data-tab="'+ id +'"]');
+  
+  $('.answers__tab-item._active').removeClass('_active');
+  $(this).addClass('_active');
+  
+  $('.answers__display').removeClass('active');
+  content.addClass('active');
+});
+window.$ = window.jQuery = require('jquery');
+$(document).ready(function() {
+    let maxVisibleSlides = 10;
+    let incrementSlides = 10;
+    
+    function setupSlides(activeTab) {
+        let currentSlideItems = $(`.answers__display[data-tab='${activeTab}'] .questions__accordion-item`);
+        
+        // Показываем начальные слайды
+        currentSlideItems.hide();
+        currentSlideItems.slice(0, maxVisibleSlides).show();
+        
+        // Если число слайдов меньше или равно maxVisibleSlides, скрываем кнопку
+        if (currentSlideItems.length <= maxVisibleSlides) {
+            $('.answers__more-btn').hide();
+        } else {
+            $('.answers__more-btn').show();
+        }
+    
+        // Обновляем обработчик событий
+        $('.answers__more-btn').off('click').on('click', function (e) {
+            e.preventDefault();
+        
+            $(`.answers__display[data-tab='${activeTab}'] .questions__accordion-item:hidden`).slice(0, incrementSlides).slideDown();
+        
+            if ($(`.answers__display[data-tab='${activeTab}'] .questions__accordion-item:hidden`).length == 0) {
+                $('.answers__more-btn').fadeOut('slow');
+            }
+        });
+    }
+    
+    // Первоначальная настройка слайдов
+    setupSlides($('.answers__tab-item._active').data('tab'));
+    
+    // Ваш обработчик переключения вкладок
+    $('.answers__tab-item').on('click', function() {
+        
+        let activeTab = $('.answers__tab-item._active').data('tab');
+        setupSlides(activeTab);
+    });
+});
