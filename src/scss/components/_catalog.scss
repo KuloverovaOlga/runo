@@ -62,6 +62,14 @@
   .price-item-btn {
     @include curved-border-angle(8rem, 11.5rem);
   }
+  .price-item-img {
+    -webkit-mask-image: url(./assets/images/catalog__img-mask.svg);
+    mask-image: url(./assets/images/catalog__img-mask.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+  }
 }
 
 @keyframes fade-in {

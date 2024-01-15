@@ -116,13 +116,13 @@
 
 .price-item {
   width: 54.5rem;
-  border-radius: 1rem;
+  border-radius: 3rem;
   background-color: $white;
   width: 54.5rem;
   position: relative;
   @include small-tablet {
     width: 70rem;
-    border-radius: 2rem;
+    border-radius: 3.2rem;
   }
   &_img {
     .price-item {
