@@ -1,4 +1,10 @@
 .product-banner {
+  padding: 3.2rem 0 9rem;
+
+  @include small-tablet {
+    padding: 8rem 0 10rem;
+  }
+
   .container {
     display: flex;
     justify-content: space-between;

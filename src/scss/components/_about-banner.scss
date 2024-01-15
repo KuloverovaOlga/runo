@@ -1,68 +1,68 @@
 .about-banner {
-  padding: 0 0 9rem;
-
-  @include small-tablet {
-    padding: 0 0 10rem;
-  }
-
-  &__heading {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 6rem;
+    padding: 3.2rem 0 9rem;
 
     @include small-tablet {
-      flex-direction: column;
-      gap: 4.8rem;
-      margin-bottom: 6.4rem;
-    }
-  }
-
-  &__title {
-    width: 76.8rem;
-
-    @include small-tablet {
-      width: 100%;
-      font-size: 6.4rem;
-      line-height: 120%;
-    }
-  }
-
-  &__subtitle {
-    width: 84rem;
-    letter-spacing: 0.072rem;
-    margin-top: 1.5rem;
-
-    @include small-tablet {
-      margin: 0;
-      font-size: 2.8rem;
-      letter-spacing: 0.11rem;
-      width: 100%;
-    }
-  }
-
-  &__wrapper {
-    position: relative;
-  }
-
-  &__img {
-    -webkit-mask-image: url(./assets/images/repair-banner__mask.webp);
-    mask-image: url(./assets/images/repair-banner__mask.webp);
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-    height: 64.3rem;
-    width: 100%;
-
-    @include small-tablet {
-      -webkit-mask-image: url(./assets/images/repair-banner__mask-mob.webp);
-      mask-image: url(./assets/images/repair-banner__mask-mob.webp);
-      height: 48rem;
+        padding: 8rem 0 10rem;
     }
 
-    img {
-      height: 100%;
-      object-fit: cover;
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 6rem;
+
+        @include small-tablet {
+            flex-direction: column;
+            gap: 4.8rem;
+            margin-bottom: 6.4rem;
+        }
     }
-  }
+
+    &__title {
+        width: 76.8rem;
+
+        @include small-tablet {
+            width: 100%;
+            font-size: 6.4rem;
+            line-height: 120%;
+        }
+    }
+
+    &__subtitle {
+        width: 84rem;
+        letter-spacing: 0.072rem;
+        margin-top: 1.5rem;
+
+        @include small-tablet {
+            margin: 0;
+            font-size: 2.8rem;
+            letter-spacing: 0.11rem;
+            width: 100%;
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &__img {
+        -webkit-mask-image: url(./assets/images/repair-banner__mask.webp);
+        mask-image: url(./assets/images/repair-banner__mask.webp);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        height: 64.3rem;
+        width: 100%;
+
+        @include small-tablet {
+            -webkit-mask-image: url(./assets/images/repair-banner__mask-mob.webp);
+            mask-image: url(./assets/images/repair-banner__mask-mob.webp);
+            height: 48rem;
+        }
+
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 }

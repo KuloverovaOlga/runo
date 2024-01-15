@@ -1,123 +1,116 @@
 .we-doing {
-  padding: 9rem 0;
-
-  @include small-tablet {
-    padding: 10rem 0;
-  }
-
-  &__heading {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 6rem;
-    align-items: center;
+    padding: 9rem 0;
 
     @include small-tablet {
-      flex-direction: column;
-      gap: 4.8rem;
-      margin-bottom: 6.4rem;
-    }
-  }
-
-  &__title {
-    width: 76.8rem;
-
-    @include small-tablet {
-      width: 100%;
-      font-size: 6.4rem;
-      line-height: 120%;
-    }
-  }
-
-  &__btn {
-    @include btn-purple;
-  }
-
-  &__wrapper {
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: space-between;
-  }
-
-  &__item {
-    -webkit-mask-image: url(./assets/images/we-doing__item-mask.svg);
-    mask-image: url(./assets/images/we-doing__item-mask.svg);
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-    width: 54.5rem;
-    height: 78rem;
-    background-color: $white;
-    display: flex;
-    flex-direction: column;
-    @include small-tablet {
-      width: 100%;
-      height: 101rem;
+        padding: 10rem 0;
     }
 
-    &-content {
-      padding: 6rem 6rem 0 6rem;
-      display: flex;
-      flex-direction: column;
-      @include small-tablet {
-        padding: 4.8rem 4.6rem 0 6.2rem;
-      }
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 6rem;
+        align-items: center;
+
+        @include small-tablet {
+            flex-direction: column;
+            gap: 4.8rem;
+            margin-bottom: 6.4rem;
+        }
     }
 
-    &-title {
-      margin-bottom: 3.2rem;
-      @include small-tablet {
-        font-size: 4.8rem;
-        letter-spacing: 0.18rem;
-      }
+    &__title {
+        width: 76.8rem;
+
+        @include small-tablet {
+            width: 100%;
+            font-size: 6.4rem;
+            line-height: 120%;
+        }
     }
 
-    &-text {
-      color: $grey-text;
-      letter-spacing: 0.072rem;
-      line-height: 146%;
-      @include small-tablet {
-        font-size: 2.8rem;
-        letter-spacing: 0.12rem;
-        line-height: 146%;
-      }
+    &__btn {
+        @include btn-purple;
     }
 
+    &__item {
+        -webkit-mask-image: url(./assets/images/we-doing__item-mask.svg);
+        mask-image: url(./assets/images/we-doing__item-mask.svg);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        width: 54.5rem;
+        height: 78rem;
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        @include small-tablet {
+            width: 100%;
+            height: 101rem;
+        }
 
-    &-img {
-      -webkit-mask-image: url(./assets/images/we-doing__img-mask.svg);
-      mask-image: url(./assets/images/we-doing__img-mask.svg);
-      -webkit-mask-repeat: no-repeat;
-      mask-repeat: no-repeat;
-      -webkit-mask-size: contain;
-      mask-size: contain;
-      width: 100%;
-      height: 45.8rem;
-      img {
-        height: 100%;
-        object-fit: cover;
-      }
-      @include small-tablet {
-        width: 100%;
-        height: 59rem;
-      }
-    }
-  }
+        &-content {
+            padding: 6rem 6rem 0 6rem;
+            display: flex;
+            flex-direction: column;
+            @include small-tablet {
+                padding: 4.8rem 4.6rem 0 6.2rem;
+            }
+        }
 
-  &__swiper-scrollbar {
-    display: none;
-    @include scroll-bar;
-    @include small-tablet {
-      display: block;
-      margin: 6.4rem 0 6.4rem;
-    }
-  }
+        &-title {
+            margin-bottom: 3.2rem;
+            @include small-tablet {
+                font-size: 4.8rem;
+                letter-spacing: 0.18rem;
+            }
+        }
 
-  &__nav-box {
-    display: none;
-    @include small-tablet {
-      display: flex;
-      gap: 2rem;
+        &-text {
+            color: $grey-text;
+            letter-spacing: 0.072rem;
+            line-height: 146%;
+            @include small-tablet {
+                font-size: 2.8rem;
+                letter-spacing: 0.12rem;
+                line-height: 146%;
+            }
+        }
+
+        &-img {
+            -webkit-mask-image: url(./assets/images/we-doing__img-mask.svg);
+            mask-image: url(./assets/images/we-doing__img-mask.svg);
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-size: contain;
+            mask-size: contain;
+            width: 100%;
+            height: 45.8rem;
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+            @include small-tablet {
+                width: 100%;
+                height: 59rem;
+            }
+        }
     }
-  }
+
+    &__swiper-scrollbar {
+        display: none;
+        @include scroll-bar;
+        @include small-tablet {
+            display: block;
+            margin: 6.4rem 0 6.4rem;
+        }
+    }
+
+    &__nav-box {
+        display: none;
+        @include small-tablet {
+            display: flex;
+            gap: 2rem;
+        }
+    }
 }

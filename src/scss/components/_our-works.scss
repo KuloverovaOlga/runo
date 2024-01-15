@@ -1,197 +1,197 @@
 .our-works {
-  &__title {
-    margin-bottom: 8rem;
-  }
+    padding: 3.2rem 0 9rem;
 
-  &__tab {
-    &-swiper {
-      position: relative;
-      overflow: hidden;
+    @include small-tablet {
+        padding: 8rem 0 10rem;
+    }
+    &__title {
+        margin-bottom: 8rem;
+    }
 
-      .our-works__tab-item {
-        @include tab-item;
-      }
+    &__tab {
+        &-swiper {
+            position: relative;
+            overflow: hidden;
 
-      .our-works__tab-btn-next,
-      .our-works__tab-btn-prev {
-        position: absolute;
-        top: 0.2rem;
-        z-index: 3;
-        outline: $bg 1.5rem solid;
+            .our-works__tab-item {
+                @include tab-item;
+            }
 
-        @include small-tablet {
-          display: none;
+            .our-works__tab-btn-next,
+            .our-works__tab-btn-prev {
+                position: absolute;
+                top: 0.2rem;
+                z-index: 3;
+                outline: $bg 1.5rem solid;
+
+                @include small-tablet {
+                    display: none;
+                }
+            }
+
+            .our-works__tab-btn-next {
+                right: 0;
+                box-shadow: $bg -5rem 0rem 3rem;
+            }
+
+            .our-works__tab-btn-prev {
+                left: 0;
+                box-shadow: $bg 5rem 0rem 3rem;
+            }
+
+            .swiper-button-disabled {
+                display: none;
+            }
         }
-      }
+    }
 
-      .our-works__tab-btn-next {
-        right: 0;
-        box-shadow: $bg -5rem 0rem 3rem;
-      }
-
-      .our-works__tab-btn-prev {
-        left: 0;
-        box-shadow: $bg 5rem 0rem 3rem;
-      }
-
-      .swiper-button-disabled {
+    &__display {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4rem;
+        margin-top: 6rem;
+        animation: fade-in 0.5s ease-in-out;
         display: none;
-      }
-    }
 
-  }
+        &.active {
+            display: flex;
+            animation: fade-in 0.5s ease-in-out;
+        }
 
-  &__display {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4rem;
-    margin-top: 6rem;
-    animation: fade-in 0.5s ease-in-out;
-    display: none;
-
-    &.active {
-      display: flex;
-      animation: fade-in 0.5s ease-in-out;
-    }
-
-    @include small-tablet {
-      gap: 2rem;
-    }
-  }
-
-  &__item {
-    -webkit-mask-image: url(./assets/images/our-works__item-mask.svg);
-    mask-image: url(./assets/images/our-works__item-mask.svg);
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-    width: 84rem;
-    height: 48.5rem;
-    display: flex;
-    justify-content: space-between;
-    background-color: $white;
-    @include small-tablet {
-      width: 100%;
-      height: 142rem;
-      flex-direction: column;
-      -webkit-mask-image: url(./assets/images/our-works__item-mask_mob.svg);
-      mask-image: url(./assets/images/our-works__item-mask_mob.svg);
-    }
-
-    &-content {
-      padding: 6rem 0 0 6rem;
-      width: 38rem;
-      @include small-tablet {
-        width: 100%;
-        padding: 4.8rem;
-      }
-    }
-
-    &-title {
-      @include small-tablet {
-        font-size: 4.8rem;
-        font-weight: 500;
-        letter-spacing: 0.18rem;
-      }
-    }
-
-    &-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.8rem;
-      margin-top: 3.2rem;
-      letter-spacing: 0.072rem;
-      @include small-tablet {
-        margin-top: 4.8rem;
-        gap: 2.4rem;
-        font-size: 2.8rem;
-        letter-spacing: 0.12rem;
-      }
-    }
-
-    &-li {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      span {
-        color: $purple;
-      }
-      @include small-tablet {
-        gap: 2.4rem;
-      }
-      &::before {
-        content: '';
-        display: block;
-        width: 3.2rem;
-        min-width: 3.2rem;
-        height: 3.2rem;
-        background-repeat: no-repeat;
-        background-size: 100%;
         @include small-tablet {
-          width: 4.8rem;
-          height: 4.8rem;
+            gap: 2rem;
         }
-      }
-      &._area {
-        &::before {
-          background-image: url(./assets/images/icons/area-icon.svg);
-        }
-
-      }
-      &._ceil {
-        &::before {
-          background-image: url(./assets/images/icons/ceil-icon.svg); 
-        }
-
-      }
-      &._type {
-        &::before {
-          background-image: url(./assets/images/icons/type-icon.svg);
-        }
-
-      }
-      &._price {
-        &::before {
-          background-image: url(./assets/images/icons/work-price-icon.svg);
-        }
-
-      }
     }
 
-    &-img {
-      -webkit-mask-image: url(./assets/images/our-works__img-mask.svg);
-      mask-image: url(./assets/images/our-works__img-mask.svg);
-      -webkit-mask-repeat: no-repeat;
-      mask-repeat: no-repeat;
-      -webkit-mask-size: contain;
-      mask-size: contain;
-      width: 40rem;
-      height: 100%;
-      @include small-tablet {
-        width: 100%;
-        height: 82.4rem;
-        -webkit-mask-image: url(./assets/images/our-works__img-mask_mob.svg);
-        mask-image: url(./assets/images/our-works__img-mask_mob.svg);
-      }
-      img {
-        height: 100%;
-        object-fit: cover;
-      }
+    &__item {
+        -webkit-mask-image: url(./assets/images/our-works__item-mask.svg);
+        mask-image: url(./assets/images/our-works__item-mask.svg);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        width: 84rem;
+        height: 48.5rem;
+        display: flex;
+        justify-content: space-between;
+        background-color: $white;
+        @include small-tablet {
+            width: 100%;
+            height: 142rem;
+            flex-direction: column;
+            -webkit-mask-image: url(./assets/images/our-works__item-mask_mob.svg);
+            mask-image: url(./assets/images/our-works__item-mask_mob.svg);
+        }
+
+        &-content {
+            padding: 6rem 0 0 6rem;
+            width: 38rem;
+            @include small-tablet {
+                width: 100%;
+                padding: 4.8rem;
+            }
+        }
+
+        &-title {
+            @include small-tablet {
+                font-size: 4.8rem;
+                font-weight: 500;
+                letter-spacing: 0.18rem;
+            }
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+            margin-top: 3.2rem;
+            letter-spacing: 0.072rem;
+            @include small-tablet {
+                margin-top: 4.8rem;
+                gap: 2.4rem;
+                font-size: 2.8rem;
+                letter-spacing: 0.12rem;
+            }
+        }
+
+        &-li {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            span {
+                color: $purple;
+            }
+            @include small-tablet {
+                gap: 2.4rem;
+            }
+            &::before {
+                content: '';
+                display: block;
+                width: 3.2rem;
+                min-width: 3.2rem;
+                height: 3.2rem;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                @include small-tablet {
+                    width: 4.8rem;
+                    height: 4.8rem;
+                }
+            }
+            &._area {
+                &::before {
+                    background-image: url(./assets/images/icons/area-icon.svg);
+                }
+            }
+            &._ceil {
+                &::before {
+                    background-image: url(./assets/images/icons/ceil-icon.svg);
+                }
+            }
+            &._type {
+                &::before {
+                    background-image: url(./assets/images/icons/type-icon.svg);
+                }
+            }
+            &._price {
+                &::before {
+                    background-image: url(./assets/images/icons/work-price-icon.svg);
+                }
+            }
+        }
+
+        &-img {
+            -webkit-mask-image: url(./assets/images/our-works__img-mask.svg);
+            mask-image: url(./assets/images/our-works__img-mask.svg);
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-size: contain;
+            mask-size: contain;
+            width: 40rem;
+            height: 100%;
+            @include small-tablet {
+                width: 100%;
+                height: 82.4rem;
+                -webkit-mask-image: url(./assets/images/our-works__img-mask_mob.svg);
+                mask-image: url(./assets/images/our-works__img-mask_mob.svg);
+            }
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
     }
-  }
-  &__more-btn {
-    @include btn-purple;
-    margin-top: 6rem;
-  }
+    &__more-btn {
+        @include btn-purple;
+        margin-top: 6rem;
+    }
 }
 
 @keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
+    0% {
+        opacity: 0;
+    }
 
-  100% {
-    opacity: 1;
-  }
+    100% {
+        opacity: 1;
+    }
 }
