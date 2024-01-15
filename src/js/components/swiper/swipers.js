@@ -122,4 +122,26 @@ const specialistsSwiper = () => {
   });
 }
 
-export {catalogSwiper, productBannerSwiper, benefitsSwiper, ourWorksTabSwiper, specialistsSwiper};
+// WE-DOING section
+const weDoingSwiper = () => {
+  const sliderThumbs = new Swiper('.we-doing__swiper', {
+    slidesPerView: 1,
+    watchOverflow: true,
+    spaceBetween: rem(2),
+    speed: 1000,
+    navigation: {
+      nextEl: '.we-doing__btn-next',
+      prevEl: '.we-doing__btn-prev',
+    },
+    scrollbar: {
+      el: '.we-doing__swiper-scrollbar',
+    },
+    breakpoints: {
+      769: {
+        slidesPerView: 3,
+      },
+    },
+  });
+}
+
+export {catalogSwiper, productBannerSwiper, benefitsSwiper, ourWorksTabSwiper, specialistsSwiper, weDoingSwiper};
