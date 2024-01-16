@@ -164,4 +164,30 @@ const answersSwiper = () => {
   });
 }
 
-export {catalogSwiper, productBannerSwiper, benefitsSwiper, ourWorksTabSwiper, specialistsSwiper, weDoingSwiper, answersSwiper};
+// POPUP CERTIFICATES section
+const popupCertSwiper = () => {
+  const sliderThumbs = new Swiper('.popup-cert__thub-swiper', {
+    slidesPerView: 4,
+    spaceBetween: rem(4),
+    speed: 500,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  const sliderImgs = new Swiper('.popup-cert__swiper', {
+    spaceBetween: rem(2),
+    speed: 300,
+    navigation: {
+      nextEl: '.popup-cert__swiper-button-next',
+      prevEl: '.popup-cert__swiper-button-prev',
+    },
+    thumbs: {
+      swiper: sliderThumbs,
+    },
+  });
+
+  $('.certificates__swiper-slide').click(function(event) {
+    sliderImgs.slideTo($('.certificates__swiper-slide').index(this))
+  });
+}
+
+export {catalogSwiper, productBannerSwiper, benefitsSwiper, ourWorksTabSwiper, specialistsSwiper, weDoingSwiper, answersSwiper, popupCertSwiper};

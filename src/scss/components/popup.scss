@@ -511,3 +511,103 @@ z-index: 2;
     &__calculator-form-aside-button {
     }
 }
+
+// popup__certificates
+.popup__certificates {
+  .popup__content {
+    background-color: transparent;
+  }
+  .popup__body {
+    width: 59rem;
+    gap: 4rem;
+    @include small-tablet {
+      width: 70rem;
+    }
+  }
+  .popup-cert__wrapper {
+    border-radius: 4rem;
+    padding: 2rem;
+    background-color: $white;
+  }
+  .popup__body-close-btn {
+    position: relative;
+    top: auto;
+    right: auto;
+    background-color: $white;
+    border-radius: 2rem;
+    width: 6rem;
+    height: 6rem;
+    @include small-tablet {
+      width: 9.6rem;
+      height: 9.6rem;
+      border-radius: 3.2rem;
+    }
+    svg {
+      width: 1.4rem;
+      height: 1.4rem;
+      @include small-tablet {
+        width: 2.8rem;
+        height: 2.8rem;
+      }
+    }
+  }
+  .popup-cert__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    @include small-tablet {
+      padding: 0;
+    }
+  }
+  .popup-cert__swiper-button-box {
+    display: flex;
+    gap: 2rem;
+    .button-swiper {
+      background-color: $white;
+      @include small-tablet {
+        width: 9.6rem;
+        height: 9.6rem;
+        border-radius: 3.2rem;
+      }
+    }
+  }
+  .popup-cert__swiper {
+    overflow: hidden;
+    .popup-cert__swiper-slide-img-box {
+      height: 66.8rem;
+      width: 46.5rem;
+      @include small-tablet {
+        width: 58rem;
+        height: 82rem;
+      }
+      img {
+        height: 100%;
+        object-fit: cover;
+        width: auto;
+      }
+    }
+
+  }
+  .button-swiper__svg-box {
+    @include small-tablet {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+  .popup-cert__thub-swiper {
+    overflow: hidden;
+    @include small-tablet {
+      display: none;
+    }
+    .popup-cert__swiper-slide-img-box {
+      height: 10rem;
+      width: 10rem;
+      border-radius: 2rem;
+      img {
+        height: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+      }
+    }
+  }
+}
