@@ -1,5 +1,5 @@
 window.$ = window.jQuery = require('jquery');
-import {catalogSwiper, productBannerSwiper, benefitsSwiper, ourWorksTabSwiper, specialistsSwiper, weDoingSwiper, answersSwiper} from './swiper/swipers';
+import {catalogSwiper, productBannerSwiper, benefitsSwiper, ourWorksTabSwiper, specialistsSwiper, weDoingSwiper, answersSwiper, popupCertSwiper} from './swiper/swipers';
 
 document.addEventListener('DOMContentLoaded', () => {
     try {
@@ -21,7 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
         weDoingSwiper();
     } catch {}
     try {
-      answersSwiper();
+        answersSwiper();
+    } catch {}
+    try {
+        popupCertSwiper();
     } catch {}
 });
 
@@ -142,4 +145,24 @@ $(document).ready(function() {
         let activeTab = $('.answers__tab-item._active').data('tab');
         setupSlides(activeTab);
     });
+});
+
+// CERTIFICATES section
+import { Fancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
+Fancybox.bind("[data-fancybox='certificates']", {
+  // Your custom options
+  idle: false,
+  Carousel: {
+    Navigation: false,
+  },
+  Toolbar: {
+    display: {
+      left: ["close"],
+      middle: ["prev", "next"],
+      right: [],
+    },
+    parentEl: function () { return this.instance.container?.querySelector(".fancybox__footer") || null; },
+  },
 });
