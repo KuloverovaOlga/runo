@@ -6,6 +6,7 @@ const reviewsSwiper = () => {
     const swiper = new Swiper('.reviews__swiper', {
         slidesPerView: 1,
         spaceBetween: 20,
+        grabCursor: true,
         scrollbar: {
             el: '.reviews__swiper-scrollbar',
         },
@@ -17,6 +18,7 @@ const reviewsSwiper = () => {
 
         breakpoints: {
             769: {
+
                 slidesPerView: 3,
                 spaceBetween: 40,
             },

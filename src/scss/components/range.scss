@@ -154,6 +154,10 @@
         .range__swiper-slide-swiper-slide.swiper-slide.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide {
         pointer-events: fill !important;
     }
+
+    .swiper-fade .swiper-slide-active .swiper-slide {
+        pointer-events: auto;
+    }
     // .range__swiper-slide-swiper-slide-inner
 
     &__swiper-slide-swiper-slide-inner {

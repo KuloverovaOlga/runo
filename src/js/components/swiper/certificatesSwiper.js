@@ -6,6 +6,7 @@ const certificatesSwiper = () => {
     const swiper = new Swiper(".certificates__swiper", {
         slidesPerView: 1,
         spaceBetween: 20,
+        grabCursor: true,
         scrollbar: {
             el: ".certificates__swiper-scrollbar",
           },
