@@ -17,6 +17,7 @@ import select from './select';
 import widget from './widget';
 import phoneMask from './phoneMask';
 import dropdown from './dropdown';
+import scroll from './scroll';
 
 import popup from './popup';
 import form from './form';
@@ -68,6 +69,9 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch {}
     try {
         dropdown();
+    } catch {}
+    try {
+        scroll();
     } catch {}
 
 

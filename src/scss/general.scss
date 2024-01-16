@@ -141,8 +141,6 @@ main {
         padding: 2.6rem 4.8rem;
         border-radius: 3.2rem;
         height: 9.6rem;
-
-       
     }
 }
 
@@ -314,6 +312,8 @@ main {
     border-radius: 2rem;
     cursor: auto;
     margin-bottom: 0;
+    position: relative;
+    z-index: 2;
     @media (max-width: 48em) {
         height: 9.6rem;
         padding: 2.8rem 3.2rem;
@@ -327,6 +327,7 @@ main {
         left: 0;
         margin-top: 1rem;
         box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.05);
+
         .choices__item {
             border-bottom: 0.1rem solid rgba(161, 172, 185, 0.2);
             padding: 1.7rem 1.6rem;
@@ -370,7 +371,7 @@ main {
         background: url('./assets/images/icons/select-arr.svg') no-repeat center center;
         background-size: contain;
         border: 0;
-
+        transition: transform 0.3s;
         @media (max-width: 48em) {
             width: 2.4rem;
             height: 3.2rem;
@@ -381,7 +382,9 @@ main {
         border: 0;
         padding: 0;
         min-height: 100%;
-
+        .choices__list--dropdown.choices__list {
+            transition: visibility 0.3s;
+        }
         .choices__list--single {
             padding: 0;
         }
@@ -410,6 +413,34 @@ main {
             height: fit-content;
             border: 0;
             gap: 2rem;
+
+            scrollbar-width: thin; /* для Firefox */
+            scrollbar-color: $grey-text $bg; /* 
+          /* Webkit (Chrome, Safari) */
+            &::-webkit-scrollbar {
+                width: 2px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: $grey-text;
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: $bg;
+            }
+
+            /* Edge */
+            &::-ms-scrollbar {
+                width: 2px;
+            }
+
+            &::-ms-scrollbar-thumb {
+                background-color: $grey-text;
+            }
+
+            &::-ms-scrollbar-track {
+                background-color: $bg;
+            }
         }
         .choices__inner {
             & .choices__placeholder {
