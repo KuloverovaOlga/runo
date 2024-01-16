@@ -1,5 +1,5 @@
 window.$ = window.jQuery = require('jquery');
-import {catalogSwiper, productBannerSwiper, benefitsSwiper, ourWorksTabSwiper, specialistsSwiper, weDoingSwiper, answersSwiper, popupCertSwiper} from './swiper/swipers';
+import {catalogSwiper, productBannerSwiper, benefitsSwiper, ourWorksTabSwiper, specialistsSwiper, weDoingSwiper, answersSwiper, popupCertSwiper, rangePopupSwiper} from './swiper/swipers';
 
 document.addEventListener('DOMContentLoaded', () => {
     try {
@@ -25,6 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch {}
     try {
         popupCertSwiper();
+    } catch {}
+    try {
+      rangePopupSwiper();
     } catch {}
 });
 
