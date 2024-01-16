@@ -6,6 +6,7 @@ const exclusivitySwiper = () => {
     const swiper = new Swiper(".exclusivity__swiper", {
         slidesPerView: 1,
         spaceBetween: 20,
+        grabCursor: true,
         scrollbar: {
             el: ".exclusivity__swiper-scrollbar",
           },

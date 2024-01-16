@@ -240,8 +240,6 @@ body::before {
         flex-direction: column;
         gap: 2rem;
         align-items: center;
-
-     
     }
 
     // .popup__application-input-group
@@ -279,11 +277,9 @@ body::before {
     &__application-form-button {
         margin-top: 4rem;
         @media (max-width: 48em) {
-           width: 100%;
-          
+            width: 100%;
         }
     }
-
 
     // ---------------------------------------calculator----------------------------
 
@@ -312,7 +308,7 @@ body::before {
             padding: 6.4rem 4.8rem;
 
             &::after {
-            display: none;
+                display: none;
             }
         }
     }
@@ -421,9 +417,9 @@ body::before {
         border-radius: 2rem;
 
         @media (max-width: 48em) {
-          width: 100%;
-          padding: 3.4rem 3.2rem;
-          border-radius: 2.4rem;
+            width: 100%;
+            padding: 3.4rem 3.2rem;
+            border-radius: 2.4rem;
         }
     }
 
@@ -449,7 +445,7 @@ body::before {
             flex-direction: column;
             gap: 4.8rem;
             align-items: flex-start;
-          }
+        }
     }
 
     &__calculator-form-aside-info-box {
@@ -458,7 +454,7 @@ body::before {
         gap: 2rem;
         @media (max-width: 48em) {
             gap: 4rem;
-          }
+        }
     }
     // .popup__calculator-form-aside-title
 
@@ -484,7 +480,7 @@ body::before {
                 font-size: 4.8rem;
                 line-height: 6rem;
             }
-          }
+        }
     }
 
     // .popup__calculator-form-aside-text
@@ -497,7 +493,7 @@ body::before {
         }
         @media (max-width: 48em) {
             width: 100%;
-          }
+        }
     }
 
     // .popup__calculator-form-aside-button-wrapper
@@ -513,197 +509,224 @@ body::before {
 
 // popup__certificates
 .popup__certificates {
-  .popup__content {
-    background-color: transparent;
-  }
-  .popup__body {
-    width: 59rem;
-    gap: 4rem;
-    @include small-tablet {
-      width: 70rem;
+    .popup__content {
+        background-color: transparent;
     }
-  }
-  .popup-cert__wrapper {
-    border-radius: 4rem;
-    padding: 2rem;
-    background-color: $white;
-  }
-  .popup__body-close-btn {
-    position: relative;
-    top: auto;
-    right: auto;
-    background-color: $white;
-    border-radius: 2rem;
-    width: 6rem;
-    height: 6rem;
-    @include small-tablet {
-      width: 9.6rem;
-      height: 9.6rem;
-      border-radius: 3.2rem;
+    .popup__body {
+        width: 50.5rem;
+        gap: 4rem;
+        padding: 0;
+        @include small-tablet {
+            width: 70rem;
+        }
     }
-    svg {
-      width: 1.4rem;
-      height: 1.4rem;
-      @include small-tablet {
-        width: 2.8rem;
-        height: 2.8rem;
-      }
+    .popup-cert__wrapper {
+        border-radius: 4rem;
+        padding: 2rem;
+        background-color: $white;
+        @include small-tablet {
+            padding: 1.6rem;
+        }
     }
-  }
-  .popup-cert__bottom {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 2rem;
-    @include small-tablet {
-      padding: 0;
+    .popup__body-close-btn {
+        position: relative;
+        top: auto;
+        right: auto;
+        background-color: $white;
+        border-radius: 2rem;
+        width: 6rem;
+        height: 6rem;
+        @include small-tablet {
+            width: 9.6rem;
+            height: 9.6rem;
+            border-radius: 3.2rem;
+        }
+        svg {
+            width: 1.4rem;
+            height: 1.4rem;
+            @include small-tablet {
+                width: 2.8rem;
+                height: 2.8rem;
+            }
+        }
     }
-  }
-  .popup-cert__swiper-button-box {
-    display: flex;
-    gap: 2rem;
-    .button-swiper {
-      background-color: $white;
-      @include small-tablet {
-        width: 9.6rem;
-        height: 9.6rem;
-        border-radius: 3.2rem;
-      }
+    .popup-cert__bottom {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 2rem;
+        @include small-tablet {
+            padding: 0;
+        }
     }
-  }
-  .popup-cert__swiper {
-    overflow: hidden;
-    .popup-cert__swiper-slide-img-box {
-      height: 66.8rem;
-      width: 46.5rem;
-      @include small-tablet {
-        width: 58rem;
-        height: 82rem;
-      }
-      img {
-        height: 100%;
-        object-fit: cover;
-        width: auto;
-      }
+    .popup-cert__swiper-button-box {
+        display: flex;
+        gap: 2rem;
+        .button-swiper {
+            background-color: $white;
+            @include small-tablet {
+                width: 9.6rem;
+                height: 9.6rem;
+                border-radius: 3.2rem;
+            }
+        }
     }
-
-  }
-  .button-swiper__svg-box {
-    @include small-tablet {
-      width: 5rem;
-      height: 5rem;
+    .popup-cert__swiper {
+        overflow: hidden;
+        .popup-cert__swiper-slide-img-box {
+            height: 66.8rem;
+            width: 46.5rem;
+            border-radius: 3rem;
+            overflow: hidden;
+            cursor: grab;
+            @include small-tablet {
+                width: 66.8rem;
+                height: 97.2rem;
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                    width: 100%;
+                }
+            }
+            img {
+                height: 100%;
+                object-fit: cover;
+                width: 100%;
+            }
+        }
     }
-  }
-  .popup-cert__thub-swiper {
-    overflow: hidden;
-    @include small-tablet {
-      display: none;
+    .button-swiper__svg-box {
+        @include small-tablet {
+            width: 5rem;
+            height: 5rem;
+        }
     }
-    .popup-cert__swiper-slide-img-box {
-      height: 10rem;
-      width: 10rem;
-      border-radius: 2rem;
-      img {
-        height: 100%;
-        object-fit: cover;
-        border-radius: inherit;
-      }
+    .popup-cert__thub-swiper {
+        overflow: hidden;
+        margin-top: 1rem;
+        @include small-tablet {
+            display: none;
+        }
+        .popup-cert__swiper-slide-img-box {
+            height: 10rem;
+            width: 10rem;
+            border-radius: 2rem;
+            cursor: pointer;
+            img {
+                height: 100%;
+                object-fit: cover;
+                border-radius: inherit;
+            }
+        }
     }
-  }
 }
 
 .popup__range {
-  .popup__content {
-    background-color: transparent;
-  }
-  .popup__body {
-    width: 95rem;
-    gap: 4rem;
-    @include small-tablet {
-      width: 70rem;
+    .popup__content {
+        background-color: transparent;
     }
-  }
-  .popup-range__wrapper {
-    border-radius: 4rem;
-    padding: 2rem;
-    background-color: $white;
-  }
-  .popup__body-close-btn {
-    position: relative;
-    top: auto;
-    right: auto;
-    background-color: $white;
-    border-radius: 2rem;
-    width: 6rem;
-    height: 6rem;
-    @include small-tablet {
-      width: 9.6rem;
-      height: 9.6rem;
-      border-radius: 3.2rem;
+    .popup__body {
+        width: 88rem;
+        gap: 4rem;
+        padding: 0;
+        @include small-tablet {
+            width: 70rem;
+        }
     }
-    svg {
-      width: 1.4rem;
-      height: 1.4rem;
-      @include small-tablet {
-        width: 2.8rem;
-        height: 2.8rem;
-      }
+    .popup-range__wrapper {
+        border-radius: 4rem;
+        padding: 2rem;
+        background-color: $white;
+        @include small-tablet {
+            padding: 1.6rem;
+        }
     }
-  }
-  .popup-range__bottom {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 2rem;
-    @include small-tablet {
-      padding: 0;
+    .popup__body-close-btn {
+        position: relative;
+        top: auto;
+        right: auto;
+        background-color: $white;
+        border-radius: 2rem;
+        width: 6rem;
+        height: 6rem;
+        @include small-tablet {
+            width: 9.6rem;
+            height: 9.6rem;
+            border-radius: 3.2rem;
+        }
+        svg {
+            width: 1.4rem;
+            height: 1.4rem;
+            @include small-tablet {
+                width: 2.8rem;
+                height: 2.8rem;
+            }
+        }
     }
-  }
-  .popup-range__swiper-button-box {
-    display: flex;
-    gap: 2rem;
-    .button-swiper {
-      background-color: $white;
-      @include small-tablet {
-        width: 9.6rem;
-        height: 9.6rem;
-        border-radius: 3.2rem;
-      }
+    .popup-range__bottom {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 2rem;
+        @include small-tablet {
+            padding: 0;
+        }
     }
-  }
-  .button-swiper__svg-box {
-    @include small-tablet {
-      width: 5rem;
-      height: 5rem;
+    .popup-range__swiper-button-box {
+        display: flex;
+        gap: 2rem;
+        .button-swiper {
+            background-color: $white;
+            @include small-tablet {
+                width: 9.6rem;
+                height: 9.6rem;
+                border-radius: 3.2rem;
+            }
+        }
     }
-  }
-  .range-popup__swiper-slide {
-    display: none;
-    &.active {
-      display: block;
+    .button-swiper__svg-box {
+        @include small-tablet {
+            width: 5rem;
+            height: 5rem;
+        }
     }
-  }
-  .range-popup__slide-img {
-    width: 83rem;
-    height: 60rem;
-    border-radius: 3rem;
-    overflow: hidden;
-    img {
-      height: 100%;
-      object-fit: cover;
-      border-radius: inherit;
+    .range-popup__swiper-slide {
+        display: none;
+        &.active {
+            display: block;
+        }
     }
-  }
-  .range-popup__swiper-slide-swiper {
-    width: 83rem;
-    border-radius: 3rem;
-    overflow: hidden;
-  }
-  .range-popup__thumb-swiper {
-    margin-top: 2rem;
     .range-popup__slide-img {
-      width: 15rem;
-      height: 15rem;
-      border-radius: 2rem;
-      overflow: hidden;
+        width: 84rem;
+        height: 59.7rem;
+        border-radius: 3rem;
+        overflow: hidden;
+        cursor: grab;
+        @include small-tablet {
+            width: 66.8rem;
+            height: 48.2rem;
+            border-radius: 3.6rem;
+        }
+        img {
+            height: 100%;
+            object-fit: cover;
+            border-radius: inherit;
+        }
     }
-  }
+    .range-popup__swiper-slide-swiper {
+        width: 84rem;
+        border-radius: 3rem;
+        overflow: hidden;
+    }
+    .range-popup__thumb-swiper {
+        margin-top: 2rem;
+        @include small-tablet {
+            display: none;
+        }
+        .range-popup__slide-img {
+            width: 15rem;
+            height: 15rem;
+            border-radius: 2rem;
+            overflow: hidden;
+            cursor: pointer;
+        }
+    }
 }

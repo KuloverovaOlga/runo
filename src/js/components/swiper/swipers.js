@@ -168,7 +168,7 @@ const answersSwiper = () => {
 const popupCertSwiper = () => {
   const sliderThumbs = new Swiper('.popup-cert__thub-swiper', {
     slidesPerView: 4,
-    spaceBetween: rem(4),
+    spaceBetween: rem(2),
     speed: 500,
     freeMode: true,
     watchSlidesProgress: true,

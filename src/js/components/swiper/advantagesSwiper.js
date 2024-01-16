@@ -6,7 +6,7 @@ const advantagesSwiper = () => {
     const swiper = new Swiper('.advantages__swiper', {
         slidesPerView: 1,
         spaceBetween: 20,
-
+   
         scrollbar: {
             el: '.advantages__swiper-scrollbar',
         },
@@ -15,6 +15,7 @@ const advantagesSwiper = () => {
             769: {
                 slidesPerView: 3,
                 spaceBetween: 0,
+                
                 grid: {
                     rows: 2,
                 },
