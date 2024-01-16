@@ -1,7 +1,10 @@
 @import './scss/fonts';
 @import './scss/libs/normalize';
 @import './scss/libs/_set';
+@import './scss/base/mixins';
 @import './scss/general';
+
+@import './scss/base/components-a';
 
 @import './scss/components/header';
 @import './scss/components/footer';
@@ -20,4 +23,18 @@
 @import './scss/components/range';
 @import './scss/components/widget';
 @import './scss/components/404';
+@import './scss/components/catalog';
+@import './scss/components/product-banner';
+@import './scss/components/benefits';
+@import './scss/components/services';
+@import './scss/components/measure-banner';
+@import './scss/components/install-banner';
+@import './scss/components/repair-banner';
+@import './scss/components/repair-prices';
+@import './scss/components/our-works';
+@import './scss/components/about-banner';
+@import './scss/components/specialists';
+@import './scss/components/we-doing';
+@import './scss/components/answers';
+@import './scss/components/contacts';
 

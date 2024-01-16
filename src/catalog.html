@@ -8,16 +8,23 @@
         <title>Каталог</title>
     </head>
     <body>
-        <div class="wrapper">
-            <include src="./components/header.html"></include>
+      <include src="./components/header.html"></include>
             <include src="./components/popup.html"></include>
             <include src="./components/widget.html"></include>
-            <main class="main">
+      <main class="main">
+          <div class="container">
+            <nav class="bread title-h5">
+              <ul>
+                <li class="bread__link"><a href="#">Главная</a></li>
+                <li class="bread__link _curr">Каталог</li>
+              </ul>
+            </nav>
+          </div>
 
-                <include src="./components/advantages.html"></include>
-                <include src="./components/application.html"></include>
-            </main>
-            <include src="./components/footer.html"></include>
-        </div>
+          <include src="./components/catalog.html"></include>
+          <include src="./components/advantages.html"></include>
+          <include src="./components/application.html"></include>
+      </main>
+      <include src="./components/footer.html"></include>
     </body>
 </html>

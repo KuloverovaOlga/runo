@@ -1,0 +1,88 @@
+.catalog {
+    padding: 3.2rem 0 9rem;
+
+    @include small-tablet {
+        padding: 8rem 0 10rem;
+    }
+
+    &__title {
+        margin-bottom: 8rem;
+    }
+
+    &__tab {
+        &-swiper {
+            position: relative;
+            overflow: hidden;
+
+            .catalog__tab-item {
+                @include tab-item;
+            }
+
+            .catalog__tab-btn-next,
+            .catalog__tab-btn-prev {
+                position: absolute;
+                top: 0.2rem;
+                z-index: 3;
+                outline: $bg 1.5rem solid;
+
+                @include small-tablet {
+                    display: none;
+                }
+            }
+
+            .catalog__tab-btn-next {
+                right: 0;
+                box-shadow: $bg -5rem 0rem 3rem;
+            }
+
+            .catalog__tab-btn-prev {
+                left: 0;
+                box-shadow: $bg 5rem 0rem 3rem;
+            }
+
+            .swiper-button-disabled {
+                display: none;
+            }
+        }
+    }
+
+    &__display {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4rem;
+        margin-top: 6rem;
+        animation: fade-in 0.5s ease-in-out;
+        display: none;
+
+        &.active {
+            display: flex;
+            animation: fade-in 0.5s ease-in-out;
+        }
+
+        @include small-tablet {
+            gap: 2rem;
+        }
+    }
+
+    .price-item-btn {
+        @include curved-border-angle(8rem, 11.5rem);
+    }
+    .price-item-img {
+        -webkit-mask-image: url(./assets/images/catalog__img-mask.svg);
+        mask-image: url(./assets/images/catalog__img-mask.svg);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

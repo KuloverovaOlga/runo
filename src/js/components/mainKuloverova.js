@@ -46,6 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
         pricesSwiper();
     } catch {}
     try {
+        catalogSwiper();
+    } catch {}
+    try {
         rangeSwiper();
     } catch {}
 
@@ -82,26 +85,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
