@@ -146,23 +146,3 @@ $(document).ready(function() {
         setupSlides(activeTab);
     });
 });
-
-// CERTIFICATES section
-import { Fancybox } from "@fancyapps/ui";
-import "@fancyapps/ui/dist/fancybox/fancybox.css";
-
-Fancybox.bind("[data-fancybox='certificates']", {
-  // Your custom options
-  idle: false,
-  Carousel: {
-    Navigation: false,
-  },
-  Toolbar: {
-    display: {
-      left: ["close"],
-      middle: ["prev", "next"],
-      right: [],
-    },
-    parentEl: function () { return this.instance.container?.querySelector(".fancybox__footer") || null; },
-  },
-});
