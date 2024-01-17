@@ -1,6 +1,9 @@
 window.$ = window.jQuery = require('jquery');
 import {catalogSwiper, productBannerSwiper, benefitsSwiper, ourWorksTabSwiper, specialistsSwiper, weDoingSwiper, answersSwiper, popupCertSwiper, rangePopupSwiper} from './swiper/swipers';
 
+import { Fancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
 document.addEventListener('DOMContentLoaded', () => {
     try {
         catalogSwiper();
@@ -108,7 +111,6 @@ $('.answers__tab-item').on('click', function() {
   $('.answers__display').removeClass('active');
   content.addClass('active');
 });
-window.$ = window.jQuery = require('jquery');
 $(document).ready(function() {
     let maxVisibleSlides = 10;
     let incrementSlides = 10;
@@ -148,4 +150,14 @@ $(document).ready(function() {
         let activeTab = $('.answers__tab-item._active').data('tab');
         setupSlides(activeTab);
     });
+});
+
+// fancy box
+$(document).ready(function() {
+  Fancybox.bind('[data-fancybox="video-measure"]', {
+    // Custom options
+  });
+  Fancybox.bind('[data-fancybox="video-install"]', {
+    // Custom options
+  }); 
 });
