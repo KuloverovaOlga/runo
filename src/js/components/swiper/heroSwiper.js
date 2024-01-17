@@ -21,7 +21,7 @@ const heroSwiper = () => {
         breakpoints: {
           769: {
             slidesPerView: 1,
-            spaceBetween: rem(0),
+            // spaceBetween: rem(0),
           },
           
         }
