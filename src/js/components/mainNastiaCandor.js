@@ -1,6 +1,9 @@
 window.$ = window.jQuery = require('jquery');
 import {catalogSwiper, productBannerSwiper, benefitsSwiper, ourWorksTabSwiper, specialistsSwiper, weDoingSwiper, answersSwiper, popupCertSwiper, rangePopupSwiper} from './swiper/swipers';
 
+import { Fancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
 document.addEventListener('DOMContentLoaded', () => {
     try {
         catalogSwiper();
@@ -108,7 +111,6 @@ $('.answers__tab-item').on('click', function() {
   $('.answers__display').removeClass('active');
   content.addClass('active');
 });
-window.$ = window.jQuery = require('jquery');
 $(document).ready(function() {
     let maxVisibleSlides = 10;
     let incrementSlides = 10;
@@ -148,4 +150,55 @@ $(document).ready(function() {
         let activeTab = $('.answers__tab-item._active').data('tab');
         setupSlides(activeTab);
     });
+});
+
+// fancy box
+$(document).ready(function() {
+  Fancybox.bind('[data-fancybox="video-measure"]', {
+    // Custom options
+  });
+  Fancybox.bind('[data-fancybox="video-install"]', {
+    // Custom options
+  }); 
+});
+
+// CATALOG section
+$(document).ready(function() {
+  let maxVisibleSlides = 6;
+  let incrementSlides = 2;
+  
+  function setupSlides(activeTab) {
+      let currentSlideItems = $(`.catalog__display[data-tab='${activeTab}'] .catalog__item`);
+      
+      // Показываем начальные слайды
+      currentSlideItems.hide();
+      currentSlideItems.slice(0, maxVisibleSlides).show();
+      
+      // Если число слайдов меньше или равно maxVisibleSlides, скрываем кнопку
+      if (currentSlideItems.length <= maxVisibleSlides) {
+          $('.catalog__more-btn').hide();
+      } else {
+          $('.catalog__more-btn').show();
+      }
+  
+      // Обновляем обработчик событий
+      $('.catalog__more-btn').off('click').on('click', function (e) {
+          e.preventDefault();
+      
+          $(`.catalog__display[data-tab='${activeTab}'] .catalog__item:hidden`).slice(0, incrementSlides).slideDown();
+      
+          if ($(`.catalog__display[data-tab='${activeTab}'] .catalog__item:hidden`).length == 0) {
+              $('.catalog__more-btn').fadeOut('slow');
+          }
+      });
+  }
+  
+  // Первоначальная настройка слайдов
+  setupSlides($('.catalog__tab-item._active').data('tab'));
+  // Ваш обработчик переключения вкладок
+  $('.catalog__tab-item').on('click', function() {
+      
+      let activeTab = $('.catalog__tab-item._active').data('tab');
+      setupSlides(activeTab);
+  });
 });

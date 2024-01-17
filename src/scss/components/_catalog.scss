@@ -75,6 +75,11 @@
         -webkit-mask-size: contain;
         mask-size: contain;
     }
+
+    &__more-btn {
+      @include btn-purple;
+      margin-top: 6rem;
+    }
 }
 
 @keyframes fade-in {
