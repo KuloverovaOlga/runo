@@ -6,7 +6,7 @@ import { rem } from "../../utils/constants";
 const heroSwiper = () => {
     const slider1 = new Swiper('.hero__swiper ', {
         slidesPerView: 1,
-        spaceBetween: rem(0),
+        spaceBetween: 20,
         loop: true,
         slideToClickedSlide: true,
         parallax: true,

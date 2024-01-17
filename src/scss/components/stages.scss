@@ -231,15 +231,15 @@
         // .stages__swiper-slide
 
         &__swiper-slide {
-            width: 100% !important;
+            width: 71rem!important;
             &:nth-child(9n + 1) {
-                width: 100% !important;
+                width: 71rem !important;
                 & .stages__swiper-slide-img-box {
                     width: 40rem;
                 }
             }
             &:nth-child(9n + 2) {
-                width: 100% !important;
+                width: 71rem !important;
                 & .stages__swiper-slide-inner {
                     -webkit-mask-image: url(./assets/images/icons/stages-mask-mob.svg);
                     mask-image: url(./assets/images/icons/stages-mask-mob.svg);
@@ -248,45 +248,45 @@
                 }
             }
             &:nth-child(9n + 3) {
-                width: 100% !important;
+                width: 71rem !important;
                 & .stages__swiper-slide-inner {
                 }
             }
             &:nth-child(9n + 4) {
-                width: 100% !important;
+                width: 71rem !important;
                 & .stages__swiper-slide-inner {
                 }
             }
             &:nth-child(9n + 5) {
-                width: 100% !important;
+                width: 71rem !important;
                 & .stages__swiper-slide-inner {
                     background-color: $white;
                     color: $black;
                 }
             }
             &:nth-child(9n + 6) {
-                width: 100% !important;
+                width: 71rem !important;
                 .stages__swiper-slide-img-box {
                     width: 26rem;
                     height: 35rem;
                 }
             }
             &:nth-child(9n + 7) {
-                width: 100% !important;
+                width: 71rem !important;
                 & .stages__swiper-slide-inner {
                     background-color: $white;
                     color: $black;
                 }
             }
             &:nth-child(9n + 8) {
-                width: 100% !important;
+                width: 71rem !important;
                 .stages__swiper-slide-img-box {
                     width: 26rem;
                     height: 35rem;
                 }
             }
             &:nth-child(9n + 9) {
-                width: 100% !important;
+                width: 71rem !important;
             }
             &.stages__swiper-slide-img {
                 display: none;

@@ -185,6 +185,8 @@
 
 /*! ./assets/images/range-mask-min.webp */
 
+/*! ./assets/images/range-mask-mob.webp */
+
 /*! ./assets/images/repair-banner__mask-mob.webp */
 
 /*! ./assets/images/repair-banner__mask.webp */
@@ -487,6 +489,10 @@
 
 /*!***********************************************!*\
   !*** ./src/assets/images/range-mask-min.webp ***!
+  \***********************************************/
+
+/*!***********************************************!*\
+  !*** ./src/assets/images/range-mask-mob.webp ***!
   \***********************************************/
 
 /*!***********************************************!*\
