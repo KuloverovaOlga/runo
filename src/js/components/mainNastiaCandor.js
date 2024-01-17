@@ -161,3 +161,44 @@ $(document).ready(function() {
     // Custom options
   }); 
 });
+
+// CATALOG section
+$(document).ready(function() {
+  let maxVisibleSlides = 6;
+  let incrementSlides = 2;
+  
+  function setupSlides(activeTab) {
+      let currentSlideItems = $(`.catalog__display[data-tab='${activeTab}'] .catalog__item`);
+      
+      // Показываем начальные слайды
+      currentSlideItems.hide();
+      currentSlideItems.slice(0, maxVisibleSlides).show();
+      
+      // Если число слайдов меньше или равно maxVisibleSlides, скрываем кнопку
+      if (currentSlideItems.length <= maxVisibleSlides) {
+          $('.catalog__more-btn').hide();
+      } else {
+          $('.catalog__more-btn').show();
+      }
+  
+      // Обновляем обработчик событий
+      $('.catalog__more-btn').off('click').on('click', function (e) {
+          e.preventDefault();
+      
+          $(`.catalog__display[data-tab='${activeTab}'] .catalog__item:hidden`).slice(0, incrementSlides).slideDown();
+      
+          if ($(`.catalog__display[data-tab='${activeTab}'] .catalog__item:hidden`).length == 0) {
+              $('.catalog__more-btn').fadeOut('slow');
+          }
+      });
+  }
+  
+  // Первоначальная настройка слайдов
+  setupSlides($('.catalog__tab-item._active').data('tab'));
+  // Ваш обработчик переключения вкладок
+  $('.catalog__tab-item').on('click', function() {
+      
+      let activeTab = $('.catalog__tab-item._active').data('tab');
+      setupSlides(activeTab);
+  });
+});
