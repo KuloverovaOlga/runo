@@ -2,8 +2,8 @@
     padding: 0 0 9rem;
     // .hero__inner
     &__container {
-        width: 100vw;
-        max-width: 190rem;
+        width: 100%;
+        max-width: 192rem;
     }
 
     &__inner {
@@ -125,7 +125,7 @@
         padding: 0 0 10rem;
         // .hero__inner
         &__container {
-            width: 100vw;
+            width: 100%;
             max-width: 75rem;
             padding: 0;
         }
@@ -207,8 +207,8 @@
             mask-image: url(./assets/images/hero-mask-mob.webp);
             -webkit-mask-repeat: no-repeat;
             mask-repeat: no-repeat;
-            -webkit-mask-size: contain;
-            mask-size: contain;
+            -webkit-mask-size: 100% 100%;
+            mask-size: 100% 100%;
             box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
             & img {
                 object-fit: cover;
