@@ -17,11 +17,12 @@ const heroSwiper = () => {
         scrollbar: {
           el: '.hero__swiper-scrollbar',
       },
-        speed: 1000,
+        // speed: 1000,
         breakpoints: {
           769: {
             slidesPerView: 1,
             // spaceBetween: rem(0),
+            speed: 800,
           },
           
         }
