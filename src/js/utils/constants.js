@@ -19,6 +19,7 @@ export let bodyUnlock = (delay = 500) => {
       //   el.style.paddingRight = '0px';
       // }
       document.querySelector('.widget').style.right = '3.7rem'
+      document.querySelector('.header').style.marginRight = ''
       body.style.paddingRight = '0px';
       document.documentElement.classList.remove('lock');
     }, delay);
@@ -44,6 +45,7 @@ export let bodyLock = (delay = 500) => {
   let scrollWith = getScrollbarWidth();
     body.style.paddingRight =`${scrollWith}px`
     document.querySelector('.widget').style.right =`${(scrollWith + 37) / 10}rem`
+    document.querySelector('.header').style.marginRight = `${(scrollWith) / 10}rem`
     document.documentElement.classList.add('lock');
     bodyLockStatus = false;
     setTimeout(function () {

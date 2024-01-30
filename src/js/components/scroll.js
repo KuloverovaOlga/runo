@@ -9,6 +9,7 @@ const scroll = () => {
                 behavior: 'smooth',
                 block: 'start',
             });
+            console.log('awdawd')
         });
     }
 }

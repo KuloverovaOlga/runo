@@ -1,0 +1,26 @@
+.bread {
+    padding: 18rem 0 0;
+    // .bread__list
+
+    &__list {
+    }
+
+    // .bread__link
+
+    &__link {
+    }
+}
+@media (max-width: 48em) {
+    .bread {
+        padding: 20rem 0 0;
+        // .bread__list
+    
+        &__list {
+        }
+    
+        // .bread__link
+    
+        &__link {
+        }
+    }
+}

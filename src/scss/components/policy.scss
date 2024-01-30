@@ -1,6 +1,6 @@
 .policy {
     // .policy__inner
-padding: 1.4rem 0 9rem;
+padding: 18rem 0 9rem;
     &__inner {
         display: flex;
         flex-direction: column;
@@ -68,7 +68,7 @@ padding: 1.4rem 0 9rem;
 @media (max-width: 48em) {
     .policy {
         // .policy__inner
-    padding: 6rem 0 10rem;
+    padding: 20rem 0 10rem;
         &__inner {
      
             gap: 8rem;
