@@ -12,11 +12,22 @@ const dropdown = () => {
         const dropdownServisesContent = dropdown.querySelector('.header__dropdown-services');
         const listTitle = dropdown.querySelectorAll('.list-title');
 
+        setTimeout(() => {
+            dropdownContent.style.transition = 'opacity 0.3s, visibility 0.3s, z-index 0.3s';
+          }, 0);
+
         function mouseenter() {
             dropdownContent.classList.add('active');
             dropdownInner.addEventListener('mouseleave', () => {
                 dropdownContent.classList.remove('active');
             });
+            if (dropdownContent.classList.contains('active')) {
+                dropdown.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('header__dropdown')) {
+                        dropdownContent.classList.remove('active');
+                    }
+                })
+            }
         }
         function mouseleave() {
             dropdownContent.classList.remove('active');
@@ -33,7 +44,7 @@ const dropdown = () => {
                 list.parentElement.classList.toggle('active');
                 $(this).parent().find('.list').slideToggle();
             }
-            function listTitleResize () {
+            function listTitleResize() {
                 if (window.innerWidth > 768) {
                     $(list).parent().find('.list').show();
                     list.removeEventListener('click', listTitleClick);
@@ -43,8 +54,8 @@ const dropdown = () => {
                     list.parentElement.classList.remove('active');
                 }
             }
-            listTitleResize ()
-            window.addEventListener('resize', listTitleResize)
+            listTitleResize();
+            window.addEventListener('resize', listTitleResize);
         });
 
         function showContent() {
@@ -61,20 +72,18 @@ const dropdown = () => {
                 dropdown.addEventListener('mouseenter', mouseenter);
                 dropdown.addEventListener('mouseleave', mouseleave);
                 dropdownLink.removeEventListener('click', dropdownClick);
-                
             }
         }
 
         showContent();
         window.addEventListener('resize', showContent);
-
     });
 
     const dropdownCatalogItem = document.querySelectorAll('.header__dropdown-catalog-item');
     const dropdownCatalogContent = document.querySelectorAll('.header__dropdown-catalog-content');
 
     dropdownCatalogItem.forEach((item, i) => {
-        item.addEventListener('click', () => {
+        item.addEventListener('mouseenter', () => {
             dropdownCatalogItem.forEach((item) => {
                 item.classList.remove('active');
             });
@@ -111,7 +120,7 @@ const dropdown = () => {
             burger.classList.remove('active');
             document.body.style.overflow = '';
         }
-    }) 
+    });
 };
 
 export default dropdown;
